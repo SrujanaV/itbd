@@ -10,7 +10,8 @@ var myApp = angular.module('myApp', [
     'angular-flexslider',
     'ui.swiper',
     'angularPromiseButtons',
-    'toastr'
+    'toastr',
+    'ui.select'
 ]);
 
 // Define all the routes below
@@ -24,6 +25,16 @@ myApp.config(function ($stateProvider, $urlRouterProvider, $httpProvider, $locat
             url: "/",
             templateUrl: tempateURL,
             controller: 'HomeCtrl'
+        })
+        .state('destination', {
+            url: "/destination",
+            templateUrl: tempateURL,
+            controller: 'DestinationCtrl'
+        })
+        .state('customdestination', {
+            url: "/customdestination",
+            templateUrl: tempateURL,
+            controller: 'CustomDestinationCtrl'
         })
         .state('form', {
             url: "/form",

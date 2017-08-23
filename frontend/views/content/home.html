@@ -1,36 +1,163 @@
-<div class="container">
-
-    <a class="btn btn-default" ng-click="buttonClick()">Demo Button</a>
-
-    <flex-slider flex-slide="s in mySlides" prev-text="" next-text="">
+<!-- START DESKTOP SLIDER -->
+<div class="homeslidr hidden-xs">
+    <flex-slider id="homeslider" flex-slide="s in mySlides track by $index" slideshow-speed="2500" slideshow="true" animation-speed="1000"
+        class="m1 carousel">
         <li>
-            <img ng-src="{{s}}" class="img-full">
+            <img alt="The Bachelor Trip" class="img-responsive " ng-src="{{s.img}}">
         </li>
     </flex-slider>
-
-    <swiper autoplay="5000" effect="slide" slides-per-view="1" loop="true">
-        <slides>
-            <slide ng-repeat="s in mySlides">
-                <img ng-src="{{s}}" class="img-full" noloading="true">
-            </slide>
-        </slides>
-        <prev></prev>
-        <next></next>
-        <pagination></pagination>
-    </swiper>
-
-    <div class="row">
-        <div class="col-md-2" ng-repeat="s in mySlides">
-            <a ng-href="{{s}}" data-fancybox="group" rel="gallary" fancybox>
-                <img ng-src="{{s}}" class="img-full">
-            </a>
-        </div>
-        <div class="col-md-2">
-            <a class="various" data-fancybox="group"  rel="gallary" href="http://www.youtube.com/embed/L9szn1QQfas?autoplay=1" fancybox><img ng-src="http://img.youtube.com/vi/L9szn1QQfas/maxresdefault.jpg" class="img-full"></a>
-        </div>
-          <div class="col-md-2">
-            <a class="various" data-fancybox="group"  rel="gallary" href="https://vimeo.com/191947042" class="img-full"></a>
+</div>
+<!-- END DESKTOP -->
+<!-- START MOBILE SLIDER -->
+<div class="homeslidr hidden-sm hidden-md hidden-lg">
+    <flex-slider flex-slide="s in mySlidestop track by $index" class="m1">
+        <li>
+            <div class="item">
+                <figure class=" ng-scope">
+                    <!-- <a href={{s.url}} target="_blank"> -->
+                    <img alt="The Bachelor Trip" class="img-responsive " ng-src="{{s.image2|serverimage}}">
+                    <!-- </a> -->
+                </figure>
+            </div>
+        </li>
+    </flex-slider>
+</div>
+<!-- END MOBILE SLIDER -->
+<!-- START POPULAR -->
+<div class="container display">
+    <div class="row ">
+        <div class="col-xs-12">
+            <h1 class="pregular" ui-sref="destination">POPULAR</h1>
+            <h1 class="theboldfont" ui-sref="destination">DESTIN ATIONS</h1>
         </div>
     </div>
-
 </div>
+<div class="m8">
+    <div class="mr">
+        <div class="container borderup">
+            <div class="addimg">
+                <img alt="The Bachelor Trip" src="img/+img.png" class="img-responsive" ui-sref="destination">
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-sm-4  col-xs-6 padng0">
+                    <h1 class="p p11 pregular" ui-sref="destination">POPULAR</h1>
+                    <h1 class="p2 p22 theboldfont" ui-sref="destination">DESTIN ATIONS</h1>
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-6 padng0" ng-repeat="x in popularDestination">
+                    <div class="eventshome">
+                        <a href="">
+                            <img alt="{{x.name}}" ng-src="{{x.image}}" class="img-responsive">
+                            <div class="shadow-down"></div>
+                            <div class="event-name">
+                                <span>{{x.name}}</span>
+                            </div>
+                            <div class="over-layer text-center">
+                                <div class="hoverimg">
+                                    <img alt="ggl" class="img-responsive" src="img/ggl.png">
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--second div -->
+    <div class="ml">
+        <div class="container borderdown">
+            <div class="addimg1">
+                <img alt="activity" src="img/+img.png" class="img-responsive" ui-sref="activity">
+            </div>
+            <div class="row">
+                <div class="col-md-2 col-sm-2 col-xs-6 padng0" ng-repeat="x in popularAttraction">
+                    <div class="eventshome" ui-sref="customdestination({id:x.destination})">
+                        <img alt="{{x.name}}" title="{{x.name}}" src="{{x.image1}}" class="img-responsive">
+                        <div class="shadow-down"></div>
+                        <div class="event-name">
+                            <span>{{x.name}}</span>
+                        </div>
+                        <div class="over-layer text-center">
+                            <div class="hoverimg">
+                                <img alt="ggl" class="img-responsive" src="img/ggl.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-4 col-xs-4 padng0">
+                    <h1 class="p p1 theboldfont" ui-sref="activity">POPULAR</h1>
+                    <h1 class="p2 p222 theboldfont" ui-sref="activity">ATTRA
+                        <br>CTIONS</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container display2">
+    <div class="row ">
+        <div class="col-xs-12">
+            <h1 class="pregular" ui-sref="activity">POPULAR</h1>
+            <h1 class="theboldfont" ui-sref="activity">ATTRA CTIONS</h1>
+        </div>
+    </div>
+</div>
+<!-- END POPULAR -->
+<!-- START SELECT FOR CUSTOMISATION -->
+<div class="padd paddup">
+    <figure class="m2">
+        <img alt="The Bachelor Trip" class="img-responsive" src="frontend/img/4.jpg">
+        <figcaption>
+            <div class="links">
+                <div>
+                    <img alt="The Bachelor Trip" class="imgab" src="frontend/img/enquire.png">
+                    <form class="himg2" ng-submit="goto(formdata)" ng-init="abc">
+                        <label class="pregular labsec">I want to go to</label>
+                        <fieldset class="inputtag">
+                            <ui-select ng-model="ctrl.person.selected" class="plan-dark-bold">
+                                <ui-select-match placeholder="Select Destination">{{$select.selected.name}}</ui-select-match>
+                                <ui-select-choices repeat="item in dropDown">
+                                    <div ng-bind-html="item.name"></div>
+                                </ui-select-choices>
+                            </ui-select>
+                        </fieldset>
+                        <button type="submit" class="gobtn" ng-click="goOn(thisId)">GO</button>
+                    </form>
+                </div>
+            </div>
+        </figcaption>
+    </figure>
+</div>
+<!--  END FOR CUSTOMISATION-->
+<!-- START ABOUT -->
+<div class="aboutin">
+    <div class="imAb"> <img alt="The Bachelor Trip" class="img-responsive " src="img/wd.png"></div>
+    <div class="spAb">
+        <h1 class="theboldfont">ABOUT US</h1>
+        <div class="ain">
+            <h2 class="whit_color theboldfont margbotom">May the bachelor in you rest in peace . . .</h2>
+            <p class="bluecol Robotor">And this is precisely where we come into the picture - to organise <strong class="abinfo pregular bluecol">THE</strong>                trip to bid adieu to your <strong class="abinfo pregular bluecol">Bachelorhood!</strong> <br>An event of
+                a lifetime needs a trip that is on par with it, a trip you won’t be able to forget about but also the kind
+                you wouldn’t be able to talk to everyone about..<br>Our Motto is to ensure that you have the best stag or
+                hens do, one that would be far greater than <strong class="abinfo pregular bluecol">The Hangover</strong>.
+                We understand you will only have one such trip in your lifetime and we strive to make it larger-than-life
+                kinds.
+                <br>We have it all; on a scale from Doug to Mr. Chow depending on how much you would prefer indulging.
+            </p>
+        </div>
+        <P class="sado"><a class="whit_color" href="aboutus">KNOW THE TEAM</a></P>
+    </div>
+</div>
+<!-- END ABOUT -->
+<!-- START SLIDER  -->
+<div class="padd padddown homeslid">
+    <flex-slider flex-slide="data in mySlidesss track by $index" slideshow-speed="2500" slideshow="true" animation-speed="1000"
+        class="carousel">
+        <li>
+            <div class="item">
+                <figure class="mim-home ng-scope">
+                    <a href="whats-hot"><img alt="The Bachelor Trip" class="img-responsive " ng-src="{{data.banner}}"></a>
+                </figure>
+            </div>
+        </li>
+    </flex-slider>
+</div>
+<!-- END SLIDER  -->

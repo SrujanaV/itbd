@@ -1,0 +1,64 @@
+<!-- START DESTINATION -->
+<div class="container text-center">
+    <div class="row">
+
+        <h1 class="theboldfont yellow_color fsiz">DESTINATIONS</h1>
+
+    </div>
+</div>
+<div>
+    <div class="container">
+        <div class="col-md-12 m4">
+            <div class="m2">
+                <!---START POPULAR DESTINATIONS ---->
+                <div class="row pd15">
+                    <h1 class="theboldfont whit_color">POPULAR<br>DESTINATIONS</h1>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="slidershow">
+                            <flex-slider prev-text="" next-text="" flex-slide="data in DestinationLand track by $index" class="desti yellow_back_color">
+                                <li>
+                                    <div class="row">
+                                        <div class="col-md-6 col-sm-6 col-xs-12 padd15px" ng-repeat="data1 in data">
+                                            <figure>
+                                                <div class="front">
+                                                    <a href=""><img alt="{{data.name}}" title="{{data.name}}" ng-src="{{data.image}}" class="img-responsive"></a>
+                                                    <div class="shadow-down"></div>
+                                                    <div class="event-name">
+                                                        <span class="font20">{{data.name}}</span>
+                                                    </div>
+                                                </div>
+                                            </figure>
+                                        </div>
+                                    </div>
+                                </li>
+                            </flex-slider>
+                        </div>
+                    </div>
+                </div>
+                <!---END POPULAR DESTINATIONS ---->
+
+                <!---START ALL DESTINATIONS ---->
+                <div class="row pd15">
+                    <h1 class="theboldfont whit_color">ALL<br>DESTINATIONS</h1>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 col-sm-4 col-xs-12 pdt15" ng-repeat="data in allDestination">
+                        <figure>
+                            <div class="front">
+                                <a ui-sref="customdestination({id:data._id})"><img alt="{{data.name}}" title="{{data.name}}" ng-src="{{data.image}}" class="img-responsive"></a>
+                                <div class="shadow-down"></div>
+                                <div class="event-name">
+                                    <span>{{data.name}}</span>
+                                </div>
+                            </div>
+                        </figure>
+                    </div>
+                </div>
+                <!--- END ALL DESTINATIONS ---->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END DESTINATION -->
