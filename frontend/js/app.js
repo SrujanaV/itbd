@@ -36,6 +36,11 @@ myApp.config(function ($stateProvider, $urlRouterProvider, $httpProvider, $locat
             templateUrl: tempateURL,
             controller: 'CustomDestinationCtrl'
         })
+        .state('activity', {
+            url: "/activity",
+            templateUrl: tempateURL,
+            controller: 'ActivityCtrl'
+        })
         .state('form', {
             url: "/form",
             templateUrl: tempateURL,

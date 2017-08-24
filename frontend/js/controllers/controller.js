@@ -328,6 +328,77 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
         $scope.getDestination = [{
             "description": "Hash brownies... Hot Girls... Unlimited Alcohol... Ultimate Nightlife... World famous Red Light District! Oh Yes! This city lets you indulge into everything that is not so legal in the other parts of the world!"
         }];
+        $scope.getPackage = [{
+            "title1": "hello",
+            "title2": "hello1",
+            "image": "img/dest/srilanka.jpg"
+        }, {
+            "title1": "hello",
+            "title2": "hello1",
+            "image": "img/dest/srilanka.jpg"
+        }, {
+            "title1": "hello",
+            "title2": "hello1",
+            "image": "img/dest/srilanka.jpg"
+        }];
+        $scope.getActivity = [{
+            "name": "hello",
+            "image": "img/dest/srilanka.jpg"
+        }, {
+            "name": "hello",
+            "image": "img/dest/srilanka.jpg"
+        }, {
+            "name": "hello",
+            "image": "img/dest/srilanka.jpg"
+        }, {
+            "name": "hello",
+            "image": "img/dest/srilanka.jpg"
+        }, {
+            "name": "hello",
+            "image": "img/dest/srilanka.jpg"
+        }, {
+            "name": "hello",
+            "image": "img/dest/srilanka.jpg"
+        }, {
+            "name": "hello",
+            "image": "img/dest/srilanka.jpg"
+        }, {
+            "name": "hello",
+            "image": "img/dest/srilanka.jpg"
+        }];
+        $scope.getTitle = [{
+            "name": "Explore our Ready Packages made by our EXPERTS!!",
+            "name1": "abc",
+            "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+        }, {
+            "name": "Explore our Ready Packages made by our EXPERTS!!Explore our Ready Packages made by our EXPERTS!!Explore our Ready Packages made by our EXPERTS!!Explore our Ready Packages made by our EXPERTS!!Explore our Ready Packages made by our EXPERTS!!Explore our Ready Packages made by our EXPERTS!!Explore our Ready Packages made by our EXPERTS!!Explore our Ready Packages made by our EXPERTS!!Explore our Ready Packages made by our EXPERTS!!Explore our Ready Packages made by our EXPERTS!!Explore our Ready Packages made by our EXPERTS!!Explore our Ready Packages made by our EXPERTS!!Explore our Ready Packages made by our EXPERTS!!Explore our Ready Packages made by our EXPERTS!!",
+            "name1": "abc",
+            "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+        }, {
+            "name": "Explore our Ready Packages made by our EXPERTS!!Explore our Ready Packages made by our EXPERTS!!Explore our Ready Packages made by our EXPERTS!!",
+            "name1": "abc",
+            "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+        }];
+    })
+
+    .controller('ActivityCtrl', function ($scope, TemplateService, NavigationService, $timeout, toastr, $http) {
+        $scope.template = TemplateService.getHTML("content/activity.html");
+        TemplateService.title = "Activity"; // This is the Title of the Website
+        $scope.navigation = NavigationService.getNavigation();
+        $scope.activityLand = [{
+            "image1": "img/dest/srilanka.jpg",
+            "name": "hello1",
+            "description": "The Array parameter is a list of strings or integers. When you specify a single numeric parameter with the Array constructor, you specify the initial length of the array.",
+            "smallImage": ["img/dest/srilanka.jpg", "img/dest/srilanka.jpg", "img/dest/srilanka.jpg"]
+        }, {
+            "title1": "hello",
+            "title2": "hello1",
+            "image": "img/dest/srilanka.jpg"
+        }, {
+            "title1": "hello",
+            "title2": "hello1",
+            "image": "img/dest/srilanka.jpg"
+        }];
     })
 
     // Example API Controller

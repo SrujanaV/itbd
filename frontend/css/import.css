@@ -10187,7 +10187,7 @@ header {
   top: 458px; }
   .cartadd .mycartme {
     position: fixed;
-    right: -25px;
+    right: -45px;
     z-index: 10;
     top: 498px;
     height: 0; }
@@ -10297,8 +10297,8 @@ header {
   -webkit-transform: rotate(-90deg);
   transform: rotate(-90deg);
   position: absolute;
-  left: -89px;
-  top: 51px;
+  left: -92px;
+  top: 53px;
   z-index: 9999; }
   .mycart2 .socialpatt {
     list-style: none;
@@ -10307,7 +10307,7 @@ header {
     padding: 6px;
     margin: 0; }
   .mycart2 li {
-    padding: 6px 55px;
+    padding: 6px 35px;
     font-size: 18px; }
 
 .patmargin3 {
@@ -11026,8 +11026,27 @@ figure.hover figcaption {
     font-size: 16px;
     margin: 0; }
 
-.displaynonpata {
-  display: none; }
+.checkboxrow .checkbox {
+  display: inline-block !important;
+  padding: 0 9px !important;
+  margin: 0 !important; }
+
+.pad15pat {
+  margin-bottom: 15px; }
+
+.panelacor {
+  padding: 5px 10px 0 !important;
+  border-top: 2px solid #fdd116 !important;
+  border-bottom: 0 solid #fdd116 !important;
+  border-left: 0 solid #fdd116 !important;
+  border-right: 0 solid #fdd116 !important;
+  cursor: pointer !important;
+  border-radius: 0 !important;
+  box-shadow: none !important; }
+  .panelacor .fontpanel {
+    font-size: 18px; }
+    .panelacor .fontpanel a i {
+      font-size: 14px !important; }
 
 .pattmarg2 {
   padding: 2%; }
@@ -11228,6 +11247,94 @@ input[type="time"].form-control {
     .pattsocial .socialpatt .fontsizep {
       padding: 3px 10px;
       font-size: 16px; }
+
+.pattayamarg4 p {
+  font-size: 16px;
+  margin: 0; }
+
+.checkboxrow p {
+  margin: 0 !important;
+  font-size: 21px; }
+
+.image_title {
+  display: inline-block;
+  width: 25px;
+  margin-top: -7px;
+  margin-right: 12px; }
+
+.padding30 {
+  font-size: 12px;
+  padding: 0 30px; }
+
+.socialpatt p {
+  font-size: 16px; }
+
+.socialpatt a {
+  color: black !important; }
+
+.pd50 {
+  padding: 0 50px; }
+
+.activi {
+  margin-top: -5%; }
+
+.category {
+  background-color: #fdd116;
+  padding: 20px 40px;
+  margin: 0 3%; }
+  .category .form-group .form-control {
+    -webkit-appearance: none;
+    display: inline-block;
+    -moz-appearance: none;
+    appearance: none;
+    background: transparent url("..//img/chevron-down.png") no-repeat right center;
+    background-size: 24px 12px;
+    height: auto;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    font-size: 16px;
+    outline: none;
+    border: 0;
+    border-bottom: 2px solid #002b7f;
+    padding: 5px; }
+
+.select-main {
+  width: 187px;
+  font-size: 18px;
+  margin-right: 20px; }
+  .select-main i {
+    font-size: 20px;
+    color: #002b7f; }
+
+.maxht {
+  max-height: 100% !important; }
+
+.mainwidht {
+  width: 100% !important; }
+
+.load-more .button-holder {
+  font-weight: 600;
+  font-size: 16px;
+  color: #fff;
+  background-image: url("../img/btn-bg.png");
+  background-repeat: no-repeat;
+  padding: 10px 40px;
+  width: auto;
+  background-size: 100% 100%;
+  margin: 0 auto;
+  display: inline-block; }
+  .load-more .button-holder .ext-detail {
+    background: none;
+    border: 0; }
+    .load-more .button-holder .ext-detail:focus {
+      outline: none; }
+
+.pdt30 {
+  padding-top: 30px; }
+
+.pdb30 {
+  padding-bottom: 30px; }
 
 .footermenu {
   background: #000000; }

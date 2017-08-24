@@ -405,7 +405,7 @@ header {
     top: 458px;
     .mycartme {
         position: fixed;
-        right: -25px;
+        right: -45px;
         z-index: 10;
         top: 498px;
         height: 0;
@@ -538,8 +538,8 @@ header {
     box-shadow: #002b7f 0 -1px 1px -1px;
     @include transform(rotate(-90deg)); // -webkit-transform: rotate(-90deg);
     position: absolute;
-    left: -89px;
-    top: 51px;
+    left: -92px;
+    top: 53px;
     z-index: 9999;
     .socialpatt {
         list-style: none;
@@ -549,7 +549,7 @@ header {
         margin: 0;
     }
     li {
-        padding: 6px 55px;
+        padding: 6px 35px;
         font-size: 18px;
     }
 }
@@ -1254,12 +1254,8 @@ figure .links {
     height: 100%;
     text-align: center;
     backface-visibility: hidden;
-    @include transform(rotateY(-180deg)); // -webkit-transform: rotateY(-180deg);
-    // -moz-transform: rotateY(-180deg);
-    // transform: rotateY(-180deg);
-    @include transition(all 0.5s); // -webkit-transition: all 0.5s;
-    // -moz-transition: all 0.5s;
-    // transition: all 0.5s;
+    @include transform(rotateY(-180deg));
+    @include transition(all 0.5s);
 }
 
 .flipDiv .descrip {
@@ -1278,29 +1274,18 @@ figure .links {
 
 .flipDiv figure .front {
     backface-visibility: hidden;
-    @include transition(all 0.5s); // -webkit-transition: all 0.5s;
-    // -moz-transition: all 0.5s;
-    // transition: all 0.5s;
+    @include transition(all 0.5s);
 }
 
 .flipDiv figure:hover .front,
 figure.hover .front {
-    // @include transition(all 0.5s);
-    // -webkit-transition: all 0.5s;
-    // -moz-transition: all 0.5s;
-    // transition: all 0.5s;
-    // @include transform(rotateY(180deg));
-    @include transform(rotateY(180deg)); // -webkit-transform: rotateY(180deg);
-    // -moz-transform: rotateY(180deg);
-    // transform: rotateY(180deg);
+    @include transform(rotateY(180deg));
     z-index: 0;
 }
 
 .flipDiv figure:hover figcaption,
 figure.hover figcaption {
-    @include transform(rotateY(0)); // -webkit-transform: rotateY(0);
-    // -moz-transform: rotateY(0);
-    // transform: rotateY(0);
+    @include transform(rotateY(0));
 }
 
 .lodm {
@@ -1427,10 +1412,36 @@ figure.hover figcaption {
     }
 }
 
-.displaynonpata {
-    display: none;
+.checkboxrow .checkbox {
+    display: inline-block!important;
+    padding: 0 9px!important;
+    margin: 0!important;
 }
 
+.pad15pat {
+    margin-bottom: 15px;
+}
+
+.panelacor {
+    padding: 5px 10px 0 !important;
+    border-top: 2px solid #fdd116 !important;
+    border-bottom: 0 solid #fdd116 !important;
+    border-left: 0 solid #fdd116 !important;
+    border-right: 0 solid #fdd116 !important;
+    cursor: pointer !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    .fontpanel {
+        font-size: 18px;
+        a i {
+            font-size: 14px !important;
+        }
+    }
+}
+
+// .displaynonpata {
+//     display: none;
+// }
 .pattmarg2 {
     padding: 2%;
 }
@@ -1664,7 +1675,118 @@ input[type="time"].form-control {
     }
 }
 
+.pattayamarg4 p {
+    font-size: 16px;
+    margin: 0;
+}
+
+.checkboxrow p {
+    margin: 0!important;
+    font-size: 21px;
+}
+
+.image_title {
+    display: inline-block;
+    width: 25px;
+    margin-top: -7px;
+    margin-right: 12px;
+}
+
+.padding30 {
+    font-size: 12px;
+    padding: 0 30px;
+}
+
+.socialpatt p {
+    font-size: 16px;
+}
+
+.socialpatt a {
+    color: black !important;
+}
+
 //destination page ends
+//activity page starts
+.pd50 {
+    padding: 0 50px;
+}
+
+.activi {
+    margin-top: -5%;
+}
+
+.category {
+    background-color: #fdd116;
+    padding: 20px 40px;
+    margin: 0 3%;
+    .form-group .form-control {
+        -webkit-appearance: none;
+        display: inline-block;
+        -moz-appearance: none;
+        appearance: none;
+        background: transparent url("..//img/chevron-down.png") no-repeat right center;
+        background-size: 24px 12px;
+        height: auto;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        font-size: 16px;
+        outline: none;
+        border: 0;
+        border-bottom: 2px solid #002b7f;
+        padding: 5px;
+    }
+}
+
+.select-main {
+    width: 187px;
+    font-size: 18px;
+    margin-right: 20px;
+    i {
+        font-size: 20px;
+        color: #002b7f;
+    }
+}
+
+.maxht {
+    max-height: 100% !important;
+}
+
+.mainwidht {
+    width: 100% !important;
+}
+
+.load-more {
+    .button-holder {
+        font-weight: 600;
+        font-size: 16px;
+        color: #fff;
+        background-image: url("../img/btn-bg.png");
+        background-repeat: no-repeat;
+        padding: 10px 40px;
+        width: auto;
+        background-size: 100% 100%;
+        margin: 0 auto;
+        display: inline-block;
+        .ext-detail {
+            background: none;
+            border: 0;
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+}
+
+.pdt30 {
+    padding-top: 30px;
+}
+
+.pdb30 {
+    padding-bottom: 30px;
+}
+
+//activity page ends
 //footer starts
 .footermenu {
     background: #000000;
