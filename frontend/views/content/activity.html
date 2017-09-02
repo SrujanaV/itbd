@@ -23,13 +23,16 @@
                     </div>
                 </div>
                 <!-- END DROP DOWN -->
-                <div ng-repeat="n in activityLoop" ng-if="showBttn.length!=0">
+                <div ng-repeat="n in activityLoop">
                     <div class="row">
-                        <div class="col-md-4 col-sm-4 col-xs-12 padd15px " ng-if="activityLand.smallImage[n]" ng-repeat="smallImg in  activityLand.smallImage[n]">
+                        <div class="col-md-4 col-sm-4 col-xs-12 padd15px " ng-repeat="smallImg in  activityLand.smallImage[n] track by $index">
+
+                            <pre>{{smallImg.image1}} </pre>
                             <div class="flipDiv">
+
                                 <figure>
                                     <div class="front">
-                                        <img alt="{{smallImg.name}}" title="{{smallImg.name}}" ng-src="{{smallImg.image1" alt="" class="maxht">
+                                        <img alt="{{smallImg.name}}" title="{{smallImg.name}}" ng-src="{{smallImg.image1}}" alt="" class="maxht">
                                         <div class="cart-sec">
                                             <button class="cart uppercase" ng-click="addTocartOnActivityPage(smallImg._id,smallImg.typeCart);">
                                               <i  ng-if="!isInWishlistActivityPage(smallImg._id)" ng-click="cartd();"><img  src="frontend/img/cartremove.png" class="cartsi img-responsive" ></i>

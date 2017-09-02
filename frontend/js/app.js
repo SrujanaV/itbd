@@ -41,6 +41,11 @@ myApp.config(function ($stateProvider, $urlRouterProvider, $httpProvider, $locat
             templateUrl: tempateURL,
             controller: 'ActivityCtrl'
         })
+        .state('whats-hot', {
+            url: "/whats-hot",
+            templateUrl: tempateURL,
+            controller: 'WhatsHotCtrl'
+        })
         .state('form', {
             url: "/form",
             templateUrl: tempateURL,

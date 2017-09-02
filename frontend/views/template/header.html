@@ -10,8 +10,8 @@
                         <li class="pregular dropdown">
                             <a class="bluecol" ui-sref="destination">DESTINATIONS</a>
                             <div class="dropdown-menu widht marg0">
-                                <div class="cont" ng-repeat="data in onlyDest">
-                                    <div class="des" ng-repeat="n in data">
+                                <div class="cont">
+                                    <div class="des" ng-repeat="n in onlyDest">
                                         <a ui-sref="customdestination({id:n._id})">{{n.name}}</a>
                                     </div>
                                 </div>
@@ -88,8 +88,7 @@
                 <div class="whatsmarg4">
                     <div class="mycart2">
                         <ul class="list-group socialpatt yellow_back_lightcolor ">
-                            <li ng-click="headerCartOpenUp(); mycart = !mycart" ng-class="{ active: mycart }" class="Roboto black fontsizep white_back_color active"
-                                style="">ENQUIRE NOW</li>
+                            <li ng-click="headerCartOpenUp(); mycart = !mycart" ng-class="{ active: mycart }" class="Roboto black fontsizep white_back_color active">ENQUIRE NOW</li>
                         </ul>
                     </div>
                     <div class="row textalign" ng-hide="submitCart">

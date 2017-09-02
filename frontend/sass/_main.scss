@@ -1724,7 +1724,7 @@ input[type="time"].form-control {
         display: inline-block;
         -moz-appearance: none;
         appearance: none;
-        background: transparent url("..//img/chevron-down.png") no-repeat right center;
+        background: transparent url("../img/chevron-down.png") no-repeat right center;
         background-size: 24px 12px;
         height: auto;
         border-top: none;
@@ -1787,6 +1787,121 @@ input[type="time"].form-control {
 }
 
 //activity page ends
+//whats hot page starts
+.wts .flexslider:hover .flex-direction-nav .flex-prev {
+    left: -16px !important;
+}
+
+.wts .flex-control-nav {
+    width: 25% !important;
+    position: absolute;
+    bottom: 0 !important;
+    text-align: center !important;
+    display: inline-block !important;
+    z-index: 2 !important;
+    right: 2% !important;
+}
+
+.categoryup {
+    background-color: #fdd116;
+    padding: 20px 40px 40px;
+    margin: 0 4%;
+    h1 {
+        font-size: 60px;
+        margin: 6% 0 2%;
+        display: inline-block;
+        width: 50%;
+        line-height: 46px;
+    }
+}
+
+.shadow-down2 {
+    position: absolute;
+    bottom: 0;
+    background: rgba(255, 252, 252, 0.82);
+    height: 39%;
+    width: 100%;
+}
+
+.event-name2 {
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    @include transform(translate(-50%));
+    color: #fff;
+    font-weight: 600;
+    font-family: pregular;
+    width: 100%;
+    text-align: center;
+}
+
+.event-name2 {
+    .eventp {
+        margin: 0;
+        font-size: 16px;
+    }
+    .eventh2 {
+        margin-bottom: 5px;
+        font-family: pregular;
+        font-weight: 900;
+        letter-spacing: -1px;
+        font-size: 26px;
+        text-transform: capitalize;
+    }
+    .eventhr {
+        border-top: 3px solid #fdd116 !important;
+        margin: 0 36% 3px !important;
+    }
+}
+
+.over-layer2 {
+    display: none;
+    background-color: rgba(226, 226, 226, 0.91);
+    height: 100%;
+    width: 101%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    @include transform(translate(-50%,
+    -50%));
+}
+
+.hoverhold {
+    font-weight: 600;
+    padding: 18% 0 0;
+    .eventp {
+        margin: 0;
+        font-size: 18px;
+    }
+    .eventh2 {
+        margin-bottom: 5px;
+        font-family: pregular;
+        font-weight: 900;
+        letter-spacing: -1px;
+        font-size: 26px;
+        text-transform: capitalize;
+    }
+    .eventhr {
+        border-top: 3px solid #ffca18 !important;
+        margin: 0 36% 7px !important;
+    }
+    .morebutton {
+        outline: none;
+        background: none;
+        border: 0;
+        letter-spacing: 2px;
+        font-weight: 600;
+        font-size: 14px;
+        color: #ffffff;
+        background-image: url("../img/btn-bg.png");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        padding: 10px 35px;
+        margin: 3% 0;
+    }
+}
+
+//whats hot page ends
 //footer starts
 .footermenu {
     background: #000000;

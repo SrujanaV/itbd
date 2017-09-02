@@ -385,6 +385,15 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
         $scope.template = TemplateService.getHTML("content/activity.html");
         TemplateService.title = "Activity"; // This is the Title of the Website
         $scope.navigation = NavigationService.getNavigation();
+        $scope.myDropdown = [{
+            "name": "Portugal"
+        }, {
+            "name": "Portugal"
+        }, {
+            "name": "Portugal"
+        }, {
+            "name": "Portugal"
+        }];
         $scope.activityLand = [{
             "image1": "img/dest/srilanka.jpg",
             "name": "hello1",
@@ -399,6 +408,80 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
             "title2": "hello1",
             "image": "img/dest/srilanka.jpg"
         }];
+    })
+
+    .controller('WhatsHotCtrl', function ($scope, TemplateService, NavigationService, $timeout, toastr, $http) {
+        $scope.template = TemplateService.getHTML("content/whats-hot.html");
+        TemplateService.title = "Activity"; // This is the Title of the Website
+        $scope.navigation = NavigationService.getNavigation();
+        $scope.allDestination = [{
+            "name": "Hat Rin Full Moon Party",
+            "fromDate": "03-04 November 2017",
+            "image": "img/bachelor/img.jpg",
+            "location": "Koh Phangan"
+        }, {
+            "name": "Armenia",
+            "fromDate": "03-04 November 2017",
+            "image": "img/bachelor/img1.jpg",
+            "location": "Koh Phangan"
+        }, {
+            "name": "Australia",
+            "fromDate": "03-04 November 2017",
+            "image": "img/bachelor/img2.jpg",
+            "location": "Koh Phangan"
+        }, {
+            "name": "Austria",
+            "fromDate": "03-04 November 2017",
+            "image": "img/bachelor/img3.jpg",
+            "location": "Koh Phangan"
+        }, {
+            "name": "Austria",
+            "fromDate": "03-04 November 2017",
+            "image": "img/bachelor/img4.jpg",
+            "location": "Koh Phangan"
+        }, {
+            "name": "Austria",
+            "fromDate": "03-04 November 2017",
+            "image": "img/bachelor/img5.jpg",
+            "location": "Koh Phangan"
+        }]
+        $scope.allDestination1 = [{
+            "name": "Hat Rin Full Moon Party",
+            "fromDate": "03-04 November 2017",
+            "image": "img/bachelorette/img.jpg",
+            "location": "Koh Phangan"
+        }, {
+            "name": "Armenia",
+            "fromDate": "03-04 November 2017",
+            "image": "img/bachelorette/img1.jpg",
+            "location": "Koh Phangan"
+        }, {
+            "name": "Australia",
+            "fromDate": "03-04 November 2017",
+            "image": "img/bachelorette/img2.jpg",
+            "location": "Koh Phangan"
+        }, {
+            "name": "Austria",
+            "fromDate": "03-04 November 2017",
+            "image": "img/bachelorette/img3.jpg",
+            "location": "Koh Phangan"
+        }, {
+            "name": "Austria",
+            "fromDate": "03-04 November 2017",
+            "image": "img/bachelorette/img4.jpg",
+            "location": "Koh Phangan"
+        }, {
+            "name": "Austria",
+            "fromDate": "03-04 November 2017",
+            "image": "img/bachelorette/img5.jpg",
+            "location": "Koh Phangan"
+        }]
+        $scope.mySlidesss = [{
+            "banner": "img/wh1.jpg",
+            "banner": "img/wh2.jpg",
+            "banner": "img/wh1.jpg",
+            "banner": "img/wh2.jpg"
+        }]
     })
 
     // Example API Controller
