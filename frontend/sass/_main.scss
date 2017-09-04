@@ -1053,6 +1053,9 @@ figure .links {
     min-width: 100% !important;
     display: block;
     background: #fdd116 !important;
+    bottom: 0;
+    height: 175px;
+    overflow: auto;
 }
 
 .customs .dropdown:hover .dropdown-menu,
@@ -1277,12 +1280,11 @@ figure .links {
     @include transition(all 0.5s);
 }
 
-.flipDiv figure:hover .front,
-figure.hover .front {
-    @include transform(rotateY(180deg));
-    z-index: 0;
-}
-
+// .flipDiv figure:hover .front,
+// figure.hover .front {
+//     @include transform(rotateY(180deg));
+//     z-index: 0;
+// }
 .flipDiv figure:hover figcaption,
 figure.hover figcaption {
     @include transform(rotateY(0));

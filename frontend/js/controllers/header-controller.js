@@ -13,6 +13,8 @@ myApp.controller('headerCtrl', function ($scope, TemplateService) {
     }, {
         "name": "Austria"
     }, {
+        "name": "Azerbaijan"
+    }, {
         "name": "Bhutan"
     }, {
         "name": "Brazil"
@@ -25,15 +27,15 @@ myApp.controller('headerCtrl', function ($scope, TemplateService) {
     }, {
         "name": "Croatia"
     }, {
-        "name": "Cruise"
+        "name": "Cruise Vacations"
     }, {
-        "name": "Czechia"
+        "name": "Czech Republic"
     }, {
         "name": "Denmark"
     }, {
         "name": "Estonia"
     }, {
-        "name": "Fiji"
+        "name": "Fiji Islands"
     }, {
         "name": "Finland"
     }, {
@@ -50,6 +52,8 @@ myApp.controller('headerCtrl', function ($scope, TemplateService) {
         "name": "Hungary"
     }, {
         "name": "Iceland"
+    }, {
+        "name": "India"
     }, {
         "name": "Indonesia"
     }, {
@@ -71,7 +75,7 @@ myApp.controller('headerCtrl', function ($scope, TemplateService) {
     }, {
         "name": "Lithuania"
     }, {
-        "name": "Macau"
+        "name": "Macao"
     }, {
         "name": "Malaysia"
     }, {
@@ -84,5 +88,57 @@ myApp.controller('headerCtrl', function ($scope, TemplateService) {
         "name": "Mexico"
     }, {
         "name": "Monaco"
+    }, {
+        "name": "Moscow"
+    }, {
+        "name": "Netherlands"
+    }, {
+        "name": "New Zealand"
+    }, {
+        "name": "Norway"
+    }, {
+        "name": "Peru"
+    }, {
+        "name": "Phillippines"
+    }, {
+        "name": "Poland"
+    }, {
+        "name": "Portugal"
+    }, {
+        "name": "Puerto Rico"
+    }, {
+        "name": "River Cruises"
+    }, {
+        "name": "Rwanda"
+    }, {
+        "name": "Seychelles"
+    }, {
+        "name": "Singapore"
+    }, {
+        "name": "Slovakia"
+    }, {
+        "name": "Slovenia"
+    }, {
+        "name": "South Africa"
+    }, {
+        "name": "Srilanka"
+    }, {
+        "name": "St.Petersburg"
+    }, {
+        "name": "Sweden"
+    }, {
+        "name": "Switzerland"
+    }, {
+        "name": "Tanzania"
+    }, {
+        "name": "Thailand"
+    }, {
+        "name": "United Arab of Emirates"
+    }, {
+        "name": "United Kingdom"
+    }, {
+        "name": "United States of America"
+    }, {
+        "name": "Zimbabwe"
     }];
 });

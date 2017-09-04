@@ -104,18 +104,18 @@
 <!-- START SELECT FOR CUSTOMISATION -->
 <div class="padd paddup">
     <figure class="m2">
-        <img alt="In time by Design" class="img-responsive" src="frontend/img/4.jpg">
+        <img alt="In time by Design" class="img-responsive" src="img/4.jpg">
         <figcaption>
             <div class="links">
                 <div>
-                    <img alt="In time by Design" class="imgab" src="frontend/img/enquire.png">
+                    <img alt="In time by Design" class="imgab" src="img/enquire.png">
                     <form class="himg2" ng-submit="goto(formdata)" ng-init="abc">
                         <label class="pregular labsec">I want to go to</label>
                         <fieldset class="inputtag">
                             <ui-select ng-model="ctrl.person.selected" class="plan-dark-bold">
                                 <ui-select-match placeholder="Select Destination">{{$select.selected.name}}</ui-select-match>
                                 <ui-select-choices repeat="item in dropDown">
-                                    <div ng-bind-html="item.name"></div>
+                                    <div>{{item.name}}</div>
                                 </ui-select-choices>
                             </ui-select>
                         </fieldset>
@@ -143,7 +143,7 @@
                 <br>We have it all; on a scale from Doug to Mr. Chow depending on how much you would prefer indulging.
             </p>
         </div>
-        <P class="sado"><a class="whit_color" href="aboutus">KNOW THE TEAM</a></P>
+        <!-- <P class="sado"><a class="whit_color" href="aboutus">KNOW THE TEAM</a></P> -->
     </div>
 </div>
 <!-- END ABOUT -->

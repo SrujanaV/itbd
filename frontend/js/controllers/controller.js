@@ -2,7 +2,6 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
         $scope.template = TemplateService.getHTML("content/home.html");
         TemplateService.title = "Home"; //This is the Title of the Website
         $scope.navigation = NavigationService.getNavigation();
-
         $scope.mySlides = [{
             "img": "img/bg1.jpg"
         }, {
@@ -13,58 +12,174 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
             "img": "img/bg4.jpg"
         }];
         $scope.popularDestination = [{
-            "image": "img/dest1.jpg",
-            "name": "USA"
+            "image": "img/australia.jpg",
+            "name": "AUSTRALIA"
         }, {
-            "image": "img/dest1.jpg",
-            "name": "Australia"
+            "image": "img/brazil.jpg",
+            "name": "BRAZIL"
         }, {
-            "image": "img/dest1.jpg",
-            "name": "Africa"
+            "image": "img/canada.jpg",
+            "name": "CANADA"
         }, {
-            "image": "img/dest1.jpg",
-            "name": "London"
+            "image": "img/france.jpg",
+            "name": "FRANCE"
         }];
         $scope.popularAttraction = [{
-            "image1": "img/attract1.jpg",
-            "name": "Australia"
+            "image1": "img/italy.jpg",
+            "name": "ITALY"
         }, {
-            "image1": "img/attract1.jpg",
-            "name": "USA"
+            "image1": "img/cruise.jpg",
+            "name": "CRUISE"
         }, {
-            "image1": "img/attract1.jpg",
-            "name": "Africa"
+            "image1": "img/hongkong.jpg",
+            "name": "Hong Kong"
         }, {
-            "image1": "img/attract1.jpg",
-            "name": "London"
+            "image1": "img/uk.jpg",
+            "name": "United Kingdom"
         }];
         $scope.dropDown = [{
+            "name": "Argentina"
+        }, {
+            "name": "Armenia"
+        }, {
             "name": "Australia"
         }, {
-            "name": "USA"
+            "name": "Austria"
         }, {
-            "name": "Africa"
+            "name": "Azerbaijan"
         }, {
-            "name": "London"
+            "name": "Bhutan"
+        }, {
+            "name": "Brazil"
+        }, {
+            "name": "Bulgaria"
+        }, {
+            "name": "Canada"
+        }, {
+            "name": "Chile"
+        }, {
+            "name": "Croatia"
+        }, {
+            "name": "Cruise Vacations"
+        }, {
+            "name": "Czech Republic"
+        }, {
+            "name": "Denmark"
+        }, {
+            "name": "Estonia"
+        }, {
+            "name": "Fiji Islands"
+        }, {
+            "name": "Finland"
+        }, {
+            "name": "France"
+        }, {
+            "name": "Georgia"
+        }, {
+            "name": "Germany"
+        }, {
+            "name": "Greece"
+        }, {
+            "name": "Hong Kong"
+        }, {
+            "name": "Hungary"
+        }, {
+            "name": "Iceland"
+        }, {
+            "name": "India"
+        }, {
+            "name": "Indonesia"
+        }, {
+            "name": "Israel"
+        }, {
+            "name": "Italy"
+        }, {
+            "name": "Jamaica"
+        }, {
+            "name": "Japan"
+        }, {
+            "name": "Jordan"
+        }, {
+            "name": "Kenya"
+        }, {
+            "name": "Korea"
+        }, {
+            "name": "Latvia"
+        }, {
+            "name": "Lithuania"
+        }, {
+            "name": "Macao"
+        }, {
+            "name": "Malaysia"
+        }, {
+            "name": "Maldives"
+        }, {
+            "name": "Malta"
+        }, {
+            "name": "Mauritius"
+        }, {
+            "name": "Mexico"
+        }, {
+            "name": "Monaco"
+        }, {
+            "name": "Moscow"
+        }, {
+            "name": "Netherlands"
+        }, {
+            "name": "New Zealand"
+        }, {
+            "name": "Norway"
+        }, {
+            "name": "Peru"
+        }, {
+            "name": "Phillippines"
+        }, {
+            "name": "Poland"
+        }, {
+            "name": "Portugal"
+        }, {
+            "name": "Puerto Rico"
+        }, {
+            "name": "River Cruises"
+        }, {
+            "name": "Rwanda"
+        }, {
+            "name": "Seychelles"
+        }, {
+            "name": "Singapore"
+        }, {
+            "name": "Slovakia"
+        }, {
+            "name": "Slovenia"
+        }, {
+            "name": "South Africa"
+        }, {
+            "name": "Srilanka"
+        }, {
+            "name": "St.Petersburg"
+        }, {
+            "name": "Sweden"
+        }, {
+            "name": "Switzerland"
+        }, {
+            "name": "Tanzania"
+        }, {
+            "name": "Thailand"
+        }, {
+            "name": "United Arab of Emirates"
+        }, {
+            "name": "United Kingdom"
+        }, {
+            "name": "United States of America"
+        }, {
+            "name": "Zimbabwe"
         }];
-        $scope.mySlidesss = [{
-            "banner": "img/banner.jpg",
-        }, {
-            "banner": "img/banner2.jpg",
-        }, {
-            "banner": "img/banner3.jpg",
-        }, {
-            "banner": "img/banner4.jpg",
-        }];
-        $scope.dropDown = [{
-            "name": "Australia"
-        }, {
-            "name": "USA"
-        }, {
-            "name": "Africa"
-        }, {
-            "name": "London"
-        }];
+
+        // myApp.filter('safeHtml', function ($sce) {
+        //         return function (val) {
+        //             return $sce.trustAsHtml(val);
+        //         };
+
     })
 
     .controller('FormCtrl', function ($scope, TemplateService, NavigationService, $timeout, toastr, $http) {
@@ -326,45 +441,46 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
         TemplateService.title = "Grid"; // This is the Title of the Website
         $scope.navigation = NavigationService.getNavigation();
         $scope.getDestination = [{
+            "image": "img/customDes/argentina.jpg",
             "description": "Hash brownies... Hot Girls... Unlimited Alcohol... Ultimate Nightlife... World famous Red Light District! Oh Yes! This city lets you indulge into everything that is not so legal in the other parts of the world!"
         }];
-        $scope.getPackage = [{
-            "title1": "hello",
-            "title2": "hello1",
-            "image": "img/dest/srilanka.jpg"
-        }, {
-            "title1": "hello",
-            "title2": "hello1",
-            "image": "img/dest/srilanka.jpg"
-        }, {
-            "title1": "hello",
-            "title2": "hello1",
-            "image": "img/dest/srilanka.jpg"
-        }];
+        // $scope.getPackage = [{
+        //     "title1": "hello",
+        //     "title2": "hello1",
+        //     "image": "img/dest/srilanka.jpg"
+        // }, {
+        //     "title1": "hello",
+        //     "title2": "hello1",
+        //     "image": "img/dest/srilanka.jpg"
+        // }, {
+        //     "title1": "hello",
+        //     "title2": "hello1",
+        //     "image": "img/dest/srilanka.jpg"
+        // }];
         $scope.getActivity = [{
-            "name": "hello",
-            "image": "img/dest/srilanka.jpg"
+            "name": "BICYCLE TOUR",
+            "image": "img/activities/bicycle_tour.jpg"
         }, {
-            "name": "hello",
-            "image": "img/dest/srilanka.jpg"
+            "name": "FOOTBALL",
+            "image": "img/activities/football.jpg"
         }, {
-            "name": "hello",
-            "image": "img/dest/srilanka.jpg"
+            "name": "ROULETTE",
+            "image": "img/activities/roulette.jpg"
         }, {
-            "name": "hello",
-            "image": "img/dest/srilanka.jpg"
+            "name": "NIGHT CLUB/DISCO",
+            "image": "img/activities/nightclub.jpg"
         }, {
-            "name": "hello",
-            "image": "img/dest/srilanka.jpg"
+            "name": "PARASAILING",
+            "image": "img/activities/parasailing.jpg"
         }, {
-            "name": "hello",
-            "image": "img/dest/srilanka.jpg"
+            "name": "SCUBA DIVING",
+            "image": "img/activities/scuba_diving.jpg"
         }, {
-            "name": "hello",
-            "image": "img/dest/srilanka.jpg"
+            "name": "SKY DIVING",
+            "image": "img/activities/sky_diving.jpg"
         }, {
-            "name": "hello",
-            "image": "img/dest/srilanka.jpg"
+            "name": "TRECKING",
+            "image": "img/activities/trecking.jpg"
         }];
         $scope.getTitle = [{
             "name": "Explore our Ready Packages made by our EXPERTS!!",
