@@ -1,7 +1,7 @@
 <!-- START BANNER  -->
 <div class="container">
     <figure class="m1">
-        <img alt="In Time By Design" class="img-responsive" src="img/customDes/argentina.jpg">
+        <img alt="In Time By Design" class="img-responsive" ng-src="{{getDestination.image}}">
     </figure>
 </div>
 <!-- END BANNER  -->
@@ -10,9 +10,7 @@
     <div class="container ">
         <div class="col-md-12">
             <div class="pattayamarg4 yellow_back_lightcolor">
-                <div class="row Robotor bluecol">Hash brownies... Hot Girls... Unlimited Alcohol... Ultimate Nightlife... World famous Red Light District!
-                    Oh Yes! This city lets you indulge into everything that is not so legal in the other parts of the world!
-                </div>
+                <div class="row Robotor bluecol">{{getDestination.description}}</div>
             </div>
         </div>
     </div>
@@ -98,22 +96,7 @@
                 <div class="whatsmain">
                     <div class="margincheck">
                         <div class="row checkboxrow Robotor bluecol yellow_back_color">
-                            <div class="col-md-4 col-sm-6 col-xs-12  pading5 ">
-                                <div class="checkbox checkboxing">
-                                    <input value="{{location.value}}" type="checkbox" ng-model="selectedAll.location" ng-click="checkAllLocation()" id="later">
-                                    <label for="later"><span></span> All</label>
-                                </div>
-                                <div class="checkbox checkboxing">
-                                    <input type="checkbox" ng-model="day.model" id="day" ng-click="searchDay()">
-                                    <label for="day"><span></span>Day</label>
-                                    <img src="frontend/img/Vector-Smart-Object1.png" alt="" class="check_img">
-                                    <input type="checkbox" ng-model="night.model" id="night" ng-click="searchNight()">
-                                    <label for="night"><span></span> Night</label>
-                                    <img src="frontend/img/Vector.png" alt="" class="check_img vector">
-                                </div>
-                            </div>
-                            <div class="col-md-8 col-sm-6 col-xs-12">
-                                <p>Customise your trip by adding to cart</p>
+                            <div class="col-md-12">dummy text
                             </div>
                         </div>
                     </div>
@@ -124,12 +107,6 @@
                             <figure>
                                 <div class="front">
                                     <img alt="{{data.name}}" title="{{data.name}}" ng-src="{{data.image}}" alt="" class="maxwidth img-responsive" ng-click="addTocart(data)">
-                                    <div class="cart-sec">
-                                        <button class="cart uppercase" ng-click="addTocartOnActivity(data._id,data.typeCart);">
-                                          <i   ng-if="!isInWishlistActivity(data._id)"  ng-click="cartd();"><img  src="frontend/img/cartremove.png" class="cartsi img-responsive" ></i>
-                                          <i  ng-if="isInWishlistActivity(data._id)" ng-click="cartr();"><img  src="frontend/img/cartadd.png" class="cartsi img-responsive"></i>
-                                      </button>
-                                    </div>
                                     <div class="shadow-down"></div>
                                     <div class="event-name">
                                         <span>{{data.name}}</span>

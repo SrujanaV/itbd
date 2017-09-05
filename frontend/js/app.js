@@ -32,7 +32,7 @@ myApp.config(function ($stateProvider, $urlRouterProvider, $httpProvider, $locat
             controller: 'DestinationCtrl'
         })
         .state('customdestination', {
-            url: "/customdestination",
+            url: "/customdestination/:id",
             templateUrl: tempateURL,
             controller: 'CustomDestinationCtrl'
         })

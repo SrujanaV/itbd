@@ -96,49 +96,6 @@ myApp.controller('headerCtrl', function ($scope, TemplateService) {
         "name": "New Zealand"
     }, {
         "name": "Norway"
-    }, {
-        "name": "Peru"
-    }, {
-        "name": "Phillippines"
-    }, {
-        "name": "Poland"
-    }, {
-        "name": "Portugal"
-    }, {
-        "name": "Puerto Rico"
-    }, {
-        "name": "River Cruises"
-    }, {
-        "name": "Rwanda"
-    }, {
-        "name": "Seychelles"
-    }, {
-        "name": "Singapore"
-    }, {
-        "name": "Slovakia"
-    }, {
-        "name": "Slovenia"
-    }, {
-        "name": "South Africa"
-    }, {
-        "name": "Srilanka"
-    }, {
-        "name": "St.Petersburg"
-    }, {
-        "name": "Sweden"
-    }, {
-        "name": "Switzerland"
-    }, {
-        "name": "Tanzania"
-    }, {
-        "name": "Thailand"
-    }, {
-        "name": "United Arab of Emirates"
-    }, {
-        "name": "United Kingdom"
-    }, {
-        "name": "United States of America"
-    }, {
-        "name": "Zimbabwe"
     }];
+    $scope.onlyDest = _.chunk($scope.onlyDest, 10);
 });

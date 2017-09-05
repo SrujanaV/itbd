@@ -1,11 +1,13 @@
 <!--  START BANNER -->
-<div class="container wts">
-    <flex-slider id="homeslider" flex-slide="s in mySlidesss track by $index" slideshow-speed="2500" slideshow="true" animation-speed="1000"
-        class="m1 carousel">
-        <li>
-            <img alt="In time by Design" class="img-responsive" ng-src="{{s.banner}}">
-        </li>
-    </flex-slider>
+<div class="container">
+    <div class="wts">
+        <flex-slider id="homeslider" flex-slide="s in mySlidesss" slideshow-speed="2500" slideshow="true" animation-speed="1000"
+            class="m1 carousel">
+            <li>
+                <img alt="In time by Design" class="img-responsive" ng-src="{{s.banner}}">
+            </li>
+        </flex-slider>
+    </div>
 </div>
 <!-- END BANNER  -->
 <!--START UPCOMING PAGE   -->
@@ -17,28 +19,22 @@
                 <div class="col-md-4 col-sm-6 col-xs-12 padd15px" ng-repeat="data in allDestination">
                     <div class="events">
                         <img alt="In time by Design " title="In time by Design" ng-src="{{data.image}}" alt="" class="img-responsive">
-                        <div class="cart-sec">
-                            <button class="cart uppercase" ng-click="addTocartOnWhatsHot10(data._id,data.typeCart);">
-                            <i   ng-if="!isInWishlistWhatsHot(data._id)" ng-click="cartd();"><img  src="frontend/img/cartremove.png" class="cartsi img-responsive" ></i>
-                            <i  ng-if="isInWishlistWhatsHot(data._id)" ng-click="cartr();"><img  src="frontend/img/cartadd.png" class="cartsi img-responsive"></i>
-                        </button>
-                        </div>
-                        <div class="shadow-down2"></div>
+                        <!-- <div class="shadow-down2"></div>
                         <div class="event-name2">
                             <h2 class="bluecol eventh2 pregular">{{data.name}}</h2>
                             <hr class="eventhr">
                             <p class="bluecol eventp Roboto">{{data.fromDate |date:'dd'}}-{{data.toDate |date:'dd MMMM yyyy'}}</p>
                             <p class="bluecol eventp Roboto">{{data.location}}</p>
-                        </div>
+                        </div> -->
                         <a ui-sref="whats-hot-more({id:data._id})">
                             <div class="over-layer2 text-center" ui-sref="whats-hot-more({id:data._id})">
-                                <div class="hoverhold">
+                                <!-- <div class="hoverhold">
                                     <h2 class="bluecol eventh2 pregular">{{data.name}}</h2>
                                     <hr class="eventhr">
                                     <p class="bluecol eventp Roboto">{{data.fromDate |date:'dd'}}-{{data.toDate |date:'dd MMMM yyyy'}}</p>
                                     <p class="bluecol eventp Roboto">{{data.location}}</p>
                                     <button class="morebutton"><a ui-sref="whats-hot-more({id:data._id})" class="whit_color">KNOW MORE</a></button>
-                                </div>
+                                </div> -->
                             </div>
                         </a>
                     </div>
@@ -51,28 +47,22 @@
                 <div class="col-md-4 col-sm-6 col-xs-12 padd15px" ng-repeat="data in allDestination1">
                     <div class="events">
                         <img alt="In time by Design " title="In time by Design " ng-src="{{data.image}}" alt="" class="img-responsive">
-                        <div class="cart-sec">
-                            <button class="cart uppercase" ng-click="addTocartOnWhatsHot10(data._id,data.typeCart);">
-                            <i   ng-if="!isInWishlistWhatsHot(data._id)" ng-click="cartd();"><img  src="frontend/img/cartremove.png" class="cartsi img-responsive" ></i>
-                            <i  ng-if="isInWishlistWhatsHot(data._id)" ng-click="cartr();"><img  src="frontend/img/cartadd.png" class="cartsi img-responsive"></i>
-                        </button>
-                        </div>
-                        <div class="shadow-down2"></div>
+                        <!-- <div class="shadow-down2"></div>
                         <div class="event-name2">
                             <h2 class="bluecol eventh2 pregular">{{data.name}}</h2>
                             <hr class="eventhr">
                             <p class="bluecol eventp Roboto">{{data.fromDate |date:'dd'}}-{{data.toDate |date:'dd MMMM yyyy'}}</p>
                             <p class="bluecol eventp Roboto">{{data.location}}</p>
-                        </div>
+                        </div> -->
                         <a ui-sref="whats-hot-more({id:data._id})">
                             <div class="over-layer2 text-center" ui-sref="whats-hot-more({id:data._id})">
-                                <div class="hoverhold">
+                                <!-- <div class="hoverhold">
                                     <h2 class="bluecol eventh2 pregular">{{data.name}}</h2>
                                     <hr class="eventhr">
                                     <p class="bluecol eventp Roboto">{{data.fromDate |date:'dd'}}-{{data.toDate |date:'dd MMMM yyyy'}}</p>
                                     <p class="bluecol eventp Roboto">{{data.location}}</p>
                                     <button class="morebutton"><a ui-sref="whats-hot-more({id:data._id})" class="whit_color">KNOW MORE</a></button>
-                                </div>
+                            </div> -->
                             </div>
                         </a>
                     </div>
