@@ -109,16 +109,16 @@ body {
 }
 
 .yellow_color {
-    color: #fdd116 !important;
+    color: #a5cb42 !important;
 }
 
 .yellow_color:hover {
-    color: #fdd116 !important;
+    color: #a5cb42 !important;
     text-decoration: none;
 }
 
 .yellow_back_color {
-    background-color: #fdd116 !important;
+    background-color: #a5cb42 !important;
 }
 
 .white_back_color {
@@ -126,7 +126,7 @@ body {
 }
 
 .yellow_back_lightcolor {
-    background-color: #fdd116 !important;
+    background-color: #a5cb42 !important;
 }
 
 .grey_color {
@@ -157,15 +157,15 @@ body {
 }
 
 .bluecol {
-    color: #002b7f !important;
+    color: #0e0f24 !important;
 }
 
 .bluecol_back {
-    background-color: #002b7f !important;
+    background-color: #0e0f24 !important;
 }
 
 .bluecol:hover {
-    color: #002b7f!important;
+    color: #0e0f24!important;
     text-decoration: none;
 }
 
@@ -289,19 +289,19 @@ header {
 .headera>a {
     font-weight: bold;
     letter-spacing: 1px;
-    border-right: 2px solid #36438c;
+    border-right: 2px solid #0e0f24;
     padding: 0 14px !important;
     line-height: 10px !important;
-    color: #012B7F;
+    color: #0e0f24;
 }
 
 .navbar-default .navbar-nav>li>a:focus,
 .navbar-default .navbar-nav>li>a:hover {
-    color: #012B7F;
+    color: #0e0f24;
 }
 
 .navbar-default .navbar-nav>li>a {
-    color: #002b7f;
+    color: #0e0f24;
 }
 
 .bordern {
@@ -313,8 +313,8 @@ header {
 }
 
 .himg {
-    margin-top: -6px;
-    width: 66px;
+    width: 209px;
+    border-radius: 100px;
     background-color: #fff;
     box-shadow: 0 0 0 5px #ffffff;
     position: absolute;
@@ -332,7 +332,7 @@ header {
 .hbc {
     text-align: center;
     border-color: rgba(0, 43, 127, 0.19) !important;
-    background-color: #fdd116 !important;
+    background-color: #a5cb42 !important;
     .rit {
         text-align: right;
     }
@@ -348,7 +348,7 @@ header {
 }
 
 .tp .dropdown:hover {
-    background-color: #002b7f !important;
+    background-color: #0e0f24 !important;
 }
 
 .dropdown-menu {
@@ -382,14 +382,14 @@ header {
 .p5 {
     text-align: center;
     border-color: rgba(0, 43, 127, 0.19) !important;
-    background-color: #fdd116 !important;
+    background-color: #a5cb42 !important;
     .rit {
         text-align: right;
     }
     .tp {
         font-size: 11px;
         text-align: center;
-        padding-left: 145px;
+        padding-left: 380px;
         color: #000;
         li {
             padding: 24px 0;
@@ -418,7 +418,7 @@ header {
 }
 
 .hdn {
-    color: #0b358c;
+    color: #0e0f24;
     font-size: 12px;
     margin-top: 10px;
     margin-bottom: 0;
@@ -435,7 +435,7 @@ header {
         text-align: center;
     }
     a {
-        color: #fdd116;
+        color: #a5cb42;
         font-size: 12px;
         padding: 0 1px;
     }
@@ -501,7 +501,7 @@ header {
 
 .paddmain {
     padding-bottom: 15px;
-    box-shadow: #002b7f 0 0 1px 0;
+    box-shadow: #0e0f24 0 0 1px 0;
 }
 
 .patmargin3 {
@@ -516,7 +516,7 @@ header {
             background-size: 100% 100%;
             padding: 3px 25px;
             border: none;
-            background-color: #fdd116;
+            background-color: #a5cb42;
             outline: none;
         }
         .form-group {
@@ -535,7 +535,7 @@ header {
 }
 
 .mycart2 {
-    box-shadow: #002b7f 0 -1px 1px -1px;
+    box-shadow: #0e0f24 0 -1px 1px -1px;
     @include transform(rotate(-90deg)); // -webkit-transform: rotate(-90deg);
     position: absolute;
     left: -92px;
@@ -566,7 +566,7 @@ header {
             background-size: 100% 100%;
             padding: 3px 25px;
             border: none;
-            background-color: #fdd116;
+            background-color: #a5cb42;
             outline: none;
         }
         .form-group {
@@ -654,7 +654,7 @@ header {
 }
 
 .dropdown-menu a {
-    color: #fdd116;
+    color: #a5cb42;
     padding: 0 7px;
     text-decoration: none;
     display: block;
@@ -670,15 +670,15 @@ header {
 
 .dropdown:hover .dropdown-menu {
     display: block;
-    background-color: #002b7f !important;
+    background-color: #0e0f24 !important;
 }
 
 .dropdown:hover .colchange {
-    color: #fdd116 !important;
+    color: #a5cb42 !important;
 }
 
 .tp .dropdown:hover {
-    background-color: #002b7f !important;
+    background-color: #0e0f24 !important;
 }
 
 .socialpatt p {
@@ -750,8 +750,8 @@ header {
 }
 
 .borderup {
-    background: linear-gradient(to right, white 58%, white 41%, white 41%, white 47%, #fdd116 47%);
-    border-right: 20px solid #fdd116;
+    background: linear-gradient(to right, white 58%, white 41%, white 41%, white 47%, #a5cb42 47%);
+    border-right: 20px solid #a5cb42;
     padding: 20px;
     position: relative;
 }
@@ -797,7 +797,7 @@ header {
 .p2 {
     font-size: 63px;
     font-weight: bolder;
-    color: #fdd116;
+    color: #a5cb42;
     position: absolute;
     line-height: 77%;
     padding-top: 26px;
@@ -837,7 +837,7 @@ header {
         .button-holder {
             font-weight: 600;
             font-size: 14px;
-            color: #002b7f;
+            color: #0e0f24;
             background-image: url("../img/btn-bg1.png");
             background-repeat: no-repeat;
             background-size: 100% 100%;
@@ -910,8 +910,8 @@ header {
 }
 
 .borderdown {
-    background: linear-gradient(to right, #fdd116 41%, #fdd116 41%, #fdd116 40%, #fdd116 40%, rgba(255, 255, 255, 0) 40%);
-    border-left: 20px solid #fdd116;
+    background: linear-gradient(to right, #a5cb42 41%, #a5cb42 41%, #a5cb42 40%, #a5cb42 40%, rgba(255, 255, 255, 0) 40%);
+    border-left: 20px solid #a5cb42;
     padding: 20px;
     margin-top: -20px;
     position: relative;
@@ -936,7 +936,7 @@ header {
 }
 
 .paddup {
-    background: linear-gradient(to bottom, white 31%, white 17%, white 17%, #fdd116 17%);
+    background: linear-gradient(to bottom, white 31%, white 17%, white 17%, #a5cb42 17%);
 }
 
 .paddup figure {
@@ -985,7 +985,7 @@ figure .links {
     display: inline-block;
     width: 50%;
     text-align: left;
-    background: rgba(2, 44, 125, 0.77);
+    background: rgba(14, 15, 36, 0.77);
     padding: 3% 0 3% 16%;
     margin-left: 15%;
     margin-top: 2.5%;
@@ -995,7 +995,7 @@ figure .links {
         outline: none !important;
     }
     .ui-select-placeholder {
-        color: #fdd116 !important;
+        color: #a5cb42 !important;
         text-align: left;
     }
     .inputtag {
@@ -1010,9 +1010,9 @@ figure .links {
         -moz-appearance: none;
         appearance: none;
         background: transparent url("../img/Vector-Smart-Object.png") no-repeat right center;
-        border-bottom: 4px solid #fdd116;
+        border-bottom: 4px solid #a5cb42;
         font-size: 23px;
-        color: #fdd116 !important;
+        color: #a5cb42 !important;
         padding: 0 6px;
         height: auto;
         border-top: none;
@@ -1052,7 +1052,7 @@ figure .links {
 .himg2 .open>.dropdown-menu {
     min-width: 100% !important;
     display: block;
-    background: #fdd116 !important;
+    background: #a5cb42 !important;
     bottom: 0;
     height: 175px;
     overflow: auto;
@@ -1060,7 +1060,7 @@ figure .links {
 
 .customs .dropdown:hover .dropdown-menu,
 .himg2 .dropdown:hover .dropdown-menu {
-    background-color: #fdd116 !important;
+    background-color: #a5cb42 !important;
 }
 
 .labsec {
@@ -1074,7 +1074,7 @@ figure .links {
 }
 
 .aboutin {
-    background: #fdd116;
+    background: #a5cb42;
     padding: 5%;
     text-align: center;
 }
@@ -1094,12 +1094,12 @@ figure .links {
     h1 {
         font-size: 56px;
         font-weight: bolder;
-        color: #012B7F;
+        color: #0e0f24;
     }
     .ain {
         margin: 0 0 18px;
         font-size: 16px;
-        color: #012B7F;
+        color: #0e0f24;
     }
 }
 
@@ -1124,7 +1124,7 @@ figure .links {
 }
 
 .padddown {
-    background: linear-gradient(to bottom, #fdd116 29%, #fdd116 80%, white 80%, white 80%, white 100%, white 100%);
+    background: linear-gradient(to bottom, #a5cb42 29%, #a5cb42 80%, white 80%, white 80%, white 100%, white 100%);
 }
 
 .homeslid .flex-direction-nav {
@@ -1148,7 +1148,7 @@ figure .links {
 
 .flex-control-paging li a.flex-active {
     background: #000!important;
-    background: #fdd116 !important;
+    background: #a5cb42 !important;
 }
 
 .flex-control-paging li a {
@@ -1174,7 +1174,7 @@ figure .links {
 .ui-select-bootstrap .ui-select-choices-row>a:hover {
     text-decoration: none;
     color: #262626;
-    background-color: #fdd116;
+    background-color: #a5cb42;
 }
 
 .ui-select-bootstrap .ui-select-choices-row>a:focus,
@@ -1195,7 +1195,7 @@ figure .links {
 
 .ui-select-bootstrap .ui-select-choices-row>a {
     font-weight: bolder !important;
-    color: #002b7f !important;
+    color: #0e0f24 !important;
     padding: 0 9px !important;
 }
 
@@ -1245,7 +1245,7 @@ figure .links {
     font-family: 'Robotor';
     font-size: 16px;
     margin: 0;
-    color: #fdd116 !important;
+    color: #a5cb42 !important;
     text-align: left;
     padding: 49px 17px 15px;
 }
@@ -1316,7 +1316,7 @@ figure.hover figcaption {
     margin-top: -4%;
     .m2 {
         margin: 0 3%;
-        background: #fdd116 !important;
+        background: #a5cb42 !important;
         padding: 2% 9%;
         .pd15 {
             padding: 0 15px;
@@ -1365,7 +1365,7 @@ figure.hover figcaption {
 }
 
 .yellow_back_color .flex-control-paging li a.flex-active {
-    background: #002B7F!important;
+    background: #0e0f24!important;
 }
 
 .whatsmain {
@@ -1426,10 +1426,10 @@ figure.hover figcaption {
 
 .panelacor {
     padding: 5px 10px 0 !important;
-    border-top: 2px solid #fdd116 !important;
-    border-bottom: 0 solid #fdd116 !important;
-    border-left: 0 solid #fdd116 !important;
-    border-right: 0 solid #fdd116 !important;
+    border-top: 2px solid #a5cb42 !important;
+    border-bottom: 0 solid #a5cb42 !important;
+    border-left: 0 solid #a5cb42 !important;
+    border-right: 0 solid #a5cb42 !important;
     cursor: pointer !important;
     border-radius: 0 !important;
     box-shadow: none !important;
@@ -1450,7 +1450,7 @@ figure.hover figcaption {
 
 .patpack {
     font-weight: 900;
-    color: #fdd116 !important;
+    color: #a5cb42 !important;
     font-size: 40px;
     padding-left: 30px;
 }
@@ -1486,7 +1486,7 @@ figure.hover figcaption {
     right: 2px;
     background: #fff;
     padding: 0 5px;
-    color: #002b7f;
+    color: #0e0f24;
     font-size: 11px;
 }
 
@@ -1606,7 +1606,7 @@ figure.hover figcaption {
     right: -72px;
     top: 51px;
     z-index: 11;
-    box-shadow: #002b7f 2px -2px 1px -2px;
+    box-shadow: #0e0f24 2px -2px 1px -2px;
     .socialpatt {
         list-style: none;
         text-align: center;
@@ -1620,7 +1620,7 @@ figure.hover figcaption {
 }
 
 .pattform {
-    box-shadow: #002b7f 0 0 1px 0;
+    box-shadow: #0e0f24 0 0 1px 0;
     padding-bottom: 15px;
     padding-top: 15px;
     .form-control {
@@ -1639,7 +1639,7 @@ figure.hover figcaption {
         height: auto !important;
         padding: 9px 12px !important;
         width: 100%;
-        background: #002b7f !important;
+        background: #0e0f24 !important;
         color: #cacaca !important;
     }
 }
@@ -1664,7 +1664,7 @@ input[type="time"].form-control {
     top: 248px;
     height: 0;
     .socialpatt {
-        box-shadow: #002b7f 0 0 1px 0;
+        box-shadow: #0e0f24 0 0 1px 0;
         list-style: none;
         text-align: center;
         cursor: pointer;
@@ -1718,7 +1718,7 @@ input[type="time"].form-control {
 }
 
 .category {
-    background-color: #fdd116;
+    background-color: #a5cb42;
     padding: 20px 40px;
     margin: 0 3%;
     .form-group .form-control {
@@ -1735,7 +1735,7 @@ input[type="time"].form-control {
         font-size: 16px;
         outline: none;
         border: 0;
-        border-bottom: 2px solid #002b7f;
+        border-bottom: 2px solid #0e0f24;
         padding: 5px;
     }
 }
@@ -1746,7 +1746,7 @@ input[type="time"].form-control {
     margin-right: 20px;
     i {
         font-size: 20px;
-        color: #002b7f;
+        color: #0e0f24;
     }
 }
 
@@ -1805,7 +1805,7 @@ input[type="time"].form-control {
 }
 
 .categoryup {
-    background-color: #fdd116;
+    background-color: #a5cb42;
     padding: 20px 40px 40px;
     margin: 0 4%;
     h1 {
@@ -1851,7 +1851,7 @@ input[type="time"].form-control {
         text-transform: capitalize;
     }
     .eventhr {
-        border-top: 3px solid #fdd116 !important;
+        border-top: 3px solid #a5cb42 !important;
         margin: 0 36% 3px !important;
     }
 }
@@ -1906,7 +1906,7 @@ input[type="time"].form-control {
 //whats hot page ends
 //footer starts
 .footermenu {
-    background: #000000;
+    background: #0e0f24;
 }
 
 .confoot {
@@ -1935,7 +1935,7 @@ input[type="time"].form-control {
 }
 
 .footermenu {
-    background: #000000;
+    background: #0e0f24;
 }
 
 .hideinput:focus::-webkit-input-placeholder {
@@ -1948,9 +1948,9 @@ input[type="time"].form-control {
     height: 30px!important;
     font-weight: 700!important;
     font-size: 14px!important;
-    background: #fdd116!important;
+    background: #a5cb42!important;
     border: none!important;
-    color: #002b7f!important;
+    color: #0e0f24!important;
     width: 17%;
 }
 
@@ -1976,7 +1976,7 @@ input[type="time"].form-control {
 }
 
 .footb {
-    background: #121212;
+    background: #000000;
     .fc {
         padding: 10px 0;
         .marg7 {

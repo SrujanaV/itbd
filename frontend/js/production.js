@@ -67228,7 +67228,7 @@ myApp.config(function ($stateProvider, $urlRouterProvider, $httpProvider, $locat
             controller: 'DestinationCtrl'
         })
         .state('customdestination', {
-            url: "/customdestination",
+            url: "/customdestination/:id",
             templateUrl: tempateURL,
             controller: 'CustomDestinationCtrl'
         })
@@ -67486,7 +67486,6 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
         $scope.template = TemplateService.getHTML("content/home.html");
         TemplateService.title = "Home"; //This is the Title of the Website
         $scope.navigation = NavigationService.getNavigation();
-
         $scope.mySlides = [{
             "img": "img/bg1.jpg"
         }, {
@@ -67497,58 +67496,172 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
             "img": "img/bg4.jpg"
         }];
         $scope.popularDestination = [{
-            "image": "img/dest1.jpg",
-            "name": "USA"
-        }, {
-            "image": "img/dest1.jpg",
+            "image": "img/australia.jpg",
             "name": "Australia"
         }, {
-            "image": "img/dest1.jpg",
-            "name": "Africa"
+            "image": "img/brazil.jpg",
+            "name": "Brazil"
         }, {
-            "image": "img/dest1.jpg",
-            "name": "London"
+            "image": "img/canada.jpg",
+            "name": "Canada"
+        }, {
+            "image": "img/france.jpg",
+            "name": "France"
         }];
         $scope.popularAttraction = [{
-            "image1": "img/attract1.jpg",
-            "name": "Australia"
+            "image1": "img/italy.jpg",
+            "name": "Italy"
         }, {
-            "image1": "img/attract1.jpg",
-            "name": "USA"
+            "image1": "img/cruise.jpg",
+            "name": "Cruise Vacations"
         }, {
-            "image1": "img/attract1.jpg",
-            "name": "Africa"
+            "image1": "img/hongkong.jpg",
+            "name": "Hong Kong"
         }, {
-            "image1": "img/attract1.jpg",
-            "name": "London"
+            "image1": "img/uk.jpg",
+            "name": "United Kingdom"
         }];
         $scope.dropDown = [{
+            "name": "Argentina"
+        }, {
+            "name": "Armenia"
+        }, {
             "name": "Australia"
         }, {
-            "name": "USA"
+            "name": "Austria"
         }, {
-            "name": "Africa"
+            "name": "Azerbaijan"
         }, {
-            "name": "London"
+            "name": "Bhutan"
+        }, {
+            "name": "Brazil"
+        }, {
+            "name": "Bulgaria"
+        }, {
+            "name": "Canada"
+        }, {
+            "name": "Chile"
+        }, {
+            "name": "Croatia"
+        }, {
+            "name": "Cruise Vacations"
+        }, {
+            "name": "Czech Republic"
+        }, {
+            "name": "Denmark"
+        }, {
+            "name": "Estonia"
+        }, {
+            "name": "Fiji Islands"
+        }, {
+            "name": "Finland"
+        }, {
+            "name": "France"
+        }, {
+            "name": "Georgia"
+        }, {
+            "name": "Germany"
+        }, {
+            "name": "Greece"
+        }, {
+            "name": "Hong Kong"
+        }, {
+            "name": "Hungary"
+        }, {
+            "name": "Iceland"
+        }, {
+            "name": "Indonesia"
+        }, {
+            "name": "Israel"
+        }, {
+            "name": "Italy"
+        }, {
+            "name": "Jamaica"
+        }, {
+            "name": "Japan"
+        }, {
+            "name": "Jordan"
+        }, {
+            "name": "Kenya"
+        }, {
+            "name": "Korea"
+        }, {
+            "name": "Latvia"
+        }, {
+            "name": "Lithuania"
+        }, {
+            "name": "Macao"
+        }, {
+            "name": "Malaysia"
+        }, {
+            "name": "Maldives"
+        }, {
+            "name": "Malta"
+        }, {
+            "name": "Mauritius"
+        }, {
+            "name": "Mexico"
+        }, {
+            "name": "Monaco"
+        }, {
+            "name": "Moscow"
+        }, {
+            "name": "Netherlands"
+        }, {
+            "name": "New Zealand"
+        }, {
+            "name": "Norway"
+        }, {
+            "name": "Peru"
+        }, {
+            "name": "Phillippines"
+        }, {
+            "name": "Poland"
+        }, {
+            "name": "Portugal"
+        }, {
+            "name": "Puerto Rico"
+        }, {
+            "name": "River Cruises"
+        }, {
+            "name": "Rwanda"
+        }, {
+            "name": "Seychelles"
+        }, {
+            "name": "Singapore"
+        }, {
+            "name": "Slovakia"
+        }, {
+            "name": "Slovenia"
+        }, {
+            "name": "South Africa"
+        }, {
+            "name": "Srilanka"
+        }, {
+            "name": "St.Petersburg"
+        }, {
+            "name": "Sweden"
+        }, {
+            "name": "Switzerland"
+        }, {
+            "name": "Tanzania"
+        }, {
+            "name": "Thailand"
+        }, {
+            "name": "United Arab of Emirates"
+        }, {
+            "name": "United Kingdom"
+        }, {
+            "name": "United States of America"
+        }, {
+            "name": "Zimbabwe"
         }];
-        $scope.mySlidesss = [{
-            "banner": "img/banner.jpg",
-        }, {
-            "banner": "img/banner2.jpg",
-        }, {
-            "banner": "img/banner3.jpg",
-        }, {
-            "banner": "img/banner4.jpg",
-        }];
-        $scope.dropDown = [{
-            "name": "Australia"
-        }, {
-            "name": "USA"
-        }, {
-            "name": "Africa"
-        }, {
-            "name": "London"
-        }];
+
+        // myApp.filter('safeHtml', function ($sce) {
+        //         return function (val) {
+        //             return $sce.trustAsHtml(val);
+        //         };
+
     })
 
     .controller('FormCtrl', function ($scope, TemplateService, NavigationService, $timeout, toastr, $http) {
@@ -67805,50 +67918,461 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
         TemplateService.title = "Grid"; // This is the Title of the Website
         $scope.navigation = NavigationService.getNavigation();
     })
-    .controller('CustomDestinationCtrl', function ($scope, TemplateService, NavigationService, $timeout, toastr, $http) {
+    .controller('CustomDestinationCtrl', function ($scope, TemplateService, NavigationService, $timeout, toastr, $http, $stateParams) {
         $scope.template = TemplateService.getHTML("content/customdestination.html");
         TemplateService.title = "Grid"; // This is the Title of the Website
         $scope.navigation = NavigationService.getNavigation();
-        $scope.getDestination = [{
-            "description": "Hash brownies... Hot Girls... Unlimited Alcohol... Ultimate Nightlife... World famous Red Light District! Oh Yes! This city lets you indulge into everything that is not so legal in the other parts of the world!"
-        }];
-        $scope.getPackage = [{
-            "title1": "hello",
-            "title2": "hello1",
-            "image": "img/dest/srilanka.jpg"
-        }, {
-            "title1": "hello",
-            "title2": "hello1",
-            "image": "img/dest/srilanka.jpg"
-        }, {
-            "title1": "hello",
-            "title2": "hello1",
-            "image": "img/dest/srilanka.jpg"
-        }];
+        $scope.id = $stateParams.id;
+        // $scope.getDestination = {
+        //     "image": "img/customDes/argentina.jpg",
+        //     "description": "Hash brownies... Hot Girls... Unlimited Alcohol... Ultimate Nightlife... World famous Red Light District! Oh Yes! This city lets you indulge into everything that is not so legal in the other parts of the world!"
+        // };
+        console.log($stateParams.id);
+        switch ($stateParams.id) {
+            //3//
+            case 'Argentina':
+                $scope.getDestination = {
+                    "image": "img/banner_images/argentina.jpg",
+                    "description": "Hash brownies... Hot Girls... Unlimited Alcohol... Ultimate Nightlife... World famous Red Light District! Oh Yes! This city lets you indulge into everything that is not so legal in the other parts of the world!"
+                };
+                break;
+            case 'Armenia':
+                $scope.getDestination = {
+                    "image": "img/banner_images/armenia.jpg",
+                    "description": "Hash brownies... Hot Girls... Unlimited Alcohol... Ultimate Nightlife... World famous Red Light District! Oh Yes! This city lets you indulge into everything that is not so legal in the other parts of the world!"
+                };
+                break;
+            case 'Australia':
+                $scope.getDestination = {
+                    "image": "img/banner_images/australia.jpg",
+                    "description": "Hash brownies... Hot Girls... Unlimited Alcohol... Ultimate Nightlife... World famous Red Light District! Oh Yes! This city lets you indulge into everything that is not so legal in the other parts of the world!"
+                };
+                break;
+            case 'Austria':
+                $scope.getDestination = {
+                    "image": "img/banner_images/austria.jpg",
+                    "description": "Hash brownies... Hot Girls... Unlimited Alcohol... Ultimate Nightlife... World famous Red Light District! Oh Yes! This city lets you indulge into everything that is not so legal in the other parts of the world!"
+                };
+                break;
+            case 'Azerbaijan':
+                $scope.getDestination = {
+                    "image": "img/banner_images/azerbaijan.jpg",
+                    "description": "Hash brownies... Hot Girls... Unlimited Alcohol... Ultimate Nightlife... World famous Red Light District! Oh Yes! This city lets you indulge into everything that is not so legal in the other parts of the world!"
+                };
+                break;
+            case 'Bhutan':
+                $scope.getDestination = {
+                    "image": "img/banner_images/bhutan.jpg",
+                    "description": "Hash brownies... Hot Girls... Unlimited Alcohol... Ultimate Nightlife... World famous Red Light District! Oh Yes! This city lets you indulge into everything that is not so legal in the other parts of the world!"
+                };
+                break;
+            case 'Brazil':
+                $scope.getDestination = {
+                    "image": "img/banner_images/brazil.jpg",
+                    "description": "Hash brownies... Hot Girls... Unlimited Alcohol... Ultimate Nightlife... World famous Red Light District! Oh Yes! This city lets you indulge into everything that is not so legal in the other parts of the world!"
+                };
+                break;
+            case 'Bulgaria':
+                $scope.getDestination = {
+                    "image": "img/banner_images/bulgaria.jpg",
+                    "description": "Hash brownies... Hot Girls... Unlimited Alcohol... Ultimate Nightlife... World famous Red Light District! Oh Yes! This city lets you indulge into everything that is not so legal in the other parts of the world!"
+                };
+                break;
+            case 'Canada':
+                $scope.getDestination = {
+                    "image": "img/banner_images/canada.jpg",
+                    "description": "Hash brownies... Hot Girls... Unlimited Alcohol... Ultimate Nightlife... World famous Red Light District! Oh Yes! This city lets you indulge into everything that is not so legal in the other parts of the world!"
+                };
+                break;
+            case 'Chile':
+                $scope.getDestination = {
+                    "image": "img/banner_images/chile.jpg",
+                    "description": "Hash brownies... Hot Girls... Unlimited Alcohol... Ultimate Nightlife... World famous Red Light District! Oh Yes! This city lets you indulge into everything that is not so legal in the other parts of the world!"
+                };
+                break;
+            case 'Croatia':
+                $scope.getDestination = {
+                    "image": "img/banner_images/croatia.jpg",
+                    "description": "Hash brownies... Hot Girls... Unlimited Alcohol... Ultimate Nightlife... World famous Red Light District! Oh Yes! This city lets you indulge into everything that is not so legal in the other parts of the world!"
+                };
+                break;
+            case 'Cruise Vacations':
+                $scope.getDestination = {
+                    "image": "img/banner_images/cruise vacations.jpg",
+                    "description": "Hash brownies... Hot Girls... Unlimited Alcohol... Ultimate Nightlife... World famous Red Light District! Oh Yes! This city lets you indulge into everything that is not so legal in the other parts of the world!"
+                };
+                break;
+            case 'Czech Republic':
+                $scope.getDestination = {
+                    "image": "img/banner_images/czech republic.jpg",
+                    "description": "Hash brownies... Hot Girls... Unlimited Alcohol... Ultimate Nightlife... World famous Red Light District! Oh Yes! This city lets you indulge into everything that is not so legal in the other parts of the world!"
+                };
+                break;
+            case 'Denmark':
+                $scope.getDestination = {
+                    "image": "img/banner_images/denmark.jpg",
+                    "description": "Hash brownies... Hot Girls... Unlimited Alcohol... Ultimate Nightlife... World famous Red Light District! Oh Yes! This city lets you indulge into everything that is not so legal in the other parts of the world!"
+                };
+                break;
+            case 'Estonia':
+                $scope.getDestination = {
+                    "image": "img/banner_images/estonia.jpg",
+                    "description": "Hash brownies... Hot Girls... Unlimited Alcohol... Ultimate Nightlife... World famous Red Light District! Oh Yes! This city lets you indulge into everything that is not so legal in the other parts of the world!"
+                };
+                break;
+            case 'Fiji Islands':
+                $scope.getDestination = {
+                    "image": "img/banner_images/fiji islands.jpg",
+                    "description": "Hash brownies... Hot Girls... Unlimited Alcohol... Ultimate Nightlife... World famous Red Light District! Oh Yes! This city lets you indulge into everything that is not so legal in the other parts of the world!"
+                };
+                break;
+            case 'Finland':
+                $scope.getDestination = {
+                    "image": "img/banner_images/finland.jpg",
+                    "description": "Hash brownies... Hot Girls... Unlimited Alcohol... Ultimate Nightlife... World famous Red Light District! Oh Yes! This city lets you indulge into everything that is not so legal in the other parts of the world!"
+                };
+                break;
+            case 'France':
+                $scope.getDestination = {
+                    "image": "img/banner_images/france.jpg",
+                    "description": "Hash brownies... Hot Girls... Unlimited Alcohol... Ultimate Nightlife... World famous Red Light District! Oh Yes! This city lets you indulge into everything that is not so legal in the other parts of the world!"
+                };
+                break;
+            case 'Georgia':
+                $scope.getDestination = {
+                    "image": "img/banner_images/georgia.jpg",
+                    "description": "Hash brownies... Hot Girls... Unlimited Alcohol... Ultimate Nightlife... World famous Red Light District! Oh Yes! This city lets you indulge into everything that is not so legal in the other parts of the world!"
+                };
+                break;
+            case 'Germany':
+                $scope.getDestination = {
+                    "image": "img/banner_images/germany.jpg",
+                    "description": "Hash brownies... Hot Girls... Unlimited Alcohol... Ultimate Nightlife... World famous Red Light District! Oh Yes! This city lets you indulge into everything that is not so legal in the other parts of the world!"
+                };
+                break;
+            case 'Greece':
+                $scope.getDestination = {
+                    "image": "img/banner_images/greece.jpg",
+                    "description": "Hash brownies... Hot Girls... Unlimited Alcohol... Ultimate Nightlife... World famous Red Light District! Oh Yes! This city lets you indulge into everything that is not so legal in the other parts of the world!"
+                };
+                break;
+            case 'Hong Kong':
+                $scope.getDestination = {
+                    "image": "img/banner_images/hongkong.jpg",
+                    "description": "Hash brownies... Hot Girls... Unlimited Alcohol... Ultimate Nightlife... World famous Red Light District! Oh Yes! This city lets you indulge into everything that is not so legal in the other parts of the world!"
+                };
+                break;
+            case 'Hungary':
+                $scope.getDestination = {
+                    "image": "img/banner_images/hungary.jpg",
+                    "description": "Hash brownies... Hot Girls... Unlimited Alcohol... Ultimate Nightlife... World famous Red Light District! Oh Yes! This city lets you indulge into everything that is not so legal in the other parts of the world!"
+                };
+                break;
+            case 'Iceland':
+                $scope.getDestination = {
+                    "image": "img/banner_images/iceland.jpg",
+                    "description": "Hash brownies... Hot Girls... Unlimited Alcohol... Ultimate Nightlife... World famous Red Light District! Oh Yes! This city lets you indulge into everything that is not so legal in the other parts of the world!"
+                };
+                break;
+
+
+
+            case 'Indonesia':
+                $scope.getDestination = {
+                    "image": "img/banner_images/indonesia.jpg",
+                    "description": "Hash brownies... Hot Girls... Unlimited Alcohol... Ultimate Nightlife... World famous Red Light District! Oh Yes! This city lets you indulge into everything that is not so legal in the other parts of the world!"
+                };
+                break;
+            case 'Israel':
+                $scope.getDestination = {
+                    "image": "img/banner_images/israel.jpg",
+                    "description": "Hash brownies... Hot Girls... Unlimited Alcohol... Ultimate Nightlife... World famous Red Light District! Oh Yes! This city lets you indulge into everything that is not so legal in the other parts of the world!"
+                };
+                break;
+            case 'Italy':
+                $scope.getDestination = {
+                    "image": "img/banner_images/italy.jpg",
+                    "description": "Hash brownies... Hot Girls... Unlimited Alcohol... Ultimate Nightlife... World famous Red Light District! Oh Yes! This city lets you indulge into everything that is not so legal in the other parts of the world!"
+                };
+                break;
+            case 'Jamaica':
+                $scope.getDestination = {
+                    "image": "img/banner_images/jamaica.jpg",
+                    "description": "Hash brownies... Hot Girls... Unlimited Alcohol... Ultimate Nightlife... World famous Red Light District! Oh Yes! This city lets you indulge into everything that is not so legal in the other parts of the world!"
+                };
+                break;
+            case 'Japan':
+                $scope.getDestination = {
+                    "image": "img/banner_images/japan.jpg",
+                    "description": "Hash brownies... Hot Girls... Unlimited Alcohol... Ultimate Nightlife... World famous Red Light District! Oh Yes! This city lets you indulge into everything that is not so legal in the other parts of the world!"
+                };
+                break;
+            case 'Jordan':
+                $scope.getDestination = {
+                    "image": "img/banner_images/jordan.jpg",
+                    "description": "Hash brownies... Hot Girls... Unlimited Alcohol... Ultimate Nightlife... World famous Red Light District! Oh Yes! This city lets you indulge into everything that is not so legal in the other parts of the world!"
+                };
+                break;
+            case 'Kenya':
+                $scope.getDestination = {
+                    "image": "img/banner_images/kenya.jpg",
+                    "description": "Hash brownies... Hot Girls... Unlimited Alcohol... Ultimate Nightlife... World famous Red Light District! Oh Yes! This city lets you indulge into everything that is not so legal in the other parts of the world!"
+                };
+                break;
+            case 'Korea':
+                $scope.getDestination = {
+                    "image": "img/banner_images/korea.jpg",
+                    "description": "Hash brownies... Hot Girls... Unlimited Alcohol... Ultimate Nightlife... World famous Red Light District! Oh Yes! This city lets you indulge into everything that is not so legal in the other parts of the world!"
+                };
+                break;
+            case 'Latvia':
+                $scope.getDestination = {
+                    "image": "img/banner_images/latvia.jpg",
+                    "description": "Hash brownies... Hot Girls... Unlimited Alcohol... Ultimate Nightlife... World famous Red Light District! Oh Yes! This city lets you indulge into everything that is not so legal in the other parts of the world!"
+                };
+                break;
+            case 'Lithuania':
+                $scope.getDestination = {
+                    "image": "img/banner_images/lithuania.jpg",
+                    "description": "Hash brownies... Hot Girls... Unlimited Alcohol... Ultimate Nightlife... World famous Red Light District! Oh Yes! This city lets you indulge into everything that is not so legal in the other parts of the world!"
+                };
+                break;
+            case 'Macao':
+                $scope.getDestination = {
+                    "image": "img/banner_images/macau.jpg",
+                    "description": "Hash brownies... Hot Girls... Unlimited Alcohol... Ultimate Nightlife... World famous Red Light District! Oh Yes! This city lets you indulge into everything that is not so legal in the other parts of the world!"
+                };
+                break;
+            case 'Malaysia':
+                $scope.getDestination = {
+                    "image": "img/banner_images/malaysia.jpg",
+                    "description": "Hash brownies... Hot Girls... Unlimited Alcohol... Ultimate Nightlife... World famous Red Light District! Oh Yes! This city lets you indulge into everything that is not so legal in the other parts of the world!"
+                };
+                break;
+            case 'Maldives':
+                $scope.getDestination = {
+                    "image": "img/banner_images/maldives.jpg",
+                    "description": "Hash brownies... Hot Girls... Unlimited Alcohol... Ultimate Nightlife... World famous Red Light District! Oh Yes! This city lets you indulge into everything that is not so legal in the other parts of the world!"
+                };
+                break;
+            case 'Malta':
+                $scope.getDestination = {
+                    "image": "img/banner_images/malta.jpg",
+                    "description": "Hash brownies... Hot Girls... Unlimited Alcohol... Ultimate Nightlife... World famous Red Light District! Oh Yes! This city lets you indulge into everything that is not so legal in the other parts of the world!"
+                };
+                break;
+            case 'Mauritius':
+                $scope.getDestination = {
+                    "image": "img/banner_images/mauritius.jpg",
+                    "description": "Hash brownies... Hot Girls... Unlimited Alcohol... Ultimate Nightlife... World famous Red Light District! Oh Yes! This city lets you indulge into everything that is not so legal in the other parts of the world!"
+                };
+                break;
+            case 'Mexico':
+                $scope.getDestination = {
+                    "image": "img/banner_images/mexico.jpg",
+                    "description": "Hash brownies... Hot Girls... Unlimited Alcohol... Ultimate Nightlife... World famous Red Light District! Oh Yes! This city lets you indulge into everything that is not so legal in the other parts of the world!"
+                };
+                break;
+            case 'Monaco':
+                $scope.getDestination = {
+                    "image": "img/banner_images/monaco.jpg",
+                    "description": "Hash brownies... Hot Girls... Unlimited Alcohol... Ultimate Nightlife... World famous Red Light District! Oh Yes! This city lets you indulge into everything that is not so legal in the other parts of the world!"
+                };
+                break;
+            case 'Moscow':
+                $scope.getDestination = {
+                    "image": "img/banner_images/moscow.jpg",
+                    "description": "Hash brownies... Hot Girls... Unlimited Alcohol... Ultimate Nightlife... World famous Red Light District! Oh Yes! This city lets you indulge into everything that is not so legal in the other parts of the world!"
+                };
+                break;
+            case 'Netherlands':
+                $scope.getDestination = {
+                    "image": "img/banner_images/netherlands.jpg",
+                    "description": "Hash brownies... Hot Girls... Unlimited Alcohol... Ultimate Nightlife... World famous Red Light District! Oh Yes! This city lets you indulge into everything that is not so legal in the other parts of the world!"
+                };
+                break;
+            case 'New Zealand':
+                $scope.getDestination = {
+                    "image": "img/banner_images/new zealand.jpg",
+                    "description": "Hash brownies... Hot Girls... Unlimited Alcohol... Ultimate Nightlife... World famous Red Light District! Oh Yes! This city lets you indulge into everything that is not so legal in the other parts of the world!"
+                };
+                break;
+            case 'Norway':
+                $scope.getDestination = {
+                    "image": "img/banner_images/norway.jpg",
+                    "description": "Hash brownies... Hot Girls... Unlimited Alcohol... Ultimate Nightlife... World famous Red Light District! Oh Yes! This city lets you indulge into everything that is not so legal in the other parts of the world!"
+                };
+                break;
+            case 'Peru':
+                $scope.getDestination = {
+                    "image": "img/banner_images/peru.jpg",
+                    "description": "Hash brownies... Hot Girls... Unlimited Alcohol... Ultimate Nightlife... World famous Red Light District! Oh Yes! This city lets you indulge into everything that is not so legal in the other parts of the world!"
+                };
+                break;
+            case 'Philippines':
+                $scope.getDestination = {
+                    "image": "img/banner_images/phillippines.jpg",
+                    "description": "Hash brownies... Hot Girls... Unlimited Alcohol... Ultimate Nightlife... World famous Red Light District! Oh Yes! This city lets you indulge into everything that is not so legal in the other parts of the world!"
+                };
+                break;
+            case 'Poland':
+                $scope.getDestination = {
+                    "image": "img/banner_images/poland.jpg",
+                    "description": "Hash brownies... Hot Girls... Unlimited Alcohol... Ultimate Nightlife... World famous Red Light District! Oh Yes! This city lets you indulge into everything that is not so legal in the other parts of the world!"
+                };
+                break;
+
+
+            case 'Portugal':
+                $scope.getDestination = {
+                    "image": "img/banner_images/portugal.jpg",
+                    "description": "Hash brownies... Hot Girls... Unlimited Alcohol... Ultimate Nightlife... World famous Red Light District! Oh Yes! This city lets you indulge into everything that is not so legal in the other parts of the world!"
+                };
+                break;
+            case 'Puerto Rico':
+                $scope.getDestination = {
+                    "image": "img/banner_images/puerto rico.jpg",
+                    "description": "Hash brownies... Hot Girls... Unlimited Alcohol... Ultimate Nightlife... World famous Red Light District! Oh Yes! This city lets you indulge into everything that is not so legal in the other parts of the world!"
+                };
+                break;
+            case 'River Cruise':
+                $scope.getDestination = {
+                    "image": "img/banner_images/river cruises.jpg",
+                    "description": "Hash brownies... Hot Girls... Unlimited Alcohol... Ultimate Nightlife... World famous Red Light District! Oh Yes! This city lets you indulge into everything that is not so legal in the other parts of the world!"
+                };
+                break;
+            case 'Rwanda':
+                $scope.getDestination = {
+                    "image": "img/banner_images/rwanda.jpg",
+                    "description": "Hash brownies... Hot Girls... Unlimited Alcohol... Ultimate Nightlife... World famous Red Light District! Oh Yes! This city lets you indulge into everything that is not so legal in the other parts of the world!"
+                };
+                break;
+            case 'Seychelles':
+                $scope.getDestination = {
+                    "image": "img/banner_images/seychelles.jpg",
+                    "description": "Hash brownies... Hot Girls... Unlimited Alcohol... Ultimate Nightlife... World famous Red Light District! Oh Yes! This city lets you indulge into everything that is not so legal in the other parts of the world!"
+                };
+                break;
+            case 'Singapore':
+                $scope.getDestination = {
+                    "image": "img/banner_images/singapore.jpg",
+                    "description": "Hash brownies... Hot Girls... Unlimited Alcohol... Ultimate Nightlife... World famous Red Light District! Oh Yes! This city lets you indulge into everything that is not so legal in the other parts of the world!"
+                };
+                break;
+            case 'Sri Lanka':
+                $scope.getDestination = {
+                    "image": "img/banner_images/sirlanka.jpg",
+                    "description": "Hash brownies... Hot Girls... Unlimited Alcohol... Ultimate Nightlife... World famous Red Light District! Oh Yes! This city lets you indulge into everything that is not so legal in the other parts of the world!"
+                };
+                break;
+            case 'Slovakia':
+                $scope.getDestination = {
+                    "image": "img/banner_images/slovakia.jpg",
+                    "description": "Hash brownies... Hot Girls... Unlimited Alcohol... Ultimate Nightlife... World famous Red Light District! Oh Yes! This city lets you indulge into everything that is not so legal in the other parts of the world!"
+                };
+                break;
+            case 'Slovenia':
+                $scope.getDestination = {
+                    "image": "img/banner_images/slovenia.jpg",
+                    "description": "Hash brownies... Hot Girls... Unlimited Alcohol... Ultimate Nightlife... World famous Red Light District! Oh Yes! This city lets you indulge into everything that is not so legal in the other parts of the world!"
+                };
+                break;
+
+
+
+            case 'South Africa':
+                $scope.getDestination = {
+                    "image": "img/banner_images/south africa.jpg",
+                    "description": "Hash brownies... Hot Girls... Unlimited Alcohol... Ultimate Nightlife... World famous Red Light District! Oh Yes! This city lets you indulge into everything that is not so legal in the other parts of the world!"
+                };
+                break;
+            case 'St.Petersburg':
+                $scope.getDestination = {
+                    "image": "img/banner_images/st.petersburg.jpg",
+                    "description": "Hash brownies... Hot Girls... Unlimited Alcohol... Ultimate Nightlife... World famous Red Light District! Oh Yes! This city lets you indulge into everything that is not so legal in the other parts of the world!"
+                };
+                break;
+            case 'Sweden':
+                $scope.getDestination = {
+                    "image": "img/banner_images/sweden.jpg",
+                    "description": "Hash brownies... Hot Girls... Unlimited Alcohol... Ultimate Nightlife... World famous Red Light District! Oh Yes! This city lets you indulge into everything that is not so legal in the other parts of the world!"
+                };
+                break;
+            case 'Switzerland':
+                $scope.getDestination = {
+                    "image": "img/banner_images/switzerland.jpg",
+                    "description": "Hash brownies... Hot Girls... Unlimited Alcohol... Ultimate Nightlife... World famous Red Light District! Oh Yes! This city lets you indulge into everything that is not so legal in the other parts of the world!"
+                };
+                break;
+            case 'Tanzania':
+                $scope.getDestination = {
+                    "image": "img/banner_images/tanzania.jpg",
+                    "description": "Hash brownies... Hot Girls... Unlimited Alcohol... Ultimate Nightlife... World famous Red Light District! Oh Yes! This city lets you indulge into everything that is not so legal in the other parts of the world!"
+                };
+                break;
+            case 'Thailand':
+                $scope.getDestination = {
+                    "image": "img/banner_images/thailand.jpg",
+                    "description": "Hash brownies... Hot Girls... Unlimited Alcohol... Ultimate Nightlife... World famous Red Light District! Oh Yes! This city lets you indulge into everything that is not so legal in the other parts of the world!"
+                };
+                break;
+            case 'United Arab Emirates':
+                $scope.getDestination = {
+                    "image": "img/banner_images/united arab of emirates.jpg",
+                    "description": "Hash brownies... Hot Girls... Unlimited Alcohol... Ultimate Nightlife... World famous Red Light District! Oh Yes! This city lets you indulge into everything that is not so legal in the other parts of the world!"
+                };
+                break;
+            case 'United Kingdom':
+                $scope.getDestination = {
+                    "image": "img/banner_images/united kingdom.jpg",
+                    "description": "Hash brownies... Hot Girls... Unlimited Alcohol... Ultimate Nightlife... World famous Red Light District! Oh Yes! This city lets you indulge into everything that is not so legal in the other parts of the world!"
+                };
+                break;
+            case 'United States of Emirates':
+                $scope.getDestination = {
+                    "image": "img/banner_images/united states of emirates.jpg",
+                    "description": "Hash brownies... Hot Girls... Unlimited Alcohol... Ultimate Nightlife... World famous Red Light District! Oh Yes! This city lets you indulge into everything that is not so legal in the other parts of the world!"
+                };
+                break;
+            case 'United States of America':
+                $scope.getDestination = {
+                    "image": "img/banner_images/usa.jpg",
+                    "description": "Hash brownies... Hot Girls... Unlimited Alcohol... Ultimate Nightlife... World famous Red Light District! Oh Yes! This city lets you indulge into everything that is not so legal in the other parts of the world!"
+                };
+                break;
+            case 'Zimbabwe':
+                $scope.getDestination = {
+                    "image": "img/banner_images/zimbabwe.jpg",
+                    "description": "Hash brownies... Hot Girls... Unlimited Alcohol... Ultimate Nightlife... World famous Red Light District! Oh Yes! This city lets you indulge into everything that is not so legal in the other parts of the world!"
+                };
+                break;
+            default:
+                break;
+        }
         $scope.getActivity = [{
-            "name": "hello",
-            "image": "img/dest/srilanka.jpg"
+            "name": "BICYCLE TOUR",
+            "image": "img/activities/bicycle_tour.jpg"
         }, {
-            "name": "hello",
-            "image": "img/dest/srilanka.jpg"
+            "name": "FOOTBALL",
+            "image": "img/activities/football.jpg"
         }, {
-            "name": "hello",
-            "image": "img/dest/srilanka.jpg"
+            "name": "ROULETTE",
+            "image": "img/activities/roulette.jpg"
         }, {
-            "name": "hello",
-            "image": "img/dest/srilanka.jpg"
+            "name": "NIGHT CLUB/DISCO",
+            "image": "img/activities/nightclub.jpg"
         }, {
-            "name": "hello",
-            "image": "img/dest/srilanka.jpg"
+            "name": "PARASAILING",
+            "image": "img/activities/parasailing.jpg"
         }, {
-            "name": "hello",
-            "image": "img/dest/srilanka.jpg"
+            "name": "SCUBA DIVING",
+            "image": "img/activities/scuba_diving.jpg"
         }, {
-            "name": "hello",
-            "image": "img/dest/srilanka.jpg"
+            "name": "SKY DIVING",
+            "image": "img/activities/sky_diving.jpg"
         }, {
-            "name": "hello",
-            "image": "img/dest/srilanka.jpg"
+            "name": "TRECKING",
+            "image": "img/activities/trecking.jpg"
         }];
         $scope.getTitle = [{
             "name": "Explore our Ready Packages made by our EXPERTS!!",
@@ -67869,28 +68393,33 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
         $scope.template = TemplateService.getHTML("content/activity.html");
         TemplateService.title = "Activity"; // This is the Title of the Website
         $scope.navigation = NavigationService.getNavigation();
-        $scope.myDropdown = [{
-            "name": "Portugal"
+        $scope.getActivity = [{
+            "name": "BICYCLE TOUR",
+            "image": "img/activities/bicycle_tour.jpg"
         }, {
-            "name": "Portugal"
+            "name": "FOOTBALL",
+            "image": "img/activities/football.jpg"
         }, {
-            "name": "Portugal"
+            "name": "ROULETTE",
+            "image": "img/activities/roulette.jpg"
         }, {
-            "name": "Portugal"
-        }];
-        $scope.activityLand = [{
-            "image1": "img/dest/srilanka.jpg",
-            "name": "hello1",
-            "description": "The Array parameter is a list of strings or integers. When you specify a single numeric parameter with the Array constructor, you specify the initial length of the array.",
-            "smallImage": ["img/dest/srilanka.jpg", "img/dest/srilanka.jpg", "img/dest/srilanka.jpg"]
+            "name": "NIGHT CLUB/DISCO",
+            "image": "img/activities/nightclub.jpg"
         }, {
-            "title1": "hello",
-            "title2": "hello1",
-            "image": "img/dest/srilanka.jpg"
+            "name": "PARAGLIDING",
+            "image": "img/activities/parasailing.jpg"
         }, {
-            "title1": "hello",
-            "title2": "hello1",
-            "image": "img/dest/srilanka.jpg"
+            "name": "SCUBA DIVING",
+            "image": "img/activities/scuba_diving.jpg"
+        }, {
+            "name": "SKY DIVING",
+            "image": "img/activities/sky_diving.jpg"
+        }, {
+            "name": "TRECKING",
+            "image": "img/activities/trecking.jpg"
+        }, {
+            "name": "SNOW SKIING",
+            "image": "img/activities/skiing.jpg"
         }];
     })
 
@@ -67961,10 +68490,8 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
             "location": "Koh Phangan"
         }]
         $scope.mySlidesss = [{
-            "banner": "img/wh1.jpg",
-            "banner": "img/wh2.jpg",
-            "banner": "img/wh1.jpg",
-            "banner": "img/wh2.jpg"
+            "banner": "img/bachelor.jpg",
+            "banner": "img/bachelorette.jpg"
         }]
     })
 
@@ -67989,6 +68516,8 @@ myApp.controller('headerCtrl', function ($scope, TemplateService) {
     }, {
         "name": "Austria"
     }, {
+        "name": "Azerbaijan"
+    }, {
         "name": "Bhutan"
     }, {
         "name": "Brazil"
@@ -68001,15 +68530,15 @@ myApp.controller('headerCtrl', function ($scope, TemplateService) {
     }, {
         "name": "Croatia"
     }, {
-        "name": "Cruise"
+        "name": "Cruise Vacations"
     }, {
-        "name": "Czechia"
+        "name": "Czech Republic"
     }, {
         "name": "Denmark"
     }, {
         "name": "Estonia"
     }, {
-        "name": "Fiji"
+        "name": "Fiji Islands"
     }, {
         "name": "Finland"
     }, {
@@ -68047,7 +68576,7 @@ myApp.controller('headerCtrl', function ($scope, TemplateService) {
     }, {
         "name": "Lithuania"
     }, {
-        "name": "Macau"
+        "name": "Macao"
     }, {
         "name": "Malaysia"
     }, {
@@ -68060,7 +68589,16 @@ myApp.controller('headerCtrl', function ($scope, TemplateService) {
         "name": "Mexico"
     }, {
         "name": "Monaco"
+    }, {
+        "name": "Moscow"
+    }, {
+        "name": "Netherlands"
+    }, {
+        "name": "New Zealand"
+    }, {
+        "name": "Norway"
     }];
+    $scope.onlyDest = _.chunk($scope.onlyDest, 10);
 });
 myApp.controller('languageCtrl', function ($scope, TemplateService, $translate, $rootScope) {
     $scope.changeLanguage = function () {

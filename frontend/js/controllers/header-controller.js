@@ -53,8 +53,6 @@ myApp.controller('headerCtrl', function ($scope, TemplateService) {
     }, {
         "name": "Iceland"
     }, {
-        "name": "India"
-    }, {
         "name": "Indonesia"
     }, {
         "name": "Israel"
@@ -98,4 +96,5 @@ myApp.controller('headerCtrl', function ($scope, TemplateService) {
         "name": "Norway"
     }];
     $scope.onlyDest = _.chunk($scope.onlyDest, 10);
+    console.log("imm")
 });

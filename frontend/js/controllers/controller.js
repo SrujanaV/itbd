@@ -1,7 +1,19 @@
-myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
+myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationService, $timeout, $state) {
         $scope.template = TemplateService.getHTML("content/home.html");
         TemplateService.title = "Home"; //This is the Title of the Website
         $scope.navigation = NavigationService.getNavigation();
+        $scope.formData = {};
+
+        $scope.gotoFun = function (id) {
+            $state.go('customdestination', {
+                id: id
+            })
+
+        }
+        $scope.search = function (name) {
+            $scope.goTo = name;
+            $scope.gotoFun($scope.goTo);
+        }
         $scope.mySlides = [{
             "img": "img/bg1.jpg"
         }, {
@@ -13,23 +25,23 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
         }];
         $scope.popularDestination = [{
             "image": "img/australia.jpg",
-            "name": "AUSTRALIA"
+            "name": "Australia"
         }, {
             "image": "img/brazil.jpg",
-            "name": "BRAZIL"
+            "name": "Brazil"
         }, {
             "image": "img/canada.jpg",
-            "name": "CANADA"
+            "name": "Canada"
         }, {
             "image": "img/france.jpg",
-            "name": "FRANCE"
+            "name": "France"
         }];
         $scope.popularAttraction = [{
             "image1": "img/italy.jpg",
-            "name": "ITALY"
+            "name": "Italy"
         }, {
             "image1": "img/cruise.jpg",
-            "name": "CRUISE"
+            "name": "Cruise Vacations"
         }, {
             "image1": "img/hongkong.jpg",
             "name": "Hong Kong"
@@ -85,8 +97,6 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
             "name": "Hungary"
         }, {
             "name": "Iceland"
-        }, {
-            "name": "India"
         }, {
             "name": "Indonesia"
         }, {
@@ -174,6 +184,7 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
         }, {
             "name": "Zimbabwe"
         }];
+
 
         // myApp.filter('safeHtml', function ($sce) {
         //         return function (val) {
@@ -445,6 +456,7 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
         //     "image": "img/customDes/argentina.jpg",
         //     "description": "Hash brownies... Hot Girls... Unlimited Alcohol... Ultimate Nightlife... World famous Red Light District! Oh Yes! This city lets you indulge into everything that is not so legal in the other parts of the world!"
         // };
+        console.log($stateParams.id);
         switch ($stateParams.id) {
             //3//
             case 'Argentina':
@@ -513,7 +525,7 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
                     "description": "Hash brownies... Hot Girls... Unlimited Alcohol... Ultimate Nightlife... World famous Red Light District! Oh Yes! This city lets you indulge into everything that is not so legal in the other parts of the world!"
                 };
                 break;
-            case 'Cruise Vacations ':
+            case 'Cruise Vacations':
                 $scope.getDestination = {
                     "image": "img/banner_images/cruise vacations.jpg",
                     "description": "Hash brownies... Hot Girls... Unlimited Alcohol... Ultimate Nightlife... World famous Red Light District! Oh Yes! This city lets you indulge into everything that is not so legal in the other parts of the world!"
@@ -654,7 +666,7 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
                     "description": "Hash brownies... Hot Girls... Unlimited Alcohol... Ultimate Nightlife... World famous Red Light District! Oh Yes! This city lets you indulge into everything that is not so legal in the other parts of the world!"
                 };
                 break;
-            case 'Macau':
+            case 'Macao':
                 $scope.getDestination = {
                     "image": "img/banner_images/macau.jpg",
                     "description": "Hash brownies... Hot Girls... Unlimited Alcohol... Ultimate Nightlife... World famous Red Light District! Oh Yes! This city lets you indulge into everything that is not so legal in the other parts of the world!"
@@ -726,7 +738,7 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
                     "description": "Hash brownies... Hot Girls... Unlimited Alcohol... Ultimate Nightlife... World famous Red Light District! Oh Yes! This city lets you indulge into everything that is not so legal in the other parts of the world!"
                 };
                 break;
-            case 'Phillippines':
+            case 'Philippines':
                 $scope.getDestination = {
                     "image": "img/banner_images/phillippines.jpg",
                     "description": "Hash brownies... Hot Girls... Unlimited Alcohol... Ultimate Nightlife... World famous Red Light District! Oh Yes! This city lets you indulge into everything that is not so legal in the other parts of the world!"
@@ -752,7 +764,7 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
                     "description": "Hash brownies... Hot Girls... Unlimited Alcohol... Ultimate Nightlife... World famous Red Light District! Oh Yes! This city lets you indulge into everything that is not so legal in the other parts of the world!"
                 };
                 break;
-            case 'River Cruises':
+            case 'River Cruise':
                 $scope.getDestination = {
                     "image": "img/banner_images/river cruises.jpg",
                     "description": "Hash brownies... Hot Girls... Unlimited Alcohol... Ultimate Nightlife... World famous Red Light District! Oh Yes! This city lets you indulge into everything that is not so legal in the other parts of the world!"
@@ -776,7 +788,7 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
                     "description": "Hash brownies... Hot Girls... Unlimited Alcohol... Ultimate Nightlife... World famous Red Light District! Oh Yes! This city lets you indulge into everything that is not so legal in the other parts of the world!"
                 };
                 break;
-            case 'Srilanka':
+            case 'Sri Lanka':
                 $scope.getDestination = {
                     "image": "img/banner_images/sirlanka.jpg",
                     "description": "Hash brownies... Hot Girls... Unlimited Alcohol... Ultimate Nightlife... World famous Red Light District! Oh Yes! This city lets you indulge into everything that is not so legal in the other parts of the world!"
@@ -833,7 +845,7 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
                     "description": "Hash brownies... Hot Girls... Unlimited Alcohol... Ultimate Nightlife... World famous Red Light District! Oh Yes! This city lets you indulge into everything that is not so legal in the other parts of the world!"
                 };
                 break;
-            case 'United Arab of Emirates':
+            case 'United Arab Emirates':
                 $scope.getDestination = {
                     "image": "img/banner_images/united arab of emirates.jpg",
                     "description": "Hash brownies... Hot Girls... Unlimited Alcohol... Ultimate Nightlife... World famous Red Light District! Oh Yes! This city lets you indulge into everything that is not so legal in the other parts of the world!"
@@ -851,7 +863,7 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
                     "description": "Hash brownies... Hot Girls... Unlimited Alcohol... Ultimate Nightlife... World famous Red Light District! Oh Yes! This city lets you indulge into everything that is not so legal in the other parts of the world!"
                 };
                 break;
-            case 'USA':
+            case 'United States of America':
                 $scope.getDestination = {
                     "image": "img/banner_images/usa.jpg",
                     "description": "Hash brownies... Hot Girls... Unlimited Alcohol... Ultimate Nightlife... World famous Red Light District! Oh Yes! This city lets you indulge into everything that is not so legal in the other parts of the world!"
@@ -864,10 +876,7 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
                 };
                 break;
             default:
-                $scope.getDestination = {
-                    "image": "img/customDes/armenia.jpg",
-                    "description": "Hash brownies... Hot Girls... Unlimited Alcohol... Ultimate Nightlife... World famous Red Light District! Oh Yes! This city lets you indulge into everything that is not so legal in the other parts of the world!"
-                };
+                break;
         }
         $scope.getActivity = [{
             "name": "BICYCLE TOUR",
@@ -926,7 +935,7 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
             "name": "NIGHT CLUB/DISCO",
             "image": "img/activities/nightclub.jpg"
         }, {
-            "name": "PARASAILING",
+            "name": "PARAGLIDING",
             "image": "img/activities/parasailing.jpg"
         }, {
             "name": "SCUBA DIVING",
@@ -937,6 +946,9 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
         }, {
             "name": "TRECKING",
             "image": "img/activities/trecking.jpg"
+        }, {
+            "name": "SNOW SKIING",
+            "image": "img/activities/skiing.jpg"
         }];
     })
 
