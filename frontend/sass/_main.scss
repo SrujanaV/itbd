@@ -313,11 +313,9 @@ header {
 }
 
 .himg {
-    width: 209px;
-    border-radius: 100px;
+    width: 200px;
     background-color: #fff;
-    box-shadow: 0 0 0 5px #ffffff;
-    position: absolute;
+    float: left;
     z-index: 9999;
 }
 
@@ -389,7 +387,7 @@ header {
     .tp {
         font-size: 11px;
         text-align: center;
-        padding-left: 380px;
+        padding-left: 200px;
         color: #000;
         li {
             padding: 24px 0;
@@ -534,6 +532,10 @@ header {
     }
 }
 
+textarea.form-control {
+    height: auto !important;
+}
+
 .mycart2 {
     box-shadow: #0e0f24 0 -1px 1px -1px;
     @include transform(rotate(-90deg)); // -webkit-transform: rotate(-90deg);
@@ -545,13 +547,26 @@ header {
         list-style: none;
         text-align: center;
         cursor: pointer;
-        padding: 6px;
+        padding: 4px;
         margin: 0;
     }
     li {
         padding: 6px 35px;
         font-size: 18px;
     }
+}
+
+.error {
+    visibility: visible;
+    background-color: black;
+    color: #fff;
+    border-radius: 2px;
+    padding: 2px 4px;
+    position: absolute;
+    z-index: 99999999;
+    font-size: 13px;
+    text-align: center;
+    margin: 0 !important;
 }
 
 .patmargin3 {
