@@ -112,12 +112,12 @@
                     <form class="himg2" ng-init="abc">
                         <label class="pregular labsec">I want to go to</label>
                         <fieldset class="inputtag">
-                             <ui-select ng-model="person.selected" class="plan-dark-bold" ng-change="search($select.selected.name)">
+                            <ui-select ng-model="person.selected" class="plan-dark-bold" ng-change="search($select.selected.name)">
                                 <ui-select-match placeholder="Select Destination">{{$select.selected.name}}</ui-select-match>
                                 <ui-select-choices repeat="item in dropDown">
                                     <div>{{item.name}}</div>
                                 </ui-select-choices>
-                            </ui-select> 
+                            </ui-select>
                         </fieldset>
                         <button class="gobtn" ng-click="gotoFun()">GO</button>
                     </form>

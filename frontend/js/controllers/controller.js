@@ -6,13 +6,13 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
 
         $scope.gotoFun = function (id) {
             $state.go('customdestination', {
-                id: id
+                id: $scope.goTo
             })
 
         }
         $scope.search = function (name) {
             $scope.goTo = name;
-            $scope.gotoFun($scope.goTo);
+            // $scope.gotoFun($scope.goTo);
         }
         $scope.mySlides = [{
             "img": "img/bg1.jpg"
