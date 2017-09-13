@@ -242,6 +242,12 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
             "name": "Zimbabwe",
             "image": "img/dest/zimbabwe.jpg",
         }];
+
+        $scope.DestinationLand = _.chunk($scope.DestinationLand, 2);
+        for (var i = 0; i < $scope.DestinationLand.length; i++) {
+            $scope.DestinationLand[i] = _.chunk($scope.DestinationLand[i], 2);
+        }
+
         $scope.allDestination = [{
             "name": "Argentina",
             "image": "img/dest/argentina.jpg",

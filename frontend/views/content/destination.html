@@ -19,14 +19,14 @@
                         <div class="slidershow">
                             <flex-slider prev-text="" next-text="" flex-slide="data in DestinationLand track by $index" class="desti yellow_back_color">
                                 <li>
-                                    <div class="row">
-                                        <div class="col-md-6 col-sm-6 col-xs-12 padd15px" ng-repeat="data1 in data">
+                                    <div class="row" ng-repeat="data1 in data">
+                                        <div class="col-md-6 col-sm-6 col-xs-12 padd15px" ng-repeat="datas in data1">
                                             <figure>
                                                 <div class="front">
-                                                    <a href=""><img alt="{{data.name}}" title="{{data.name}}" ng-src="{{data.image}}" class="img-responsive"></a>
+                                                    <a href=""><img alt="{{datas.name}}" title="{{datas.name}}" src="{{datas.image}}" class="img-responsive"></a>
                                                     <div class="shadow-down"></div>
                                                     <div class="event-name">
-                                                        <span class="font20">{{data.name}}</span>
+                                                        <span class="font20">{{datas.name}}</span>
                                                     </div>
                                                 </div>
                                             </figure>
