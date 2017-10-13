@@ -106,20 +106,20 @@
                         <div class="flipDiv">
                             <figure>
                                 <div class="front">
-                                    <img alt="{{data.name}}" title="{{data.name}}" ng-src="{{data.image}}" alt="" class="maxwidth img-responsive" ng-click="addTocart(data)">
+                                    <img ng-src="{{data.image}}" alt="" class="maxwidth img-responsive" ng-click="Image(data.number);">
                                     <!-- <div class="shadow-down"></div>
                                     <div class="event-name">
                                         <span>{{data.name}}</span>
                                     </div> -->
                                 </div>
-                                <figcaption>
+                                <!-- <figcaption>
                                     <div class="cart-sec">
                                         <button class="cart uppercase" ng-click="addTocartOnActivity(data._id,data.typeCart);">
-                                        <i   ng-if="!isInWishlistActivity(data._id)"  ng-click="cartd();"><img  src="frontend/img/cartremove.png" class="cartsi img-responsive" ></i>
-                                        <i  ng-if="isInWishlistActivity(data._id)" ng-click="cartr();"><img  src="frontend/img/cartadd.png" class="cartsi img-responsive"></i>
+                                        <i ng-if="!isInWishlistActivity(data._id)"  ng-click="cartd();"><img  src="frontend/img/cartremove.png" class="cartsi img-responsive" ></i>
+                                        <i ng-if="isInWishlistActivity(data._id)" ng-click="cartr();"><img  src="frontend/img/cartadd.png" class="cartsi img-responsive"></i>
                                     </button>
                                     </div>
-                                </figcaption>
+                                </figcaption> -->
                             </figure>
                         </div>
                     </div>
