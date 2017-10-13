@@ -20,77 +20,11 @@
 <div class="whatsmain">
     <div class="container ">
         <div class="col-md-12 ">
-            <!---PACKAGES START ---->
-            <!-- <div class="whatsmarg4 displaynonpata">
-                <div class="row text-center pattmarg2">
-                    <span><a class="patpack theboldfont ">ACTIVITIES </a></span>
-
-                    <span><a class=" patpack2 whit_color theboldfont">PACKAGES</a></span>
-                </div>
-                <div class="whatsmain">
-                    <div class="margincheck">
-                        <div class="row checkboxrow Robotor bluecol yellow_back_color">
-                            <div class="col-md-12 col-sm-12 col-xs-12 text-center">
-                                <p>Explore our Ready Packages made by our EXPERTS!!</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row pattmarg3">
-                    <div class="col-md-3 col-sm-3 col-xs-12 pading0" ng-repeat="data in getPackage">
-                        <div class="events">
-                            <img alt="{{data.title1}} {{data.title2}}" title="{{data.title1}} {{data.title2}}" ng-src="{{data.image}}" alt="" class="img-responsive">
-                            <div class="cart-sec">
-                                <button class="cart uppercase" ng-click="addTocartOnPackage(data._id,data.typeCart);">
-                                  <i ng-click="cartd();"><img  src="frontend/img/cartremove.png" class="cartsi img-responsive" ></i>
-                                  <i ng-click="cartr();"><img  src="frontend/img/cartadd.png" class="cartsi img-responsive"></i>
-                              </button>
-                            </div>
-                            <div class="shadow-down"></div>
-                            <div class="event-name">
-                                <span>{{data.title1}} {{data.title2}}</span>
-                                <br>
-                                <span>{{data.duration}}</span>
-                            </div>
-                            <div class="over-layer text-center" ui-sref="package({id:data._id})">
-                                <div class="cart-sec">
-                                    <button class="cart uppercase" ng-click="addTocartOnPackage(data._id,data.typeCart);">
-                                    <i><img src="frontend/img/cartremove.png" class="cartsi img-responsive" ></i>
-                                    <i><img src="frontend/img/cartadd.png" class="cartsi img-responsive"></i>
-                                </button>
-                                </div>
-                                <div class="button-holder">
-                                    <button class="ext-detail" ui-sref="package({id:data._id})">KNOW MORE</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-3 col-xs-12 pading0">
-                        <div class="events">
-                            <img alt="customisation" title="customisation" ng-src="frontend/img/customis.gif" class="maxwidth img-responsive">
-                            <div class="over-layer text-center" ui-sref="customisation({id:currentStateId})">
-                                <div class="button-holder">
-                                    <button class="ext-detail">KNOW MORE</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="text-center">
-                    <h4 class="nodata">No Result Found</h4>
-                </div>
-                <div class="col-md-12  col-sm-12 col-xs-12 loadimag text-center " ng-hide="getPackage.length == 0">
-                    <a class="whit_color" ng-click="loadMorePackage()" ng-if="viewMore">VIEW  MORE</a>
-                    <a class="whit_color" ng-if="viewLess && !viewMore" ng-click="loadLessPackage()">VIEW  LESS</a>
-                </div>
-            </div> -->
-            <!---PACKAGES END ---->
 
             <!---ACTIVIES START---->
             <div class="{{classp}} whatsmarg4 displaynonpata">
                 <div class="row text-center pattmarg2">
                     <span><a class=" patpack2 whit_color theboldfont text-capitalize">Gallery</a></span>
-                    <!-- <span><a class=" patpack theboldfont ">PACKAGES </a></span> -->
                 </div>
 
                 <div class="whatsmain">
@@ -107,19 +41,7 @@
                             <figure>
                                 <div class="front">
                                     <img ng-src="{{data.image}}" alt="" class="maxwidth img-responsive" ng-click="Image(data.number);">
-                                    <!-- <div class="shadow-down"></div>
-                                    <div class="event-name">
-                                        <span>{{data.name}}</span>
-                                    </div> -->
                                 </div>
-                                <!-- <figcaption>
-                                    <div class="cart-sec">
-                                        <button class="cart uppercase" ng-click="addTocartOnActivity(data._id,data.typeCart);">
-                                        <i ng-if="!isInWishlistActivity(data._id)"  ng-click="cartd();"><img  src="frontend/img/cartremove.png" class="cartsi img-responsive" ></i>
-                                        <i ng-if="isInWishlistActivity(data._id)" ng-click="cartr();"><img  src="frontend/img/cartadd.png" class="cartsi img-responsive"></i>
-                                    </button>
-                                    </div>
-                                </figcaption> -->
                             </figure>
                         </div>
                     </div>
@@ -127,10 +49,6 @@
                 <div class="marg45 text-center" ng-show="noResult && !viewMoreActivity">
                     <h4 class="nodata">No Result Found</h4>
                 </div>
-                <!-- <div class="col-md-12  col-sm-12 col-xs-12 loadimag text-center " ng-hide="getActivity.length == 0">
-                    <a class="whit_color" ng-click="loadMorePackage()">VIEW  MORE</a>
-                    <a class="whit_color" ng-click="searchExpert()">VIEW  LESS</a>
-                </div> -->
             </div>
             <!---ACTIVIES END  ---->
         </div>
@@ -217,50 +135,3 @@
     </div>
 </div>
 <!---END ENQUIRE FORM ---->
-<!---TRIP DETAILS START  ---->
-<!-- <div class="whatsmain pad10">
-    <div class="container ">
-        <div class="col-md-12 margin3">
-            <div class="whatsmarg4"> -->
-
-<!---START VIDEO FRAME ---->
-<!-- <div class="pad15pat embed-responsive embed-responsive-16by9" ng-if="getDestination.video">
-                    <iframe id="test" class="embed-responsive-item" ng-if="getDestination.video" ng-src="{{'https://www.youtube.com/embed/'+getDestination.video|trusted}}"></iframe>
-                </div> -->
-<!---END VIDEO FRAME ---->
-<!---START ACCORDION ---->
-<!-- <div class="row pregular">
-                    <uib-accordion close-others="true">
-                        <div uib-accordion-group is-open="accordian[$index].isFirstOpen" class="panel-default panelacor" ng-class="{'yellow_back_color': accordian[$index].isFirstOpen, '': !accordian[$index].isFirstOpen}"
-                            ng-repeat="data in getTitle">
-                            <uib-accordion-heading>
-                                <div class="fontpanel Pregular bluecol" ng-class="{'yellow_back_color': accordian[$index].isFirstOpen, '': !accordian[$index].isFirstOpen}">
-                                    <img alt="{{data.name}}" title="{{data.name}}" ng-src="{{data.name | TbtIcon}}" class="image_title">                                    {{data.name}}
-                                    <i class="pull-right fa " ng-class="{'fa fa-minus':  accordian[$index].isFirstOpen, 'fa fa-plus': !accordian[$index].isFirstOpen}"></i>
-                                </div>
-                            </uib-accordion-heading> -->
-<!-- Please Remove the Below Comment -->
-<!-- <div class=" padding30"> -->
-<!-- <div class=" padding30" ng-repeat="x in DestinationTitle"> -->
-<!-- <ul class="list-group socialpatt">
-                                    <li class="Robotor bluecol" ng-if="{{data.name1}}">
-                                        <strong class="padding15">{{data.name1}}</strong>
-                                    </li>
-                                    <p class="Robotor" ng-bind-html="data.description"></p>
-                                </ul> -->
-<!-- <div class="row padding30">
-                                    <div class="col-md-3 col-sm-3 col-xs-3  pading0" ng-repeat="image in x.images">
-                                        <figure>
-                                            <img alt="" title=""  class="img-responsive" src="{{image.image | serverimage}}">
-                                        </figure>
-                                    </div>
-                                </div> -->
-<!-- </div>
-                        </div>
-                    </uib-accordion>
-                </div> -->
-<!-- END ACCORDION -->
-<!-- </div>
-        </div>
-    </div>
-</div> -->
