@@ -11057,7 +11057,8 @@ figure.hover figcaption {
 
 .pattayamarg4 {
   margin: 0% 5% 1%;
-  padding: 3% 8%; }
+  padding: 3% 8%;
+  text-align: center; }
   .pattayamarg4 p {
     font-size: 16px;
     margin: 0; }
@@ -11104,7 +11105,8 @@ figure.hover figcaption {
   margin-left: 20px; }
 
 .margincheck {
-  margin: 1% 5% -1px; }
+  margin: 1% 5% -1px;
+  text-align: center; }
 
 .checkboxrow {
   padding: 1% 2% 8%; }

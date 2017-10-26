@@ -73,7 +73,7 @@ myApp.controller('headerCtrl', function ($scope, TemplateService) {
     }, {
         "name": "Lithuania"
     }, {
-        "name": "Macao"
+        "name": "Macau"
     }, {
         "name": "Malaysia"
     }, {
