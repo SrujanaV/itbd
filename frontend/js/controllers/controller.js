@@ -462,6 +462,27 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
         //     "description": "Hash brownies... Hot Girls... Unlimited Alcohol... Ultimate Nightlife... World famous Red Light District! Oh Yes! This city lets you indulge into everything that is not so legal in the other parts of the world!"
         // };
         console.log($stateParams.id);
+
+
+// $scope.cartSubmit = function (cartData, detailForm) {
+//             console.log("submiting...")
+//             console.log(cartData)
+//             if (cartData) {
+//                 if (detailForm.$valid == true) {
+//                     NavigationService.submitEnquiry(cartData, function (data) {
+//                         if (data.data.value) {
+//                             console.log("all data")
+//                         }
+//                         console.log(data)
+//                     });
+//                 }
+//             }
+//         };
+
+
+
+
+
         switch ($stateParams.id) {
             //3//
             case 'Argentina':
@@ -2601,6 +2622,10 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
                 $scope.galleryImage.close();
             };
         };
+
+
+
+
     })
 
     .controller('ActivityCtrl', function ($scope, TemplateService, NavigationService, $timeout, toastr, $http) {

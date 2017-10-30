@@ -68,7 +68,7 @@
                         </div>
                     </div>
                     <div class="col-md-9 col-sm-9 yellow_back_lightcolor pattform">
-                        <form name="myForm" ng-submit="enquirySubmit(enquiryData,myForm)">
+                        <form name="myForm">
                             <div class="col-md-6  col-sm-6 padboth15">
                                 <input type="text" class="hideinput form-control Roboto" placeholder="Interested Cities" name="cities" ng-model="enquiryData.cities"
                                     required>
@@ -80,9 +80,9 @@
                                 <p class="error" ng-show="myForm.activitie.$invalid && myForm.activitie.$touched">Interested Activities is required</p>
                             </div>
                             <div class="col-md-3 col-sm-3 padboth15">
-                                <input type="number" class="hideinput form-control Robotor" placeholder="Group Size" name="size" ng-model="enquiryData.size"
+                                <input type="number" class="hideinput form-control Robotor" placeholder="Group Size" name="groupsize" ng-model="enquiryData.groupsize"
                                     required>
-                                <p class="error" ng-show="myForm.size.$invalid && myForm.size.$touched">Group Size is required</p>
+                                <p class="error" ng-show="myForm.groupsize.$invalid && myForm.groupsize.$touched">Group Size is required</p>
                             </div>
 
                             <div class="col-md-5 col-sm-5 padboth15">
@@ -107,9 +107,9 @@
                                 <p class="error" ng-show="myForm.name.$invalid && myForm.name.$touched">Name is required</p>
                             </div>
                             <div class="col-md-6 col-sm-6 padboth15">
-                                <input type="number" class="hideinput form-control Robotor" placeholder="Phone No" name="phone" ng-model="enquiryData.phone"
+                                <input type="number" class="hideinput form-control Robotor" placeholder="Phone No" name="mobile" ng-model="enquiryData.mobile"
                                     required minlength="10" maxlength="10">
-                                <p class="error" ng-show="myForm.phone.$invalid && myForm.phone.$touched">Phone No is required</p>
+                                <p class="error" ng-show="myForm.mobile.$invalid && myForm.mobile.$touched">Phone No is required</p>
                             </div>
 
                             <div class="col-md-8 col-sm-8 ">
@@ -118,8 +118,8 @@
                                 <p class="error" ng-show="myForm.email.$invalid && myForm.email.$touched">Email ID is required</p>
                             </div>
                             <div class="col-md-4 col-sm-3 ">
-                                <button ng-click="enquirybtn = !enquirybtn" ng-disabled="myForm.$invalid" ng-class="{ active: enquirybtn }" type="submit"
-                                    class="btn btn-submit">Submit</button>
+                                <button ng-disabled="myForm.$invalid" ng-class="{ active: enquirybtn }" type="submit"
+                                    class="btn btn-submit" ng-click="enquirySubmit(enquiryData,myForm)">Submit</button>
                             </div>
                         </form>
                     </div>
