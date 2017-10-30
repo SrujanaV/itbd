@@ -19,6 +19,7 @@ $scope.cartSubmit = function (cartData, detailForm) {
                             console.log("all data")
                         }
                         console.log(data)
+                        $scope.cartData={};
                     });
                 }
             }
