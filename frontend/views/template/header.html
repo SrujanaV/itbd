@@ -94,12 +94,12 @@
                                     <div class="form-group">
                                         <label class="labels bluecol">Name:</label>
                                         <input type="text" class="form-control inputform" placeholder="Name" name="name" ng-model="cartData.name" required>
-                                        <p class="error" ng-show="detailForm.name.$invalid && detailForm.name.$touched">Name is required</p>
+                                        <p class="error" ng-if="detailForm.name.$invalid && detailForm.name.$touched">Name is required</p>
                                     </div>
                                     <div class="form-group">
                                         <label class="labels bluecol">Email Id:</label>
                                         <input type="email" class="form-control inputform" placeholder="Email" name="email" ng-model="cartData.email" required>
-                                        <p class="error" ng-show="detailForm.email.$invalid && detailForm.email.$touched">Email is required</p>
+                                        <p class="error" ng-if="detailForm.email.$invalid && detailForm.email.$touched">Email is required</p>
                                     </div>
                                     <div class="form-group">
                                         <label class="labels bluecol">Mob No:</label>

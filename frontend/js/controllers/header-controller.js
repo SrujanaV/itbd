@@ -17,9 +17,16 @@ $scope.cartSubmit = function (cartData, detailForm) {
                         console.log("in navigation")
                         if (data.data.value) {
                             console.log("all data")
+                        
                         }
                         console.log(data)
-                        $scope.cartData={};
+                         
+                        $scope.mycart=false;
+                           $scope.cartData={};
+                 
+                      
+                       
+                       
                     });
                 }
             }
