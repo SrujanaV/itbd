@@ -1,9 +1,39 @@
-myApp.controller('headerCtrl', function ($scope, TemplateService) {
+myApp.controller('headerCtrl', function ($scope, TemplateService, NavigationService, $timeout, toastr, $http, $stateParams, $uibModal) {
     $scope.template = TemplateService;
     $scope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParams) {
         $(window).scrollTop(0);
     });
+
     $.fancybox.close(true);
+$scope.onlyNumbers = "^[1-9][0-9]*$";
+$scope.cartSubmit = function (cartData, detailForm) {
+            console.log("submiting...")
+            console.log("data",cartData)
+            if (cartData) {
+                console.log("cartData")
+                if (detailForm.$valid == true) {
+                    console.log("detailForm.$valid")
+                    NavigationService.submitEnquiry(cartData, function (data) {
+                        console.log("in navigation")
+                        if (data.data.value) {
+                            console.log("all data")
+                        
+                        }
+                        console.log(data)
+                         
+                        $scope.mycart=false;
+                           $scope.cartData={};
+                 
+                      
+                       
+                       
+                    });
+                }
+            }
+        };
+
+
+
     $scope.onlyDest = [{
         "name": "Argentina"
     }, {
@@ -73,7 +103,7 @@ myApp.controller('headerCtrl', function ($scope, TemplateService) {
     }, {
         "name": "Lithuania"
     }, {
-        "name": "Macao"
+        "name": "Macau"
     }, {
         "name": "Malaysia"
     }, {

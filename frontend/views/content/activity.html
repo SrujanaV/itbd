@@ -32,70 +32,15 @@
                                 <figure>
                                     <div class="front">
                                         <img alt="{{smallImg.name}}" title="{{smallImg.name}}" ng-src="{{smallImg.image}}" alt="" class="maxwidth img-responsive">
-                                        <!-- <div class="cart-sec">
-                                            <button class="cart uppercase" ng-click="addTocartOnActivityPage(smallImg._id,smallImg.typeCart);">
-                                              <i  ng-if="!isInWishlistActivityPage(smallImg._id)" ng-click="cartd();"><img  src="frontend/img/cartremove.png" class="cartsi img-responsive" ></i>
-                                              <i  ng-if="isInWishlistActivityPage(smallImg._id)" ng-click="cartr();"><img  src="frontend/img/cartadd.png" class="cartsi img-responsive"></i>
-                                          </button>
-                                        </div> -->
                                         <div class="shadow-down"></div>
                                         <div class="event-name">
                                             <span>{{smallImg.name}}</span>
                                         </div>
                                     </div>
-                                    <!-- <figcaption>
-                                        <div class="cart-sec">
-                                            <button class="cart uppercase" ng-click="addTocartOnActivityPage(smallImg._id,smallImg.typeCart);">
-                                                <i  ng-if="!isInWishlistActivityPage(smallImg._id)" ng-click="cartd();"><img  src="frontend/img/cartremove.png" class="cartsi img-responsive"></i>
-                                                <i  ng-if="isInWishlistActivityPage(smallImg._id)" ng-click="cartr();"><img  src="frontend/img/cartadd.png" class="cartsi img-responsive"></i>
-                                            </button>
-                                        </div>
-                                        <div class="descrip">
-                                            <p ng-bind-html="smallImg.description | htmlDecode | letterLimit: 255"></p>
-                                        </div> -->
-                                    <!-- <div ng-if="!addedSuccess" class="descrip" ng-bind-html="smallImg.description | shorten :180"></div> -->
-                                    <!-- <div ng-if="addedSuccess" class="descrip"><p class="toppad">Your query has been added to the cart.</p></div> -->
-                                    <!-- </figcaption> -->
                                 </figure>
                             </div>
                         </div>
                     </div>
-                    <!-- <div class="row">
-                        <div class="col-md-12  col-sm-12 col-xs-12 padd15px padd30px" ng-if="activityLand.bigImage[n]">
-                            <div class="flipDiv">
-                                <figure>
-                                    <div class="front">
-                                        <img alt="{{activityLand.bigImage[n].name}}" title="{{activityLand.bigImage[n].name}}" ng-src="{{activityLand.bigImage[n].image2 |serverimage}}"
-                                            alt="" class="mainwidht img-responsive">
-                                        <div class="cart-sec">
-                                            <button class="cart uppercase" ng-click="addTocartOnActivityPage(activityLand.bigImage[n]._id,activityLand.bigImage[n].typeCart);">
-                                                <i   ng-if="!isInWishlistActivityPage(activityLand.bigImage[n]._id)" ng-click="cartd();"><img src="frontend/img/cartremove.png" class="cartsi img-responsive" ></i>
-                                                <i  ng-if="isInWishlistActivityPage(activityLand.bigImage[n]._id)" ng-click="cartr();"><img   src="frontend/img/cartadd.png" class="cartsi img-responsive"></i>
-                                            </button>
-                                        </div>
-                                        <div class="shadow-down"></div>
-                                        <div class="event-name">
-                                            <span>{{activityLand.bigImage[n].name}}</span>
-                                        </div>
-                                    </div>
-                                    <figcaption>
-                                        <div class="cart-sec">
-                                            <button class="cart uppercase" ng-click="addTocartOnActivityPage(activityLand.bigImage[n]._id,activityLand.bigImage[n].typeCart);">
-                                              <i   ng-if="!isInWishlistActivityPage(activityLand.bigImage[n]._id)"  ng-click="cartd();"><img   src="frontend/img/cartremove.png" class="cartsi img-responsive" ></i>
-                                              <i  ng-if="isInWishlistActivityPage(activityLand.bigImage[n]._id)" ng-click="cartr();"><img  src="frontend/img/cartadd.png" class="cartsi img-responsive"></i>
-                                          </button>
-                                        </div>
-                                        <div ng-if="!addedSuccess" class="descrip">
-                                            <p ng-bind-html="activityLand.bigImage[n].description | htmlDecode | letterLimit: 255"></p>
-                                        </div>
-                                        <div ng-if="addedSuccess" class="descrip">
-                                            <p class="toppad">Your query has been added to the cart.</p>
-                                        </div>
-                                    </figcaption>
-                                </figure>
-                            </div>
-                        </div>
-                    </div>  -->
                 </div>
                 <!-- ERROR BOX -->
                 <div ng-if="showBttn.length==0">

@@ -23,7 +23,7 @@
                                         <div class="col-md-6 col-sm-6 col-xs-12 padd15px" ng-repeat="datas in data1">
                                             <figure>
                                                 <div class="front">
-                                                    <a href=""><img alt="{{datas.name}}" title="{{datas.name}}" src="{{datas.image}}" class="img-responsive"></a>
+                                                    <a ui-sref="customdestination({id:datas.name})"><img alt="{{datas.name}}" title="{{datas.name}}" src="{{datas.image}}" class="img-responsive"></a>
                                                     <div class="shadow-down"></div>
                                                     <div class="event-name">
                                                         <span class="font20">{{datas.name}}</span>

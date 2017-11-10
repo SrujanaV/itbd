@@ -4,16 +4,15 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
         $scope.navigation = NavigationService.getNavigation();
         $scope.formData = {};
 
-        $scope.gotoFun = function (id) {
+        $scope.gotoFun = function () {
             $state.go('customdestination', {
                 id: $scope.goTo
             })
-
         }
         $scope.search = function (name) {
             $scope.goTo = name;
-            // $scope.gotoFun($scope.goTo);
         }
+
         $scope.mySlides = [{
             "img": "img/bg1.jpg"
         }, {
@@ -118,7 +117,7 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
         }, {
             "name": "Lithuania"
         }, {
-            "name": "Macao"
+            "name": "Macau"
         }, {
             "name": "Malaysia"
         }, {
@@ -142,7 +141,7 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
         }, {
             "name": "Peru"
         }, {
-            "name": "Phillippines"
+            "name": "Philippines"
         }, {
             "name": "Poland"
         }, {
@@ -150,7 +149,7 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
         }, {
             "name": "Puerto Rico"
         }, {
-            "name": "River Cruises"
+            "name": "River Cruise"
         }, {
             "name": "Rwanda"
         }, {
@@ -164,7 +163,7 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
         }, {
             "name": "South Africa"
         }, {
-            "name": "Srilanka"
+            "name": "Sri Lanka"
         }, {
             "name": "St.Petersburg"
         }, {
@@ -176,7 +175,7 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
         }, {
             "name": "Thailand"
         }, {
-            "name": "United Arab of Emirates"
+            "name": "United Arab Emirates"
         }, {
             "name": "United Kingdom"
         }, {
@@ -221,7 +220,7 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
             "name": "Argentina",
             "image": "img/dest/argentina.jpg",
         }, {
-            "name": "Fiji",
+            "name": "Fiji Islands",
             "image": "img/dest/fiji_text.jpg",
         }, {
             "name": "Korea",
@@ -279,10 +278,10 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
             "name": "Croatia",
             "image": "img/dest/croatia.jpg",
         }, {
-            "name": "Cruise ",
+            "name": "Cruise Vacations",
             "image": "img/dest/cruise.jpg",
         }, {
-            "name": "Czechia",
+            "name": "Czech Republic",
             "image": "img/dest/czech.jpg",
         }, {
             "name": "Denmark",
@@ -291,7 +290,7 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
             "name": "Estonia",
             "image": "img/dest/estonia.jpg",
         }, {
-            "name": "Fiji",
+            "name": "Fiji Islands",
             "image": "img/dest/fiji.jpg",
         }, {
             "name": "Finland",
@@ -453,7 +452,7 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
         TemplateService.title = "Grid"; // This is the Title of the Website
         $scope.navigation = NavigationService.getNavigation();
     })
-    .controller('CustomDestinationCtrl', function ($scope, TemplateService, NavigationService, $timeout, toastr, $http, $stateParams) {
+    .controller('CustomDestinationCtrl', function ($scope, TemplateService, NavigationService, $timeout, toastr, $http, $stateParams, $uibModal) {
         $scope.template = TemplateService.getHTML("content/customdestination.html");
         TemplateService.title = "Grid"; // This is the Title of the Website
         $scope.navigation = NavigationService.getNavigation();
@@ -463,29 +462,58 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
         //     "description": "Hash brownies... Hot Girls... Unlimited Alcohol... Ultimate Nightlife... World famous Red Light District! Oh Yes! This city lets you indulge into everything that is not so legal in the other parts of the world!"
         // };
         console.log($stateParams.id);
+
+
+        // $scope.cartSubmit = function (cartData, detailForm) {
+        //             console.log("submiting...")
+        //             console.log(cartData)
+        //             if (cartData) {
+        //                 if (detailForm.$valid == true) {
+        //                     NavigationService.submitEnquiry(cartData, function (data) {
+        //                         if (data.data.value) {
+        //                             console.log("all data")
+        //                         }
+        //                         console.log(data)
+        //                     });
+        //                 }
+        //             }
+        //         };
+
+
+
+
+
         switch ($stateParams.id) {
             //3//
             case 'Argentina':
                 $scope.getDestination = {
                     "image": "img/banner_images/argentina.jpg",
                     "description": "Hash brownies... Hot Girls... Unlimited Alcohol... Ultimate Nightlife... World famous Red Light District! Oh Yes! This city lets you indulge into everything that is not so legal in the other parts of the world!",
-                    "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever"
+                    "content": "A glimpse of the popular places to visit in Argentina"
                 };
                 $scope.getActivity = [{
+                    "number": 0,
                     "image": "img/custom_dest/argentina/ar1.jpg"
                 }, {
+                    "number": 1,
                     "image": "img/custom_dest/argentina/ar2.jpg"
                 }, {
+                    "number": 2,
                     "image": "img/custom_dest/argentina/ar3.jpg"
                 }, {
+                    "number": 3,
                     "image": "img/custom_dest/argentina/ar4.jpg"
                 }, {
+                    "number": 4,
                     "image": "img/custom_dest/argentina/ar5.jpg"
                 }, {
+                    "number": 5,
                     "image": "img/custom_dest/argentina/ar6.jpg"
                 }, {
+                    "number": 6,
                     "image": "img/custom_dest/argentina/ar7.jpg"
                 }, {
+                    "number": 7,
                     "image": "img/custom_dest/argentina/ar8.jpg"
                 }];
                 break;
@@ -495,22 +523,31 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
                     "description": "Visit Armenia, it is beautiful! Country of old legends and biblical stories, Hidden lakes, valleys, highlands n rich forests. This is a destination where you will be intrigued by history, awed by monuments, amazed by the landscape and charmed by down-to-earth locals. Few nations have histories as ancient, complex and laced with tragedy as Armenia. The simply extraordinary collection of medieval monasteries scattered across the country is the number-one attraction, closely followed by a dramatically beautiful landscape that is perfectly suited to hiking and other outdoor activities. And then there's the unexpected delight of Yerevan – one of Europe's most exuberant and endearing cities. Put together, they offer an enticing and hugely enjoyable travel experience."
                 };
                 $scope.getActivity = [{
+                    "number": 0,
                     "image": "img/custom_dest/armenia/arm1.jpg"
                 }, {
+                    "number": 1,
                     "image": "img/custom_dest/armenia/arm2.jpg"
                 }, {
+                    "number": 2,
                     "image": "img/custom_dest/armenia/arm3.jpg"
                 }, {
+                    "number": 3,
                     "image": "img/custom_dest/armenia/arm4.jpg"
                 }, {
+                    "number": 4,
                     "image": "img/custom_dest/armenia/arm5.jpg"
                 }, {
+                    "number": 5,
                     "image": "img/custom_dest/armenia/arm6.jpg"
                 }, {
+                    "number": 6,
                     "image": "img/custom_dest/armenia/arm7.jpg"
                 }, {
+                    "number": 7,
                     "image": "img/custom_dest/armenia/arm8.jpg"
                 }, {
+                    "number": 8,
                     "image": "img/custom_dest/armenia/arm9.jpg"
                 }];
                 break;
@@ -520,22 +557,31 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
                     "description": "Experience sun kissed beaches of gold coast to the spiritual heart of the red centre. Australia is marine wildlife. Australia is iconic road trips. Australia is a wild and beautiful place, a land whose colour palette of red outback sands and Technicolor reefs frames sophisticated cities and soulful Indigenous stories. it follows that cities here are a lot of fun. Sydney is the glamorous poster child with world-class beaches and an otherwise glorious setting. Melbourne is all arts, alleyways and a stellar food scene. Brisbane is a subtropical town on the way up, Adelaide has festive grace and pubby poise. Boomtown Perth breathes West Coast optimism and Canberra showcases so many cultural treasures, while the tropical northern frontier town of Darwin, and the chilly southern sandstone city of Hobart, couldn't be more different."
                 };
                 $scope.getActivity = [{
+                    "number": 0,
                     "image": "img/custom_dest/australia/australia1.jpg"
                 }, {
+                    "number": 1,
                     "image": "img/custom_dest/australia/australia2.jpg"
                 }, {
+                    "number": 2,
                     "image": "img/custom_dest/australia/australia3.jpg"
                 }, {
+                    "number": 3,
                     "image": "img/custom_dest/australia/australia4.jpg"
                 }, {
+                    "number": 4,
                     "image": "img/custom_dest/australia/australia5.jpg"
                 }, {
+                    "number": 5,
                     "image": "img/custom_dest/australia/australia6.jpg"
                 }, {
+                    "number": 6,
                     "image": "img/custom_dest/australia/australia7.jpg"
                 }, {
+                    "number": 7,
                     "image": "img/custom_dest/australia/australia8.jpg"
                 }, {
+                    "number": 8,
                     "image": "img/custom_dest/australia/australia9.jpg"
                 }];
                 break;
@@ -546,49 +592,69 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
                     "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever"
                 };
                 $scope.getActivity = [{
+                    "number": 0,
                     "image": "img/custom_dest/austria/austria1.jpg"
                 }, {
+                    "number": 1,
                     "image": "img/custom_dest/austria/austria2.jpg"
                 }, {
+                    "number": 2,
                     "image": "img/custom_dest/austria/austria3.jpg"
                 }, {
+                    "number": 3,
                     "image": "img/custom_dest/austria/austria4.jpg"
                 }, {
+                    "number": 4,
                     "image": "img/custom_dest/austria/austria5.jpg"
                 }, {
+                    "number": 5,
                     "image": "img/custom_dest/austria/austria6.jpg"
                 }, {
+                    "number": 6,
                     "image": "img/custom_dest/austria/austria7.jpg"
                 }, {
+                    "number": 7,
                     "image": "img/custom_dest/austria/austria8.jpg"
                 }, {
+                    "number": 8,
                     "image": "img/custom_dest/austria/austria9.jpg"
                 }, {
+                    "number": 9,
                     "image": "img/custom_dest/austria/austria10.jpg"
                 }, {
+                    "number": 10,
                     "image": "img/custom_dest/austria/austria11.jpg"
                 }];
                 break;
             case 'Azerbaijan':
                 $scope.getDestination = {
                     "image": "img/banner_images/azerbaijan.jpg",
-                    "description": "East meets west in diverse Azerbaijan. ‘Feel the diversity’!! Breathtaking mountain scenery, Untouched nature, mineral springs!! Selling itself as the 'Land of Fire', Azerbaijan (Azərbaycan) is a tangle of contradictions and contrasts. Neither Europe nor Asia, it's a nexus of ancient historical empires, but also a ‘new’ nation rapidly transforming itself with a super-charged gust of petro-spending. Azerbaijan is thriving cosmopolitan cities. It is triumphant architecture. It is breathtaking landscapes. "
+                    "description": "East meets west in diverse Azerbaijan. ‘Feel the diversity’!! Breathtaking mountain scenery, Untouched nature, mineral springs!! Selling itself as the 'Land of Fire', Azerbaijan (Azərbaycan) is a tangle of contradictions and contrasts. Neither Europe nor Asia, it's a nexus of ancient historical empires, but also a ‘new’ nation rapidly transforming itself with a super-charged gust of petro-spending. Azerbaijan is thriving cosmopolitan cities. It is triumphant architecture. It is breathtaking landscapes.",
+                    "content": "A glimpse of the popular places to visit in Azerbaijan"
                 };
                 $scope.getActivity = [{
+                    "number": 0,
                     "image": "img/custom_dest/azerbaijan/azerbaijan1.jpg"
                 }, {
+                    "number": 1,
                     "image": "img/custom_dest/azerbaijan/azerbaijan2.jpg"
                 }, {
+                    "number": 2,
                     "image": "img/custom_dest/azerbaijan/azerbaijan3.jpg"
                 }, {
+                    "number": 3,
                     "image": "img/custom_dest/azerbaijan/azerbaijan4.jpg"
                 }, {
+                    "number": 4,
                     "image": "img/custom_dest/azerbaijan/azerbaijan5.jpg"
                 }, {
+                    "number": 5,
                     "image": "img/custom_dest/azerbaijan/azerbaijan6.jpg"
                 }, {
+                    "number": 6,
                     "image": "img/custom_dest/azerbaijan/azerbaijan7.jpg"
                 }, {
+                    "number": 7,
                     "image": "img/custom_dest/azerbaijan/azerbaijan8.jpg"
                 }];
                 break;
@@ -599,16 +665,22 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
                     "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever"
                 };
                 $scope.getActivity = [{
+                    "number": 0,
                     "image": "img/custom_dest/bhutan/bhutan1.jpg"
                 }, {
+                    "number": 1,
                     "image": "img/custom_dest/bhutan/bhutan2.jpg"
                 }, {
+                    "number": 2,
                     "image": "img/custom_dest/bhutan/bhutan3.jpg"
                 }, {
+                    "number": 3,
                     "image": "img/custom_dest/bhutan/bhutan4.jpg"
                 }, {
+                    "number": 4,
                     "image": "img/custom_dest/bhutan/bhutan5.jpg"
                 }, {
+                    "number": 5,
                     "image": "img/custom_dest/bhutan/bhutan6.jpg"
                 }];
                 break;
@@ -619,18 +691,25 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
                     "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever"
                 };
                 $scope.getActivity = [{
+                    "number": 0,
                     "image": "img/custom_dest/brazil/brazil1.jpg"
                 }, {
+                    "number": 1,
                     "image": "img/custom_dest/brazil/brazil2.jpg"
                 }, {
+                    "number": 2,
                     "image": "img/custom_dest/brazil/brazil3.jpg"
                 }, {
+                    "number": 3,
                     "image": "img/custom_dest/brazil/brazil4.jpg"
                 }, {
+                    "number": 4,
                     "image": "img/custom_dest/brazil/brazil5.jpg"
                 }, {
+                    "number": 5,
                     "image": "img/custom_dest/brazil/brazil6.jpg"
                 }, {
+                    "number": 6,
                     "image": "img/custom_dest/brazil/brazil7.jpg"
                 }];
                 break;
@@ -641,16 +720,22 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
                     "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever"
                 };
                 $scope.getActivity = [{
+                    "number": 0,
                     "image": "img/custom_dest/bulgaria/bulgaria1.jpg"
                 }, {
+                    "number": 1,
                     "image": "img/custom_dest/bulgaria/bulgaria2.jpg"
                 }, {
+                    "number": 2,
                     "image": "img/custom_dest/bulgaria/bulgaria3.jpg"
                 }, {
+                    "number": 3,
                     "image": "img/custom_dest/bulgaria/bulgaria4.jpg"
                 }, {
+                    "number": 4,
                     "image": "img/custom_dest/bulgaria/bulgaria5.jpg"
                 }, {
+                    "number": 5,
                     "image": "img/custom_dest/bulgaria/bulgaria6.jpg"
                 }];
                 break;
@@ -661,24 +746,34 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
                     "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever"
                 };
                 $scope.getActivity = [{
+                    "number": 0,
                     "image": "img/custom_dest/canada/canada1.jpg"
                 }, {
+                    "number": 1,
                     "image": "img/custom_dest/canada/canada2.jpg"
                 }, {
+                    "number": 2,
                     "image": "img/custom_dest/canada/canada3.jpg"
                 }, {
+                    "number": 3,
                     "image": "img/custom_dest/canada/canada4.jpg"
                 }, {
+                    "number": 4,
                     "image": "img/custom_dest/canada/canada5.jpg"
                 }, {
+                    "number": 5,
                     "image": "img/custom_dest/canada/canada6.jpg"
                 }, {
+                    "number": 6,
                     "image": "img/custom_dest/canada/canada7.jpg"
                 }, {
+                    "number": 7,
                     "image": "img/custom_dest/canada/canada8.jpg"
                 }, {
+                    "number": 8,
                     "image": "img/custom_dest/canada/canada9.jpg"
                 }, {
+                    "number": 9,
                     "image": "img/custom_dest/canada/canada10.jpg"
                 }];
                 break;
@@ -689,22 +784,31 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
                     "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever"
                 };
                 $scope.getActivity = [{
+                    "number": 0,
                     "image": "img/custom_dest/chile/chile1.jpg"
                 }, {
+                    "number": 1,
                     "image": "img/custom_dest/chile/chile2.jpg"
                 }, {
+                    "number": 2,
                     "image": "img/custom_dest/chile/chile3.jpg"
                 }, {
+                    "number": 3,
                     "image": "img/custom_dest/chile/chile4.jpg"
                 }, {
+                    "number": 4,
                     "image": "img/custom_dest/chile/chile5.jpg"
                 }, {
+                    "number": 5,
                     "image": "img/custom_dest/chile/chile6.jpg"
                 }, {
+                    "number": 6,
                     "image": "img/custom_dest/chile/chile7.jpg"
                 }, {
+                    "number": 7,
                     "image": "img/custom_dest/chile/chile8.jpg"
                 }, {
+                    "number": 8,
                     "image": "img/custom_dest/chile/chile9.jpg"
                 }];
                 break;
@@ -715,22 +819,31 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
                     "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever"
                 };
                 $scope.getActivity = [{
+                    "number": 0,
                     "image": "img/custom_dest/croatia/croatia1.jpg"
                 }, {
+                    "number": 1,
                     "image": "img/custom_dest/croatia/croatia2.jpg"
                 }, {
+                    "number": 2,
                     "image": "img/custom_dest/croatia/croatia3.jpg"
                 }, {
+                    "number": 3,
                     "image": "img/custom_dest/croatia/croatia4.jpg"
                 }, {
+                    "number": 4,
                     "image": "img/custom_dest/croatia/croatia5.jpg"
                 }, {
+                    "number": 5,
                     "image": "img/custom_dest/croatia/croatia6.jpg"
                 }, {
+                    "number": 6,
                     "image": "img/custom_dest/croatia/croatia7.jpg"
                 }, {
+                    "number": 7,
                     "image": "img/custom_dest/croatia/croatia8.jpg"
                 }, {
+                    "number": 8,
                     "image": "img/custom_dest/croatia/croatia9.jpg"
                 }];
                 break;
@@ -741,26 +854,37 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
                     "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever"
                 };
                 $scope.getActivity = [{
+                    "number": 0,
                     "image": "img/custom_dest/cruise_vacations/cruise_vacations1.jpg"
                 }, {
+                    "number": 1,
                     "image": "img/custom_dest/cruise_vacations/cruise_vacations2.jpg"
                 }, {
+                    "number": 2,
                     "image": "img/custom_dest/cruise_vacations/cruise_vacations3.jpg"
                 }, {
+                    "number": 3,
                     "image": "img/custom_dest/cruise_vacations/cruise_vacations4.jpg"
                 }, {
+                    "number": 4,
                     "image": "img/custom_dest/cruise_vacations/cruise_vacations5.jpg"
                 }, {
+                    "number": 5,
                     "image": "img/custom_dest/cruise_vacations/cruise_vacations6.jpg"
                 }, {
+                    "number": 6,
                     "image": "img/custom_dest/cruise_vacations/cruise_vacations7.jpg"
                 }, {
+                    "number": 7,
                     "image": "img/custom_dest/cruise_vacations/cruise_vacations8.jpg"
                 }, {
+                    "number": 8,
                     "image": "img/custom_dest/cruise_vacations/cruise_vacations9.jpg"
                 }, {
+                    "number": 8,
                     "image": "img/custom_dest/cruise_vacations/cruise_vacations10.jpg"
                 }, {
+                    "number": 10,
                     "image": "img/custom_dest/cruise_vacations/cruise_vacations11.jpg"
                 }];
                 break;
@@ -771,14 +895,19 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
                     "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever"
                 };
                 $scope.getActivity = [{
+                    "number": 0,
                     "image": "img/custom_dest/czech republic/czech republic1.jpg"
                 }, {
+                    "number": 1,
                     "image": "img/custom_dest/czech republic/czech republic2.jpg"
                 }, {
+                    "number": 2,
                     "image": "img/custom_dest/czech republic/czech republic3.jpg"
                 }, {
+                    "number": 3,
                     "image": "img/custom_dest/czech republic/czech republic4.jpg"
                 }, {
+                    "number": 4,
                     "image": "img/custom_dest/czech republic/czech republic5.jpg"
                 }];
                 break;
@@ -789,20 +918,28 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
                     "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever"
                 };
                 $scope.getActivity = [{
+                    "number": 0,
                     "image": "img/custom_dest/denmark/denmark1.jpg"
                 }, {
+                    "number": 1,
                     "image": "img/custom_dest/denmark/denmark2.jpg"
                 }, {
+                    "number": 2,
                     "image": "img/custom_dest/denmark/denmark3.jpg"
                 }, {
+                    "number": 3,
                     "image": "img/custom_dest/denmark/denmark4.jpg"
                 }, {
+                    "number": 4,
                     "image": "img/custom_dest/denmark/denmark5.jpg"
                 }, {
+                    "number": 5,
                     "image": "img/custom_dest/denmark/denmark6.jpg"
                 }, {
+                    "number": 6,
                     "image": "img/custom_dest/denmark/denmark7.jpg"
                 }, {
+                    "number": 7,
                     "image": "img/custom_dest/denmark/denmark8.jpg"
                 }];
                 break;
@@ -813,18 +950,25 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
                     "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever"
                 };
                 $scope.getActivity = [{
+                    "number": 0,
                     "image": "img/custom_dest/estonia/estonia1.jpg"
                 }, {
+                    "number": 1,
                     "image": "img/custom_dest/estonia/estonia2.jpg"
                 }, {
+                    "number": 2,
                     "image": "img/custom_dest/estonia/estonia3.jpg"
                 }, {
+                    "number": 3,
                     "image": "img/custom_dest/estonia/estonia4.jpg"
                 }, {
+                    "number": 4,
                     "image": "img/custom_dest/estonia/estonia5.jpg"
                 }, {
+                    "number": 5,
                     "image": "img/custom_dest/estonia/estonia6.jpg"
                 }, {
+                    "number": 6,
                     "image": "img/custom_dest/estonia/estonia7.jpg"
                 }];
                 break;
@@ -835,14 +979,19 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
                     "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever"
                 };
                 $scope.getActivity = [{
+                    "number": 0,
                     "image": "img/custom_dest/fiji islands/fiji islands1.jpg"
                 }, {
+                    "number": 1,
                     "image": "img/custom_dest/fiji islands/fiji islands2.jpg"
                 }, {
+                    "number": 2,
                     "image": "img/custom_dest/fiji islands/fiji islands3.jpg"
                 }, {
+                    "number": 3,
                     "image": "img/custom_dest/fiji islands/fiji islands4.jpg"
                 }, {
+                    "number": 4,
                     "image": "img/custom_dest/fiji islands/fiji islands5.jpg"
                 }];
                 break;
@@ -853,16 +1002,22 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
                     "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever"
                 };
                 $scope.getActivity = [{
+                    "number": 0,
                     "image": "img/custom_dest/finland/finland1.jpg"
                 }, {
+                    "number": 1,
                     "image": "img/custom_dest/finland/finland2.jpg"
                 }, {
+                    "number": 2,
                     "image": "img/custom_dest/finland/finland3.jpg"
                 }, {
+                    "number": 3,
                     "image": "img/custom_dest/finland/finland4.jpg"
                 }, {
+                    "number": 4,
                     "image": "img/custom_dest/finland/finland5.jpg"
                 }, {
+                    "number": 5,
                     "image": "img/custom_dest/finland/finland6.jpg"
                 }];
                 break;
@@ -873,24 +1028,34 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
                     "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever"
                 };
                 $scope.getActivity = [{
+                    "number": 0,
                     "image": "img/custom_dest/france/france1.jpg"
                 }, {
+                    "number": 1,
                     "image": "img/custom_dest/france/france2.jpg"
                 }, {
+                    "number": 2,
                     "image": "img/custom_dest/france/france3.jpg"
                 }, {
+                    "number": 3,
                     "image": "img/custom_dest/france/france4.jpg"
                 }, {
+                    "number": 4,
                     "image": "img/custom_dest/france/france5.jpg"
                 }, {
+                    "number": 5,
                     "image": "img/custom_dest/france/france6.jpg"
                 }, {
+                    "number": 6,
                     "image": "img/custom_dest/france/france7.jpg"
                 }, {
+                    "number": 7,
                     "image": "img/custom_dest/france/france8.jpg"
                 }, {
+                    "number": 8,
                     "image": "img/custom_dest/france/france9.jpg"
                 }, {
+                    "number": 9,
                     "image": "img/custom_dest/france/france10.jpg"
                 }];
                 break;
@@ -901,24 +1066,34 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
                     "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever"
                 };
                 $scope.getActivity = [{
+                    "number": 0,
                     "image": "img/custom_dest/georgia/georgia1.jpg"
                 }, {
+                    "number": 1,
                     "image": "img/custom_dest/georgia/georgia2.jpg"
                 }, {
+                    "number": 2,
                     "image": "img/custom_dest/georgia/georgia3.jpg"
                 }, {
+                    "number": 3,
                     "image": "img/custom_dest/georgia/georgia4.jpg"
                 }, {
+                    "number": 4,
                     "image": "img/custom_dest/georgia/georgia5.jpg"
                 }, {
+                    "number": 5,
                     "image": "img/custom_dest/georgia/georgia6.jpg"
                 }, {
+                    "number": 6,
                     "image": "img/custom_dest/georgia/georgia7.jpg"
                 }, {
+                    "number": 7,
                     "image": "img/custom_dest/georgia/georgia8.jpg"
                 }, {
+                    "number": 8,
                     "image": "img/custom_dest/georgia/georgia9.jpg"
                 }, {
+                    "number": 9,
                     "image": "img/custom_dest/georgia/georgia10.jpg"
                 }];
                 break;
@@ -929,30 +1104,43 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
                     "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever"
                 };
                 $scope.getActivity = [{
+                    "number": 0,
                     "image": "img/custom_dest/germany/germany1.jpg"
                 }, {
+                    "number": 1,
                     "image": "img/custom_dest/germany/germany2.jpg"
                 }, {
+                    "number": 2,
                     "image": "img/custom_dest/germany/germany3.jpg"
                 }, {
+                    "number": 3,
                     "image": "img/custom_dest/germany/germany4.jpg"
                 }, {
+                    "number": 4,
                     "image": "img/custom_dest/germany/germany5.jpg"
                 }, {
+                    "number": 5,
                     "image": "img/custom_dest/germany/germany6.jpg"
                 }, {
+                    "number": 6,
                     "image": "img/custom_dest/germany/germany7.jpg"
                 }, {
+                    "number": 7,
                     "image": "img/custom_dest/germany/germany8.jpg"
                 }, {
+                    "number": 8,
                     "image": "img/custom_dest/germany/germany9.jpg"
                 }, {
+                    "number": 9,
                     "image": "img/custom_dest/germany/germany10.jpg"
                 }, {
+                    "number": 10,
                     "image": "img/custom_dest/germany/germany11.jpg"
                 }, {
+                    "number": 11,
                     "image": "img/custom_dest/germany/germany12.jpg"
                 }, {
+                    "number": 12,
                     "image": "img/custom_dest/germany/germany13.jpg"
                 }];
                 break;
@@ -963,24 +1151,34 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
                     "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever"
                 };
                 $scope.getActivity = [{
+                    "number": 0,
                     "image": "img/custom_dest/greece/greece1.jpg"
                 }, {
+                    "number": 1,
                     "image": "img/custom_dest/greece/greece2.jpg"
                 }, {
+                    "number": 2,
                     "image": "img/custom_dest/greece/greece3.jpg"
                 }, {
+                    "number": 3,
                     "image": "img/custom_dest/greece/greece4.jpg"
                 }, {
+                    "number": 4,
                     "image": "img/custom_dest/greece/greece5.jpg"
                 }, {
+                    "number": 5,
                     "image": "img/custom_dest/greece/greece6.jpg"
                 }, {
+                    "number": 6,
                     "image": "img/custom_dest/greece/greece7.jpg"
                 }, {
+                    "number": 7,
                     "image": "img/custom_dest/greece/greece8.jpg"
                 }, {
+                    "number": 8,
                     "image": "img/custom_dest/greece/greece9.jpg"
                 }, {
+                    "number": 9,
                     "image": "img/custom_dest/greece/greece10.jpg"
                 }];
                 break;
@@ -991,16 +1189,22 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
                     "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever"
                 };
                 $scope.getActivity = [{
+                    "number": 0,
                     "image": "img/custom_dest/hongkong/hongkong1.jpg"
                 }, {
+                    "number": 1,
                     "image": "img/custom_dest/hongkong/hongkong2.jpg"
                 }, {
+                    "number": 2,
                     "image": "img/custom_dest/hongkong/hongkong3.jpg"
                 }, {
+                    "number": 3,
                     "image": "img/custom_dest/hongkong/hongkong4.jpg"
                 }, {
+                    "number": 4,
                     "image": "img/custom_dest/hongkong/hongkong5.jpg"
                 }, {
+                    "number": 5,
                     "image": "img/custom_dest/hongkong/hongkong6.jpg"
                 }];
                 break;
@@ -1011,20 +1215,28 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
                     "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever"
                 };
                 $scope.getActivity = [{
+                    "number": 0,
                     "image": "img/custom_dest/hungary/hungary1.jpg"
                 }, {
+                    "number": 1,
                     "image": "img/custom_dest/hungary/hungary2.jpg"
                 }, {
+                    "number": 2,
                     "image": "img/custom_dest/hungary/hungary3.jpg"
                 }, {
+                    "number": 3,
                     "image": "img/custom_dest/hungary/hungary4.jpg"
                 }, {
+                    "number": 4,
                     "image": "img/custom_dest/hungary/hungary5.jpg"
                 }, {
+                    "number": 5,
                     "image": "img/custom_dest/hungary/hungary6.jpg"
                 }, {
+                    "number": 6,
                     "image": "img/custom_dest/hungary/hungary7.jpg"
                 }, {
+                    "number": 7,
                     "image": "img/custom_dest/hungary/hungary8.jpg"
                 }];
                 break;
@@ -1035,14 +1247,19 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
                     "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever"
                 };
                 $scope.getActivity = [{
+                    "number": 0,
                     "image": "img/custom_dest/iceland/iceland1.jpg"
                 }, {
+                    "number": 1,
                     "image": "img/custom_dest/iceland/iceland2.jpg"
                 }, {
+                    "number": 2,
                     "image": "img/custom_dest/iceland/iceland3.jpg"
                 }, {
+                    "number": 3,
                     "image": "img/custom_dest/iceland/iceland4.jpg"
                 }, {
+                    "number": 4,
                     "image": "img/custom_dest/iceland/iceland5.jpg"
                 }];
                 break;
@@ -1053,28 +1270,40 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
                     "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever"
                 };
                 $scope.getActivity = [{
+                    "number": 0,
                     "image": "img/custom_dest/indonesia/indonesia1.jpg"
                 }, {
+                    "number": 1,
                     "image": "img/custom_dest/indonesia/indonesia2.jpg"
                 }, {
+                    "number": 2,
                     "image": "img/custom_dest/indonesia/indonesia3.jpg"
                 }, {
+                    "number": 3,
                     "image": "img/custom_dest/indonesia/indonesia4.jpg"
                 }, {
+                    "number": 4,
                     "image": "img/custom_dest/indonesia/indonesia5.jpg"
                 }, {
+                    "number": 5,
                     "image": "img/custom_dest/indonesia/indonesia6.jpg"
                 }, {
+                    "number": 6,
                     "image": "img/custom_dest/indonesia/indonesia7.jpg"
                 }, {
+                    "number": 7,
                     "image": "img/custom_dest/indonesia/indonesia8.jpg"
                 }, {
+                    "number": 8,
                     "image": "img/custom_dest/indonesia/indonesia9.jpg"
                 }, {
+                    "number": 9,
                     "image": "img/custom_dest/indonesia/indonesia10.jpg"
                 }, {
+                    "number": 10,
                     "image": "img/custom_dest/indonesia/indonesia11.jpg"
                 }, {
+                    "number": 11,
                     "image": "img/custom_dest/indonesia/indonesia12.jpg"
                 }];
                 break;
@@ -1085,24 +1314,34 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
                     "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever"
                 };
                 $scope.getActivity = [{
+                    "number": 0,
                     "image": "img/custom_dest/israel/israel1.jpg"
                 }, {
+                    "number": 1,
                     "image": "img/custom_dest/israel/israel2.jpg"
                 }, {
+                    "number": 2,
                     "image": "img/custom_dest/israel/israel3.jpg"
                 }, {
+                    "number": 3,
                     "image": "img/custom_dest/israel/israel4.jpg"
                 }, {
+                    "number": 4,
                     "image": "img/custom_dest/israel/israel5.jpg"
                 }, {
+                    "number": 5,
                     "image": "img/custom_dest/israel/israel6.jpg"
                 }, {
+                    "number": 6,
                     "image": "img/custom_dest/israel/israel7.jpg"
                 }, {
+                    "number": 7,
                     "image": "img/custom_dest/israel/israel8.jpg"
                 }, {
+                    "number": 8,
                     "image": "img/custom_dest/israel/israel9.jpg"
                 }, {
+                    "number": 9,
                     "image": "img/custom_dest/israel/israel10.jpg"
                 }];
                 break;
@@ -1113,24 +1352,34 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
                     "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever"
                 };
                 $scope.getActivity = [{
+                    "number": 0,
                     "image": "img/custom_dest/italy/italy1.jpg"
                 }, {
+                    "number": 1,
                     "image": "img/custom_dest/italy/italy2.jpg"
                 }, {
+                    "number": 2,
                     "image": "img/custom_dest/italy/italy3.jpg"
                 }, {
+                    "number": 3,
                     "image": "img/custom_dest/italy/italy4.jpg"
                 }, {
+                    "number": 4,
                     "image": "img/custom_dest/italy/italy5.jpg"
                 }, {
+                    "number": 5,
                     "image": "img/custom_dest/italy/italy6.jpg"
                 }, {
+                    "number": 6,
                     "image": "img/custom_dest/italy/italy7.jpg"
                 }, {
+                    "number": 7,
                     "image": "img/custom_dest/italy/italy9.jpg"
                 }, {
+                    "number": 8,
                     "image": "img/custom_dest/italy/italy10.jpg"
                 }, {
+                    "number": 9,
                     "image": "img/custom_dest/italy/italy11.jpg"
                 }];
                 break;
@@ -1141,14 +1390,19 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
                     "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever"
                 };
                 $scope.getActivity = [{
+                    "number": 0,
                     "image": "img/custom_dest/jamaica/jamaica1.jpg"
                 }, {
+                    "number": 1,
                     "image": "img/custom_dest/jamaica/jamaica2.jpg"
                 }, {
+                    "number": 2,
                     "image": "img/custom_dest/jamaica/jamaica3.jpg"
                 }, {
+                    "number": 3,
                     "image": "img/custom_dest/jamaica/jamaica4.jpg"
                 }, {
+                    "number": 4,
                     "image": "img/custom_dest/jamaica/jamaica5.jpg"
                 }];
                 break;
@@ -1159,22 +1413,31 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
                     "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever"
                 };
                 $scope.getActivity = [{
+                    "number": 0,
                     "image": "img/custom_dest/japan/japan1.jpg"
                 }, {
+                    "number": 1,
                     "image": "img/custom_dest/japan/japan2.jpg"
                 }, {
+                    "number": 2,
                     "image": "img/custom_dest/japan/japan3.jpg"
                 }, {
+                    "number": 3,
                     "image": "img/custom_dest/japan/japan4.jpg"
                 }, {
+                    "number": 4,
                     "image": "img/custom_dest/japan/japan5.jpg"
                 }, {
+                    "number": 5,
                     "image": "img/custom_dest/japan/japan6.jpg"
                 }, {
+                    "number": 6,
                     "image": "img/custom_dest/japan/japan7.jpg"
                 }, {
+                    "number": 7,
                     "image": "img/custom_dest/japan/japan8.jpg"
                 }, {
+                    "number": 8,
                     "image": "img/custom_dest/japan/japan9.jpg"
                 }];
                 break;
@@ -1185,18 +1448,25 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
                     "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever"
                 };
                 $scope.getActivity = [{
+                    "number": 0,
                     "image": "img/custom_dest/jordan/jordan1.jpg"
                 }, {
+                    "number": 1,
                     "image": "img/custom_dest/jordan/jordan2.jpg"
                 }, {
+                    "number": 2,
                     "image": "img/custom_dest/jordan/jordan3.jpg"
                 }, {
+                    "number": 3,
                     "image": "img/custom_dest/jordan/jordan4.jpg"
                 }, {
+                    "number": 4,
                     "image": "img/custom_dest/jordan/jordan5.jpg"
                 }, {
+                    "number": 5,
                     "image": "img/custom_dest/jordan/jordan6.jpg"
                 }, {
+                    "number": 6,
                     "image": "img/custom_dest/jordan/jordan7.jpg"
                 }];
                 break;
@@ -1207,14 +1477,19 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
                     "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever"
                 };
                 $scope.getActivity = [{
+                    "number": 0,
                     "image": "img/custom_dest/kenya/kenya1.jpg"
                 }, {
+                    "number": 1,
                     "image": "img/custom_dest/kenya/kenya2.jpg"
                 }, {
+                    "number": 2,
                     "image": "img/custom_dest/kenya/kenya3.jpg"
                 }, {
+                    "number": 3,
                     "image": "img/custom_dest/kenya/kenya4.jpg"
                 }, {
+                    "number": 4,
                     "image": "img/custom_dest/kenya/kenya5.jpg"
                 }];
                 break;
@@ -1225,22 +1500,31 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
                     "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever"
                 };
                 $scope.getActivity = [{
+                    "number": 0,
                     "image": "img/custom_dest/korea/korea1.jpg"
                 }, {
+                    "number": 1,
                     "image": "img/custom_dest/korea/korea2.jpg"
                 }, {
+                    "number": 2,
                     "image": "img/custom_dest/korea/korea3.jpg"
                 }, {
+                    "number": 3,
                     "image": "img/custom_dest/korea/korea4.jpg"
                 }, {
+                    "number": 4,
                     "image": "img/custom_dest/korea/korea5.jpg"
                 }, {
+                    "number": 5,
                     "image": "img/custom_dest/korea/korea6.jpg"
                 }, {
+                    "number": 6,
                     "image": "img/custom_dest/korea/korea7.jpg"
                 }, {
+                    "number": 7,
                     "image": "img/custom_dest/korea/korea8.jpg"
                 }, {
+                    "number": 8,
                     "image": "img/custom_dest/korea/korea9.jpg"
                 }];
                 break;
@@ -1251,20 +1535,28 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
                     "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever"
                 };
                 $scope.getActivity = [{
+                    "number": 0,
                     "image": "img/custom_dest/latvia/latvia1.jpg"
                 }, {
+                    "number": 1,
                     "image": "img/custom_dest/latvia/latvia2.jpg"
                 }, {
+                    "number": 2,
                     "image": "img/custom_dest/latvia/latvia3.jpg"
                 }, {
+                    "number": 3,
                     "image": "img/custom_dest/latvia/latvia4.jpg"
                 }, {
+                    "number": 4,
                     "image": "img/custom_dest/latvia/latvia5.jpg"
                 }, {
+                    "number": 5,
                     "image": "img/custom_dest/latvia/latvia6.jpg"
                 }, {
+                    "number": 6,
                     "image": "img/custom_dest/latvia/latvia7.jpg"
                 }, {
+                    "number": 7,
                     "image": "img/custom_dest/latvia/latvia8.jpg"
                 }];
                 break;
@@ -1275,36 +1567,48 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
                     "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever"
                 };
                 $scope.getActivity = [{
+                    "number": 0,
                     "image": "img/custom_dest/lithuania/lithuania1.jpg"
                 }, {
+                    "number": 1,
                     "image": "img/custom_dest/lithuania/lithuania2.jpg"
                 }, {
+                    "number": 2,
                     "image": "img/custom_dest/lithuania/lithuania3.jpg"
                 }, {
+                    "number": 3,
                     "image": "img/custom_dest/lithuania/lithuania4.jpg"
                 }, {
+                    "number": 4,
                     "image": "img/custom_dest/lithuania/lithuania5.jpg"
                 }];
                 break;
-            case 'Macao':
+            case 'Macau':
                 $scope.getDestination = {
                     "image": "img/banner_images/macau.jpg",
                     "description": "Best known globally as the 'Vegas of China', the Macau Special Administrative Region is indeed a mecca of gambling and glitz. But the city is so much more than that. A Portuguese colony for more than 300 years, it is a city of blended cultures. Ancient Chinese temples sit on streets paved with traditional Portuguese tiles. The Macau Peninsula holds the old city centre, where colonial ruins sit next to arty new boutiques. Further south are the conjoined islands of Taipa, Cotai and Coloane. Taipa has gloriously preserved Macanese architecture, Cotai is home to the new mega casinos and Coloane is lined with colonial villages and pretty beaches.",
                     "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever"
                 };
                 $scope.getActivity = [{
+                    "number": 0,
                     "image": "img/custom_dest/macao/macao1.jpg"
                 }, {
+                    "number": 1,
                     "image": "img/custom_dest/macao/macao2.jpg"
                 }, {
+                    "number": 2,
                     "image": "img/custom_dest/macao/macao3.jpg"
                 }, {
+                    "number": 3,
                     "image": "img/custom_dest/macao/macao4.jpg"
                 }, {
+                    "number": 4,
                     "image": "img/custom_dest/macao/macao5.jpg"
                 }, {
+                    "number": 5,
                     "image": "img/custom_dest/macao/macao6.jpg"
                 }, {
+                    "number": 6,
                     "image": "img/custom_dest/macao/macao7.jpg"
                 }];
                 break;
@@ -1315,18 +1619,25 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
                     "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever"
                 };
                 $scope.getActivity = [{
+                    "number": 0,
                     "image": "img/custom_dest/malaysia/malaysia1.jpg"
                 }, {
+                    "number": 1,
                     "image": "img/custom_dest/malaysia/malaysia2.jpg"
                 }, {
+                    "number": 2,
                     "image": "img/custom_dest/malaysia/malaysia3.jpg"
                 }, {
+                    "number": 3,
                     "image": "img/custom_dest/malaysia/malaysia4.jpg"
                 }, {
+                    "number": 4,
                     "image": "img/custom_dest/malaysia/malaysia5.jpg"
                 }, {
+                    "number": 5,
                     "image": "img/custom_dest/malaysia/malaysia6.jpg"
                 }, {
+                    "number": 6,
                     "image": "img/custom_dest/malaysia/malaysia7.jpg"
                 }];
                 break;
@@ -1337,16 +1648,22 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
                     "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever"
                 };
                 $scope.getActivity = [{
+                    "number": 0,
                     "image": "img/custom_dest/maldives/maldives1.jpg"
                 }, {
+                    "number": 1,
                     "image": "img/custom_dest/maldives/maldives2.jpg"
                 }, {
+                    "number": 2,
                     "image": "img/custom_dest/maldives/maldives3.jpg"
                 }, {
+                    "number": 3,
                     "image": "img/custom_dest/maldives/maldives4.jpg"
                 }, {
+                    "number": 4,
                     "image": "img/custom_dest/maldives/maldives5.jpg"
                 }, {
+                    "number": 5,
                     "image": "img/custom_dest/maldives/maldives6.jpg"
                 }];
                 break;
@@ -1357,16 +1674,22 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
                     "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever"
                 };
                 $scope.getActivity = [{
+                    "number": 0,
                     "image": "img/custom_dest/malta/malta1.jpg"
                 }, {
+                    "number": 1,
                     "image": "img/custom_dest/malta/malta2.jpg"
                 }, {
+                    "number": 2,
                     "image": "img/custom_dest/malta/malta3.jpg"
                 }, {
+                    "number": 3,
                     "image": "img/custom_dest/malta/malta4.jpg"
                 }, {
+                    "number": 4,
                     "image": "img/custom_dest/malta/malta5.jpg"
                 }, {
+                    "number": 5,
                     "image": "img/custom_dest/malta/malta6.jpg"
                 }];
                 break;
@@ -1377,14 +1700,19 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
                     "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever"
                 };
                 $scope.getActivity = [{
+                    "number": 0,
                     "image": "img/custom_dest/mauritius/mauritius1.jpg"
                 }, {
+                    "number": 1,
                     "image": "img/custom_dest/mauritius/mauritius2.jpg"
                 }, {
+                    "number": 2,
                     "image": "img/custom_dest/mauritius/mauritius3.jpg"
                 }, {
+                    "number": 3,
                     "image": "img/custom_dest/mauritius/mauritius4.jpg"
                 }, {
+                    "number": 4,
                     "image": "img/custom_dest/mauritius/mauritius5.jpg"
                 }];
                 break;
@@ -1395,16 +1723,22 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
                     "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever"
                 };
                 $scope.getActivity = [{
+                    "number": 0,
                     "image": "img/custom_dest/mexico/mexico1.jpg"
                 }, {
+                    "number": 1,
                     "image": "img/custom_dest/mexico/mexico2.jpg"
                 }, {
+                    "number": 2,
                     "image": "img/custom_dest/mexico/mexico3.jpg"
                 }, {
+                    "number": 3,
                     "image": "img/custom_dest/mexico/mexico4.jpg"
                 }, {
+                    "number": 4,
                     "image": "img/custom_dest/mexico/mexico5.jpg"
                 }, {
+                    "number": 5,
                     "image": "img/custom_dest/mexico/mexico6.jpg"
                 }];
                 break;
@@ -1415,18 +1749,25 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
                     "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever"
                 };
                 $scope.getActivity = [{
+                    "number": 0,
                     "image": "img/custom_dest/monaco/monaco1.jpg"
                 }, {
+                    "number": 1,
                     "image": "img/custom_dest/monaco/monaco2.jpg"
                 }, {
+                    "number": 2,
                     "image": "img/custom_dest/monaco/monaco3.jpg"
                 }, {
+                    "number": 3,
                     "image": "img/custom_dest/monaco/monaco4.jpg"
                 }, {
+                    "number": 4,
                     "image": "img/custom_dest/monaco/monaco5.jpg"
                 }, {
+                    "number": 5,
                     "image": "img/custom_dest/monaco/monaco6.jpg"
                 }, {
+                    "number": 6,
                     "image": "img/custom_dest/monaco/monaco7.jpg"
                 }];
                 break;
@@ -1437,24 +1778,34 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
                     "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever"
                 };
                 $scope.getActivity = [{
+                    "number": 0,
                     "image": "img/custom_dest/moscow/moscow1.jpg"
                 }, {
+                    "number": 1,
                     "image": "img/custom_dest/moscow/moscow2.jpg"
                 }, {
+                    "number": 2,
                     "image": "img/custom_dest/moscow/moscow3.jpg"
                 }, {
+                    "number": 3,
                     "image": "img/custom_dest/moscow/moscow5.jpg"
                 }, {
+                    "number": 4,
                     "image": "img/custom_dest/moscow/moscow6.jpg"
                 }, {
+                    "number": 5,
                     "image": "img/custom_dest/moscow/moscow7.jpg"
                 }, {
+                    "number": 6,
                     "image": "img/custom_dest/moscow/moscow8.jpg"
                 }, {
+                    "number": 7,
                     "image": "img/custom_dest/moscow/moscow9.jpg"
                 }, {
+                    "number": 8,
                     "image": "img/custom_dest/moscow/moscow10.jpg"
                 }, {
+                    "number": 9,
                     "image": "img/custom_dest/moscow/moscow11.jpg"
                 }];
                 break;
@@ -1465,16 +1816,22 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
                     "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever"
                 };
                 $scope.getActivity = [{
+                    "number": 0,
                     "image": "img/custom_dest/netherlands/netherlands1.jpg"
                 }, {
+                    "number": 1,
                     "image": "img/custom_dest/netherlands/netherlands2.jpg"
                 }, {
+                    "number": 2,
                     "image": "img/custom_dest/netherlands/netherlands3.jpg"
                 }, {
+                    "number": 3,
                     "image": "img/custom_dest/netherlands/netherlands4.jpg"
                 }, {
+                    "number": 4,
                     "image": "img/custom_dest/netherlands/netherlands5.jpg"
                 }, {
+                    "number": 5,
                     "image": "img/custom_dest/netherlands/netherlands6.jpg"
                 }];
                 break;
@@ -1485,24 +1842,34 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
                     "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever"
                 };
                 $scope.getActivity = [{
+                    "number": 0,
                     "image": "img/custom_dest/new zealand/new zealand1.jpg"
                 }, {
+                    "number": 1,
                     "image": "img/custom_dest/new zealand/new zealand2.jpg"
                 }, {
+                    "number": 2,
                     "image": "img/custom_dest/new zealand/new zealand3.jpg"
                 }, {
+                    "number": 3,
                     "image": "img/custom_dest/new zealand/new zealand4.jpg"
                 }, {
+                    "number": 4,
                     "image": "img/custom_dest/new zealand/new zealand5.jpg"
                 }, {
+                    "number": 5,
                     "image": "img/custom_dest/new zealand/new zealand6.jpg"
                 }, {
+                    "number": 6,
                     "image": "img/custom_dest/new zealand/new zealand7.jpg"
                 }, {
+                    "number": 7,
                     "image": "img/custom_dest/new zealand/new zealand8.jpg"
                 }, {
+                    "number": 8,
                     "image": "img/custom_dest/new zealand/new zealand9.jpg"
                 }, {
+                    "number": 9,
                     "image": "img/custom_dest/new zealand/new zealand10.jpg"
                 }];
                 break;
@@ -1513,16 +1880,22 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
                     "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever"
                 };
                 $scope.getActivity = [{
+                    "number": 0,
                     "image": "img/custom_dest/norway/norway1.jpg"
                 }, {
+                    "number": 1,
                     "image": "img/custom_dest/norway/norway2.jpg"
                 }, {
+                    "number": 2,
                     "image": "img/custom_dest/norway/norway3.jpg"
                 }, {
+                    "number": 3,
                     "image": "img/custom_dest/norway/norway4.jpg"
                 }, {
+                    "number": 4,
                     "image": "img/custom_dest/norway/norway5.jpg"
                 }, {
+                    "number": 5,
                     "image": "img/custom_dest/norway/norway6.jpg"
                 }];
                 break;
@@ -1533,12 +1906,16 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
                     "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever"
                 };
                 $scope.getActivity = [{
+                    "number": 0,
                     "image": "img/custom_dest/peru/peru1.jpg"
                 }, {
+                    "number": 1,
                     "image": "img/custom_dest/peru/peru2.jpg"
                 }, {
+                    "number": 2,
                     "image": "img/custom_dest/peru/peru3.jpg"
                 }, {
+                    "number": 3,
                     "image": "img/custom_dest/peru/peru4.jpg"
                 }];
                 break;
@@ -1549,18 +1926,25 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
                     "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever"
                 };
                 $scope.getActivity = [{
+                    "number": 0,
                     "image": "img/custom_dest/phillippines/phillippines1.jpg"
                 }, {
+                    "number": 1,
                     "image": "img/custom_dest/phillippines/phillippines2.jpg"
                 }, {
+                    "number": 2,
                     "image": "img/custom_dest/phillippines/phillippines3.jpg"
                 }, {
+                    "number": 3,
                     "image": "img/custom_dest/phillippines/phillippines4.jpg"
                 }, {
+                    "number": 4,
                     "image": "img/custom_dest/phillippines/phillippines5.jpg"
                 }, {
+                    "number": 5,
                     "image": "img/custom_dest/phillippines/phillippines6.jpg"
                 }, {
+                    "number": 6,
                     "image": "img/custom_dest/phillippines/phillippines7.jpg"
                 }];
                 break;
@@ -1571,18 +1955,25 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
                     "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever"
                 };
                 $scope.getActivity = [{
+                    "number": 0,
                     "image": "img/custom_dest/poland/poland1.jpg"
                 }, {
+                    "number": 1,
                     "image": "img/custom_dest/poland/poland2.jpg"
                 }, {
+                    "number": 2,
                     "image": "img/custom_dest/poland/poland3.jpg"
                 }, {
+                    "number": 3,
                     "image": "img/custom_dest/poland/poland4.jpg"
                 }, {
+                    "number": 4,
                     "image": "img/custom_dest/poland/poland5.jpg"
                 }, {
+                    "number": 5,
                     "image": "img/custom_dest/poland/poland6.jpg"
                 }, {
+                    "number": 6,
                     "image": "img/custom_dest/poland/poland7.jpg"
                 }];
                 break;
@@ -1593,44 +1984,64 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
                     "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever"
                 };
                 $scope.getActivity = [{
+                    "number": 0,
                     "image": "img/custom_dest/portugal/portugal1.jpg"
                 }, {
+                    "number": 1,
                     "image": "img/custom_dest/portugal/portugal2.jpg"
                 }, {
+                    "number": 2,
                     "image": "img/custom_dest/portugal/portugal3.jpg"
                 }, {
+                    "number": 3,
                     "image": "img/custom_dest/portugal/portugal4.jpg"
                 }, {
+                    "number": 4,
                     "image": "img/custom_dest/portugal/portugal5.jpg"
                 }, {
+                    "number": 5,
                     "image": "img/custom_dest/portugal/portugal6.jpg"
                 }, {
+                    "number": 6,
                     "image": "img/custom_dest/portugal/portugal7.jpg"
                 }, {
+                    "number": 7,
                     "image": "img/custom_dest/portugal/portugal8.jpg"
                 }, {
+                    "number": 8,
                     "image": "img/custom_dest/portugal/portugal9.jpg"
                 }, {
+                    "number": 9,
                     "image": "img/custom_dest/portugal/portugal10.jpg"
                 }, {
+                    "number": 10,
                     "image": "img/custom_dest/portugal/portugal11.jpg"
                 }, {
+                    "number": 11,
                     "image": "img/custom_dest/portugal/portugal12.jpg"
                 }, {
+                    "number": 12,
                     "image": "img/custom_dest/portugal/portugal13.jpg"
                 }, {
+                    "number": 13,
                     "image": "img/custom_dest/portugal/portugal14.jpg"
                 }, {
+                    "number": 14,
                     "image": "img/custom_dest/portugal/portugal15.jpg"
                 }, {
+                    "number": 15,
                     "image": "img/custom_dest/portugal/portugal16.jpg"
                 }, {
+                    "number": 16,
                     "image": "img/custom_dest/portugal/portugal17.jpg"
                 }, {
+                    "number": 17,
                     "image": "img/custom_dest/portugal/portugal18.jpg"
                 }, {
+                    "number": 18,
                     "image": "img/custom_dest/portugal/portugal19.jpg"
                 }, {
+                    "number": 19,
                     "image": "img/custom_dest/portugal/portugal20.jpg"
                 }];
                 break;
@@ -1641,18 +2052,25 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
                     "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever"
                 };
                 $scope.getActivity = [{
+                    "number": 0,
                     "image": "img/custom_dest/puerto rico/puerto rico1.jpg"
                 }, {
+                    "number": 1,
                     "image": "img/custom_dest/puerto rico/puerto rico2.jpg"
                 }, {
+                    "number": 2,
                     "image": "img/custom_dest/puerto rico/puerto rico3.jpg"
                 }, {
+                    "number": 3,
                     "image": "img/custom_dest/puerto rico/puerto rico4.jpg"
                 }, {
+                    "number": 4,
                     "image": "img/custom_dest/puerto rico/puerto rico5.jpg"
                 }, {
+                    "number": 5,
                     "image": "img/custom_dest/puerto rico/puerto rico6.jpg"
                 }, {
+                    "number": 6,
                     "image": "img/custom_dest/puerto rico/puerto rico7.jpg"
                 }];
                 break;
@@ -1663,16 +2081,22 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
                     "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever"
                 };
                 $scope.getActivity = [{
+                    "number": 0,
                     "image": "img/custom_dest/river cruises/river cruises1.jpg"
                 }, {
+                    "number": 1,
                     "image": "img/custom_dest/river cruises/river cruises2.jpg"
                 }, {
+                    "number": 2,
                     "image": "img/custom_dest/river cruises/river cruises3.jpg"
                 }, {
+                    "number": 3,
                     "image": "img/custom_dest/river cruises/river cruises4.jpg"
                 }, {
+                    "number": 4,
                     "image": "img/custom_dest/river cruises/river cruises5.jpg"
                 }, {
+                    "number": 5,
                     "image": "img/custom_dest/river cruises/river cruises6.jpg"
                 }];
                 break;
@@ -1683,12 +2107,16 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
                     "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever"
                 };
                 $scope.getActivity = [{
+                    "number": 0,
                     "image": "img/custom_dest/rwanda/rwanda1.jpg"
                 }, {
+                    "number": 1,
                     "image": "img/custom_dest/rwanda/rwanda2.jpg"
                 }, {
+                    "number": 2,
                     "image": "img/custom_dest/rwanda/rwanda3.jpg"
                 }, {
+                    "number": 3,
                     "image": "img/custom_dest/rwanda/rwanda4.jpg"
                 }];
                 break;
@@ -1699,16 +2127,22 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
                     "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever"
                 };
                 $scope.getActivity = [{
+                    "number": 0,
                     "image": "img/custom_dest/seychelles/seychelles1.jpg"
                 }, {
+                    "number": 1,
                     "image": "img/custom_dest/seychelles/seychelles2.jpg"
                 }, {
+                    "number": 2,
                     "image": "img/custom_dest/seychelles/seychelles3.jpg"
                 }, {
+                    "number": 3,
                     "image": "img/custom_dest/seychelles/seychelles4.jpg"
                 }, {
+                    "number": 4,
                     "image": "img/custom_dest/seychelles/seychelles5.jpg"
                 }, {
+                    "number": 5,
                     "image": "img/custom_dest/seychelles/seychelles6.jpg"
                 }];
                 break;
@@ -1719,18 +2153,25 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
                     "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever"
                 };
                 $scope.getActivity = [{
+                    "number": 0,
                     "image": "img/custom_dest/singapore/singapore1.jpg"
                 }, {
+                    "number": 1,
                     "image": "img/custom_dest/singapore/singapore2.jpg"
                 }, {
+                    "number": 2,
                     "image": "img/custom_dest/singapore/singapore3.jpg"
                 }, {
+                    "number": 3,
                     "image": "img/custom_dest/singapore/singapore4.jpg"
                 }, {
+                    "number": 4,
                     "image": "img/custom_dest/singapore/singapore5.jpg"
                 }, {
+                    "number": 5,
                     "image": "img/custom_dest/singapore/singapore6.jpg"
                 }, {
+                    "number": 6,
                     "image": "img/custom_dest/singapore/singapore7.jpg"
                 }];
                 break;
@@ -1741,14 +2182,19 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
                     "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever"
                 };
                 $scope.getActivity = [{
+                    "number": 0,
                     "image": "img/custom_dest/srilanka/srilanka1.jpg"
                 }, {
+                    "number": 1,
                     "image": "img/custom_dest/srilanka/srilanka2.jpg"
                 }, {
+                    "number": 2,
                     "image": "img/custom_dest/srilanka/srilanka3.jpg"
                 }, {
+                    "number": 3,
                     "image": "img/custom_dest/srilanka/srilanka4.jpg"
                 }, {
+                    "number": 4,
                     "image": "img/custom_dest/srilanka/srilanka5.jpg"
                 }];
                 break;
@@ -1759,16 +2205,22 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
                     "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever"
                 };
                 $scope.getActivity = [{
+                    "number": 0,
                     "image": "img/custom_dest/slovakia/slovakia1.jpg"
                 }, {
+                    "number": 1,
                     "image": "img/custom_dest/slovakia/slovakia2.jpg"
                 }, {
+                    "number": 2,
                     "image": "img/custom_dest/slovakia/slovakia3.jpg"
                 }, {
+                    "number": 3,
                     "image": "img/custom_dest/slovakia/slovakia4.jpg"
                 }, {
+                    "number": 4,
                     "image": "img/custom_dest/slovakia/slovakia5.jpg"
                 }, {
+                    "number": 5,
                     "image": "img/custom_dest/slovakia/slovakia6.jpg"
                 }];
                 break;
@@ -1779,16 +2231,22 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
                     "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever"
                 };
                 $scope.getActivity = [{
+                    "number": 0,
                     "image": "img/custom_dest/slovenia/slovenia1.jpg"
                 }, {
+                    "number": 1,
                     "image": "img/custom_dest/slovenia/slovenia2.jpg"
                 }, {
+                    "number": 2,
                     "image": "img/custom_dest/slovenia/slovenia3.jpg"
                 }, {
+                    "number": 3,
                     "image": "img/custom_dest/slovenia/slovenia4.jpg"
                 }, {
+                    "number": 4,
                     "image": "img/custom_dest/slovenia/slovenia5.jpg"
                 }, {
+                    "number": 5,
                     "image": "img/custom_dest/slovenia/slovenia6.jpg"
                 }];
                 break;
@@ -1799,20 +2257,28 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
                     "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever"
                 };
                 $scope.getActivity = [{
+                    "number": 0,
                     "image": "img/custom_dest/south africa/south africa1.jpg"
                 }, {
+                    "number": 1,
                     "image": "img/custom_dest/south africa/south africa2.jpg"
                 }, {
+                    "number": 2,
                     "image": "img/custom_dest/south africa/south africa3.jpg"
                 }, {
+                    "number": 3,
                     "image": "img/custom_dest/south africa/south africa4.jpg"
                 }, {
+                    "number": 4,
                     "image": "img/custom_dest/south africa/south africa5.jpg"
                 }, {
+                    "number": 5,
                     "image": "img/custom_dest/south africa/south africa6.jpg"
                 }, {
+                    "number": 6,
                     "image": "img/custom_dest/south africa/south africa7.jpg"
                 }, {
+                    "number": 7,
                     "image": "img/custom_dest/south africa/south africa8.jpg"
                 }];
                 break;
@@ -1823,26 +2289,37 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
                     "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever"
                 };
                 $scope.getActivity = [{
+                    "number": 0,
                     "image": "img/custom_dest/st.petersburg/st.petersburg1.jpg"
                 }, {
+                    "number": 1,
                     "image": "img/custom_dest/st.petersburg/st.petersburg2.jpg"
                 }, {
+                    "number": 2,
                     "image": "img/custom_dest/st.petersburg/st.petersburg3.jpg"
                 }, {
+                    "number": 3,
                     "image": "img/custom_dest/st.petersburg/st.petersburg4.jpg"
                 }, {
+                    "number": 4,
                     "image": "img/custom_dest/st.petersburg/st.petersburg5.jpg"
                 }, {
+                    "number": 5,
                     "image": "img/custom_dest/st.petersburg/st.petersburg6.jpg"
                 }, {
+                    "number": 6,
                     "image": "img/custom_dest/st.petersburg/st.petersburg7.jpg"
                 }, {
+                    "number": 7,
                     "image": "img/custom_dest/st.petersburg/st.petersburg8.jpg"
                 }, {
+                    "number": 8,
                     "image": "img/custom_dest/st.petersburg/st.petersburg9.jpg"
                 }, {
+                    "number": 9,
                     "image": "img/custom_dest/st.petersburg/st.petersburg10.jpg"
                 }, {
+                    "number": 10,
                     "image": "img/custom_dest/st.petersburg/st.petersburg11.jpg"
                 }, ];
                 break;
@@ -1853,14 +2330,19 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
                     "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever"
                 };
                 $scope.getActivity = [{
+                    "number": 0,
                     "image": "img/custom_dest/sweden/sweden1.jpg"
                 }, {
+                    "number": 1,
                     "image": "img/custom_dest/sweden/sweden2.jpg"
                 }, {
+                    "number": 2,
                     "image": "img/custom_dest/sweden/sweden3.jpg"
                 }, {
+                    "number": 3,
                     "image": "img/custom_dest/sweden/sweden4.jpg"
                 }, {
+                    "number": 4,
                     "image": "img/custom_dest/sweden/sweden5.jpg"
                 }];
                 break;
@@ -1871,28 +2353,40 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
                     "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever"
                 };
                 $scope.getActivity = [{
+                    "number": 0,
                     "image": "img/custom_dest/switzerland/switzerland1.jpg"
                 }, {
+                    "number": 1,
                     "image": "img/custom_dest/switzerland/switzerland2.jpg"
                 }, {
+                    "number": 2,
                     "image": "img/custom_dest/switzerland/switzerland3.jpg"
                 }, {
+                    "number": 3,
                     "image": "img/custom_dest/switzerland/switzerland4.jpg"
                 }, {
+                    "number": 4,
                     "image": "img/custom_dest/switzerland/switzerland5.jpg"
                 }, {
+                    "number": 5,
                     "image": "img/custom_dest/switzerland/switzerland6.jpg"
                 }, {
+                    "number": 6,
                     "image": "img/custom_dest/switzerland/switzerland7.jpg"
                 }, {
+                    "number": 7,
                     "image": "img/custom_dest/switzerland/switzerland8.jpg"
                 }, {
+                    "number": 8,
                     "image": "img/custom_dest/switzerland/switzerland9.jpg"
                 }, {
+                    "number": 9,
                     "image": "img/custom_dest/switzerland/switzerland10.jpg"
                 }, {
+                    "number": 10,
                     "image": "img/custom_dest/switzerland/switzerland11.jpg"
                 }, {
+                    "number": 11,
                     "image": "img/custom_dest/switzerland/switzerland12.jpg"
                 }];
                 break;
@@ -1903,14 +2397,19 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
                     "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever"
                 };
                 $scope.getActivity = [{
+                    "number": 0,
                     "image": "img/custom_dest/tanzania/tanzania1.jpg"
                 }, {
+                    "number": 1,
                     "image": "img/custom_dest/tanzania/tanzania2.jpg"
                 }, {
+                    "number": 2,
                     "image": "img/custom_dest/tanzania/tanzania3.jpg"
                 }, {
+                    "number": 3,
                     "image": "img/custom_dest/tanzania/tanzania4.jpg"
                 }, {
+                    "number": 4,
                     "image": "img/custom_dest/tanzania/tanzania5.jpg"
                 }];
                 break;
@@ -1921,20 +2420,28 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
                     "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever"
                 };
                 $scope.getActivity = [{
+                    "number": 0,
                     "image": "img/custom_dest/thailand/thailand1.jpg"
                 }, {
+                    "number": 1,
                     "image": "img/custom_dest/thailand/thailand2.jpg"
                 }, {
+                    "number": 2,
                     "image": "img/custom_dest/thailand/thailand3.jpg"
                 }, {
+                    "number": 3,
                     "image": "img/custom_dest/thailand/thailand4.jpg"
                 }, {
+                    "number": 4,
                     "image": "img/custom_dest/thailand/thailand5.jpg"
                 }, {
+                    "number": 5,
                     "image": "img/custom_dest/thailand/thailand6.jpg"
                 }, {
+                    "number": 6,
                     "image": "img/custom_dest/thailand/thailand7.jpg"
                 }, {
+                    "number": 7,
                     "image": "img/custom_dest/thailand/thailand8.jpg"
                 }];
                 break;
@@ -1945,22 +2452,31 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
                     "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever"
                 };
                 $scope.getActivity = [{
+                    "number": 0,
                     "image": "img/custom_dest/uae/uae1.jpg"
                 }, {
+                    "number": 1,
                     "image": "img/custom_dest/uae/uae2.jpg"
                 }, {
+                    "number": 2,
                     "image": "img/custom_dest/uae/uae3.jpg"
                 }, {
+                    "number": 3,
                     "image": "img/custom_dest/uae/uae4.jpg"
                 }, {
+                    "number": 4,
                     "image": "img/custom_dest/uae/uae5.jpg"
                 }, {
+                    "number": 5,
                     "image": "img/custom_dest/uae/uae6.jpg"
                 }, {
+                    "number": 6,
                     "image": "img/custom_dest/uae/uae7.jpg"
                 }, {
+                    "number": 7,
                     "image": "img/custom_dest/uae/uae8.jpg"
                 }, {
+                    "number": 8,
                     "image": "img/custom_dest/uae/uae9.jpg"
                 }];
                 break;
@@ -1971,24 +2487,34 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
                     "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever"
                 };
                 $scope.getActivity = [{
+                    "number": 0,
                     "image": "img/custom_dest/uk/uk1.jpg"
                 }, {
+                    "number": 1,
                     "image": "img/custom_dest/uk/uk2.jpg"
                 }, {
+                    "number": 2,
                     "image": "img/custom_dest/uk/uk3.jpg"
                 }, {
+                    "number": 3,
                     "image": "img/custom_dest/uk/uk4.jpg"
                 }, {
+                    "number": 4,
                     "image": "img/custom_dest/uk/uk5.jpg"
                 }, {
+                    "number": 5,
                     "image": "img/custom_dest/uk/uk6.jpg"
                 }, {
+                    "number": 6,
                     "image": "img/custom_dest/uk/uk7.jpg"
                 }, {
+                    "number": 7,
                     "image": "img/custom_dest/uk/uk8.jpg"
                 }, {
+                    "number": 8,
                     "image": "img/custom_dest/uk/uk9.jpg"
                 }, {
+                    "number": 9,
                     "image": "img/custom_dest/uk/uk10.jpg"
                 }];
                 break;
@@ -1999,30 +2525,43 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
                     "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever"
                 };
                 $scope.getActivity = [{
+                    "number": 0,
                     "image": "img/custom_dest/usa/usa1.jpg"
                 }, {
+                    "number": 1,
                     "image": "img/custom_dest/usa/usa2.jpg"
                 }, {
+                    "number": 2,
                     "image": "img/custom_dest/usa/usa3.jpg"
                 }, {
+                    "number": 3,
                     "image": "img/custom_dest/usa/usa4.jpg"
                 }, {
+                    "number": 4,
                     "image": "img/custom_dest/usa/usa5.jpg"
                 }, {
+                    "number": 5,
                     "image": "img/custom_dest/usa/usa6.jpg"
                 }, {
+                    "number": 6,
                     "image": "img/custom_dest/usa/usa7.jpg"
                 }, {
+                    "number": 7,
                     "image": "img/custom_dest/usa/usa8.jpg"
                 }, {
+                    "number": 8,
                     "image": "img/custom_dest/usa/usa9.jpg"
                 }, {
+                    "number": 9,
                     "image": "img/custom_dest/usa/usa10.jpg"
                 }, {
+                    "number": 10,
                     "image": "img/custom_dest/usa/usa11.jpg"
                 }, {
+                    "number": 11,
                     "image": "img/custom_dest/usa/usa12.jpg"
                 }, {
+                    "number": 12,
                     "image": "img/custom_dest/usa/usa13.jpg"
                 }];
                 break;
@@ -2033,16 +2572,22 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
                     "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever"
                 };
                 $scope.getActivity = [{
+                    "number": 0,
                     "image": "img/custom_dest/zimbabwe/zimbabwe1.jpg"
                 }, {
+                    "number": 1,
                     "image": "img/custom_dest/zimbabwe/zimbabwe2.jpg"
                 }, {
+                    "number": 2,
                     "image": "img/custom_dest/zimbabwe/zimbabwe3.jpg"
                 }, {
+                    "number": 3,
                     "image": "img/custom_dest/zimbabwe/zimbabwe4.jpg"
                 }, {
+                    "number": 4,
                     "image": "img/custom_dest/zimbabwe/zimbabwe5.jpg"
                 }, {
+                    "number": 5,
                     "image": "img/custom_dest/zimbabwe/zimbabwe6.jpg"
                 }];
                 break;
@@ -2062,6 +2607,23 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
             "name1": "abc",
             "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
         }];
+        $scope.Image = function (number) {
+            $scope.number = number;
+            $scope.galleryImage = $uibModal.open({
+                animation: true,
+                templateUrl: "views/modal/gallery.html",
+                scope: $scope,
+                // windowClass: 'modalWidth',
+                backdropClass: 'black-drop'
+            });
+            $scope.closeModal = function () { // to close modals for ALL OTP
+                $scope.galleryImage.close();
+            };
+        };
+
+
+
+
     })
 
     .controller('ActivityCtrl', function ($scope, TemplateService, NavigationService, $timeout, toastr, $http) {
@@ -2096,28 +2658,10 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
             "name": "SNOW SKIING",
             "image": "img/activities/skiing.jpg"
         }];
-        // $scope.loadLessActivities();
-        // $scope.loadMoreActivities = function () {
-        //     $scope.viewMore = false;
-        //     $scope.viewLess = true;
-        //     var images = [];
-        //     images.smallImage = $scope.smallImageArray;
-        //     images.bigImage = $scope.bigImageArray;
-        //     $scope.activityLand = images;
-        //     if (images.bigImage.length >= images.smallImage.length) {
-        //         $scope.activityLoop = _.times(images.bigImage.length, Number);
-        //         console.log('if $scope.activityLoop', $scope.activityLoop);
-        //     } else {
-        //         $scope.activityLoop = _.times(images.smallImage.length, Number);
-        //         console.log('else $scope.activityLoop', $scope.activityLoop);
-        //     }
-        //     // TemplateService.removeLoader;
-        // }
     })
-
     .controller('WhatsHotCtrl', function ($scope, TemplateService, NavigationService, $timeout, toastr, $http) {
         $scope.template = TemplateService.getHTML("content/whats-hot.html");
-        TemplateService.title = "Activity"; // This is the Title of the Website
+        TemplateService.title = "Whats Hot"; // This is the Title of the Website
         $scope.navigation = NavigationService.getNavigation();
         $scope.allDestination = [{
             "name": "Hat Rin Full Moon Party",

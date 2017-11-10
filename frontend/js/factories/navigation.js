@@ -1,4 +1,13 @@
-myApp.factory('NavigationService', function () {
+var adminURL = "";
+var adminurl = "http://wohlig.io/api/";
+if (isproduction) {
+  adminURL = "http://www.wohlig.co.in/demo/index.php";
+} else {
+  adminURL = "http://localhost/demo/index.php";
+}
+
+
+myApp.factory('NavigationService', function ($http) {
     var navigation = [{
             name: "Home",
             classis: "active",
@@ -26,5 +35,22 @@ myApp.factory('NavigationService', function () {
         getNavigation: function () {
             return navigation;
         },
+
+
+submitEnquiry: function (myForm, callback) {
+            $http({
+                url: adminurl + 'Enquiry/saveEnquiry',
+                method: 'POST',
+                data: myForm
+            }).then(callback);
+        },
+
+
+
+
     };
+
+
+
+
 });
