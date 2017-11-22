@@ -39,11 +39,12 @@ myApp.factory('NavigationService', function ($http) {
 
 submitEnquiry: function (myForm, callback) {
             $http({
-                url: adminurl + 'Enquiry/saveEnquiry',
+                url: adminurl + 'Enquiry/saveMailData',
                 method: 'POST',
                 data: myForm
             }).then(callback);
         },
+
 
 
 
