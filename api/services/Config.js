@@ -23,7 +23,7 @@ var schema = new Schema({
 // });
 
 module.exports = mongoose.model('Config', schema);
-var requrl = "http://wohlig.io/api/";
+var requrl = "https://intimebydesign.com/api/";
 var models = {
     maxRow: 10,
     getForeignKeys: function (schema) {
