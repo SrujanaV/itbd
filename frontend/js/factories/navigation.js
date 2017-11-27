@@ -1,7 +1,7 @@
 var adminURL = "";
-var adminurl = "https://intimebydesign.com/api/";
+var adminurl = "http://wohlig.io/api/";
 if (isproduction) {
-  adminURL = "https://intimebydesign.com/demo/index.php";
+  adminURL = "http://www.wohlig.co.in/demo/index.php";
 } else {
   adminURL = "http://localhost/demo/index.php";
 }
@@ -40,6 +40,13 @@ myApp.factory('NavigationService', function ($http) {
 submitEnquiry: function (myForm, callback) {
             $http({
                 url: adminurl + 'Enquiry/saveMailData',
+                method: 'POST',
+                data: myForm
+            }).then(callback);
+        },
+        saveMail: function (myForm, callback) {
+            $http({
+                url: adminurl + 'EmailInfo/save',
                 method: 'POST',
                 data: myForm
             }).then(callback);

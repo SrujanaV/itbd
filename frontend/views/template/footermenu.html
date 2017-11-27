@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" ng-controller="footerCtrl">
     <div class="row mf">
         <div class="col-md-3 col-sm-6 col-xs-6">
             <strong class="stp Robotor"><a class="yellow_color" ui-sref="destination">DESTINATIONS</a></strong>
@@ -21,9 +21,9 @@
             <strong class="stp Robotor yellow_color">ENQUIRE US</strong>
             <div class="stp Robotor">
                 <form name="myFormFooter" ng-submit="subscribeSubmit(subscribeData)" ng-hide="subscribeComplete || alreadySubscribed" class="form-inline">
-                    <input type="email" placeholder="ENTER YOUR EMAIL ID" class="hideinput form-control ng-pristine ng-empty ng-invalid ng-invalid-required ng-valid-email ng-touched"
+                    <input type="email" placeholder="ENTER YOUR EMAIL ID" ng-model="data.email" class="hideinput form-control ng-pristine ng-empty ng-invalid ng-invalid-required ng-valid-email ng-touched"
                         name="email" ng-model="subscribeData.email" required="">
-                    <button class="submitgo" type="submit" name="button">GO</button>
+                    <button class="submitgo" type="submit" ng-click="submitEmail(data)" name="button">GO</button>
                 </form>
             </div>
             <strong ng-if="subscribeComplete" class="stp Robotor yellow_color">Thank You For Subscribing.</strong>
