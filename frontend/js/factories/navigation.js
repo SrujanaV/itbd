@@ -1,7 +1,7 @@
 var adminURL = "";
-var adminurl = "http://wohlig.io/api/";
+var adminurl = "https://intimebydesign.com/api/";
 if (isproduction) {
-  adminURL = "http://www.wohlig.co.in/demo/index.php";
+  adminURL = "https://intimebydesign.com/demo/index.php";
 } else {
   adminURL = "http://localhost/demo/index.php";
 }
