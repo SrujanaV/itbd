@@ -1,12 +1,3 @@
-var adminURL = "";
-var adminurl = "http://wohlig.io/api/";
-if (isproduction) {
-  adminURL = "http://www.wohlig.co.in/demo/index.php";
-} else {
-  adminURL = "http://localhost/demo/index.php";
-}
-
-
 myApp.factory('NavigationService', function ($http) {
     var navigation = [{
             name: "Home",

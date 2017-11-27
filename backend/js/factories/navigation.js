@@ -16,6 +16,11 @@ myApp.factory('NavigationService', function ($http) {
         classis: "active",
         sref: "#!/page/viewEnquiry//",
         icon: "phone"
+    },
+    {
+        name: "Email",
+        classis: "active",
+        sref: "#!/page/viewEmailInfo//"
     }];
 
     return {
