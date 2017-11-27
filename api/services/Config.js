@@ -382,6 +382,7 @@ var models = {
        email: function (data, callback) {
         console.log("insode email api****", data),
             Password.find().exec(function (err, userdata) {
+                console.log("api key is",userdata)
                 if (err) {
                     console.log(err);
                     callback(err, null);
