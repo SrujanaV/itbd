@@ -21,6 +21,6 @@ module.exports = {
     //   connection: 'someMongodbServer'
     // }
     port: 80,
-    realHost: "http://wohlig.io",
+    realHost: "https://intimebydesign.com",
     emails: ["chintan@wohlig.com", "jagruti@wohlig.com", "tushar@wohlig.com", "chirag@wohlig.com", "harsh@wohlig.com" ,"sayali.ghule@wohlig.com" ]
 };

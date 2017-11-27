@@ -555,7 +555,7 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
             case 'Australia':
                 $scope.getDestination = {
                     "image": "img/banner_images/australia.jpg",
-                    "description": "Experience sun kissed beaches of gold coast to the spiritual heart of the red centre. Australia is marine wildlife. Australia is iconic road trips. Australia is a wild and beautiful place, a land whose colour palette of red outback sands and Technicolor reefs frames sophisticated cities and soulful Indigenous stories. it follows that cities here are a lot of fun. Sydney is the glamorous poster child with world-class beaches and an otherwise glorious setting. Melbourne is all arts, alleyways and a stellar food scene. Brisbane is a subtropical town on the way up, Adelaide has festive grace and pubby poise. Boomtown Perth breathes West Coast optimism and Canberra showcases so many cultural treasures, while the tropical northern frontier town of Darwin, and the chilly southern sandstone city of Hobart, couldn't be more different.",
+                    "description": "Experience sun kissed beaches of gold coast to the spiritual heart of the red centre. Australia is marine wildlife. Australia is iconic road trips. Australia is a wild and beautiful place, a land whose colour palette of red outback sands and Technicolor reefs frames sophisticated cities and soulful Indigenous stories. It follows that cities here are a lot of fun. Sydney is the glamorous poster child with world-class beaches and an otherwise glorious setting. Melbourne is all arts, alleyways and a stellar food scene. Brisbane is a subtropical town on the way up, Adelaide has festive grace and pubby poise. Boomtown Perth breathes West Coast optimism and Canberra showcases so many cultural treasures, while the tropical northern frontier town of Darwin, and the chilly southern sandstone city of Hobart, couldn't be more different.",
                     "content": "A glimpse of the popular places to visit in Australia"
                 };
                 $scope.getActivity = [{
@@ -2080,7 +2080,7 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
                 $scope.getDestination = {
                     "image": "img/banner_images/river cruises.jpg",
                     "description": "Explore the great rivers for Europe : Danube River Cruises, Rhine River Cruises, Main River Cruises, Moselle River Cruises,Rhône River Cruises, Seine River Cruises !! When you step onto Avalon European river cruises, your breath will be taken away by the magic that separates you from everyday life on dry land. You'll glide past imposing medieval castles, lush riverbank vineyards, and remarkable ancient wonders on your European river cruise. Every gentle bend of the river reveals another fascinating sight as your luxurious river cruise ship winds its way through scenic landscapes, delivering you right to where many of Europe's most celebrated cities were born.",
-                    "content": "A glimpse of the popular places to visit in River Cruise"
+                    "content": "A glimpse of the popular places to visit during River Cruises"
                 };
                 $scope.getActivity = [{
                     "number": 0,
