@@ -90,7 +90,7 @@ var model = {
 
                     Config.email(emailData, function (err, emailRespo) {
                         if (err) {
-                            console.log(err);
+                            console.log("---------",err);
                             cbWaterfall1(null, err);
                         } else if (emailRespo) {
                             cbWaterfall1(null, emailRespo);

@@ -23,7 +23,6 @@ var schema = new Schema({
 // });
 
 module.exports = mongoose.model('Config', schema);
-var requrl = "https://intimebydesign.com/api/";
 var models = {
     maxRow: 10,
     getForeignKeys: function (schema) {
@@ -378,6 +377,8 @@ var models = {
             callback(err);
         });
     },
+       
+       
        email: function (data, callback) {
         console.log("insode email api****", data),
             Password.find().exec(function (err, userdata) {
@@ -388,7 +389,7 @@ var models = {
                     if (data.filename && data.filename != "") {
                         console.log("Email data: ", data);
                         request.post({
-                            url: requrl + "config/emailReader/",
+                            url: env.realHost + "/api/config/emailReader/",
                             json: data
                         }, function (err, http, body) {
                             console.log("body : ", body);
@@ -455,6 +456,7 @@ var models = {
                 }
             });
     },
+    
     sendEmail: function (fromEmail, toEmail, subject, html, attachments, callback) {
 
         Password.findOneByName("sendgrid", function (err, data) {
