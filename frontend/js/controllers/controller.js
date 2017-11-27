@@ -1,4 +1,4 @@
-myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationService, $timeout, $state) {
+myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationService, $timeout, $state,$uibModal) {
         $scope.template = TemplateService.getHTML("content/home.html");
         TemplateService.title = "Home"; //This is the Title of the Website
         $scope.navigation = NavigationService.getNavigation();
@@ -2618,11 +2618,11 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
                 // windowClass: 'modalWidth',
                 backdropClass: 'black-drop'
             });
-            $scope.closeModal = function () { // to close modals for ALL OTP
-                $scope.galleryImage.close();
-            };
+            
         };
-
+        $scope.closeModal = function () { // to close modals for ALL OTP
+            $scope.galleryImage.close();
+        };
 
 
 
