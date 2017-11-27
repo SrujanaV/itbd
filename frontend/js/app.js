@@ -4,14 +4,14 @@ var myApp = angular.module('myApp', [
     'pascalprecht.translate',
     'angulartics',
     'angulartics.google.analytics',
-    'ui.bootstrap',
-    // 'ngAnimate',
+    //  'ngAnimate',
     // 'ngSanitize',
     'angular-flexslider',
     'ui.swiper',
     'angularPromiseButtons',
     'toastr',
-    'ui.select'
+    'ui.select',
+    'ui.bootstrap'
 ]);
 
 // Define all the routes below
