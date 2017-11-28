@@ -103,7 +103,7 @@ var model = {
             function (err, data2) {
                 if (err) {
                     console.log(err);
-                    callback(null, []);
+                    callback(null, "validationfailed");
                 } else if (data2) {
                     if (_.isEmpty(data2)) {
                         callback(null, []);

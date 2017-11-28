@@ -1,4 +1,4 @@
-myApp.controller('headerCtrl', function ($scope, TemplateService, NavigationService, $timeout, toastr, $http, $stateParams, $uibModal) {
+myApp.controller('headerCtrl', function ($scope, $state,TemplateService, NavigationService, $timeout, toastr, $http, $stateParams, $uibModal) {
     $scope.template = TemplateService;
     $scope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParams) {
         $(window).scrollTop(0);
@@ -14,19 +14,17 @@ $scope.cartSubmit = function (cartData, detailForm) {
                 if (detailForm.$valid == true) {
                     console.log("detailForm.$valid")
                     NavigationService.submitEnquiry(cartData, function (data) {
-                        console.log("in navigation")
-                        if (data.data.value) {
-                            console.log("all data")
+                     console.log("data is",data)
+                        if (data.data.data=="validationfailed") {
+                           $scope.showmsg=true;
                         
-                        }
-                        console.log(data)
-                         
-                        $scope.mycart=false;
+                        }else{
+                             $scope.mycart=false;
                            $scope.cartData={};
-                 
-                      
-                       
-                       
+                           $scope.showmsg=false;
+                             $state.reload()
+
+                        }
                     });
                 }
             }

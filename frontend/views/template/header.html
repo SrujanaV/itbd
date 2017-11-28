@@ -99,6 +99,7 @@
                                     <div class="form-group">
                                         <label class="labels bluecol">Email Id:</label>
                                         <input type="email" class="form-control inputform" placeholder="Email" name="email" ng-model="cartData.email" required>
+                                        <p class="error" ng-if="showmsg">Email id alredy exist</p>
                                         <p class="error" ng-if="detailForm.email.$invalid && detailForm.email.$touched">Email is required</p>
                                     </div>
                                     <div class="form-group">
