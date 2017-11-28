@@ -3,14 +3,19 @@ myApp.controller('footerCtrl', function ($scope, TemplateService, NavigationServ
     $scope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParams) {
         $(window).scrollTop(0);
     });
+    $scope.showMsg=false
     console.log("inside footerctrl")
 $scope.submitEmail=function(data){
 
      NavigationService.saveMail(data, function (data1) {
-         console.log("go");
-         $scope.data={};
-         if(data1.value==true){
-             
+         console.log("go",data1);
+          if(data1.data.value==true){
+              console.log("inside if")
+               $scope.showMsg=false
+               $scope.data={};
+         }else{
+                   console.log("inside else")
+             $scope.showMsg=true
          }
       });
 }

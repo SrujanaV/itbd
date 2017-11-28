@@ -83,7 +83,7 @@ var model = {
                     emailData.message = data.message;
                     emailData.groupsize = data.groupsize;
                     emailData.mobile = data.mobile;
-                    emailData.email = "intimebydesign@gmail.com";
+                    emailData.email = "saili.rawnang@wohlig.com";
                     emailData.filename = "mail.ejs";
                     emailData.subject = "Enquiry";
                     console.log("emaildata", emailData);
@@ -103,7 +103,7 @@ var model = {
             function (err, data2) {
                 if (err) {
                     console.log(err);
-                    callback(null, []);
+                    callback(null, "validationfailed");
                 } else if (data2) {
                     if (_.isEmpty(data2)) {
                         callback(null, []);
