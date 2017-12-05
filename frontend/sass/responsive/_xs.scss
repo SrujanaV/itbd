@@ -1,3 +1,130 @@
  @media (max-width: $screen-xs-max) {
      // Mobile
+     .himg2 .form-control {
+         font-size: 14px;
+     }
+     .m2{
+         margin-top: 70px;
+     }
+     .himg2 {
+         width: 75%;
+         margin-left: 10%;
+         margin-top: -5.5%;
+         .gobtn {
+             padding-left: 0;
+             font-size: 16px;
+         }
+         .form-control{
+             background-size: 14px;
+         }
+     }
+     .p222{
+        margin:15% 0 0 -15%
+     }
+     .p2{
+         font-size: 40px;
+         br{
+            display: none;
+        }
+     }
+     .p22{
+        margin-left: 15%;
+        br{
+            display: none;
+        }
+     }
+     .imgab {
+         width: 24%;
+     }
+     .spAb {
+         width: 85%;
+         padding-left: 0;
+         h1 {
+             font-size: 50px;
+             letter-spacing: 2px;
+         }
+     }
+     .hbc {
+         .tp {
+             padding-left: 0;
+         }
+     }
+     .pd50 {
+         padding: 0 20px;
+     }
+     .category {
+         padding: 20px;
+     }
+     .categoryup {
+         padding: 30px;
+         margin: 0;
+         h1 {
+             font-size: 30px;
+             margin: 0;
+         }
+     }
+     .cartadd {
+         .mycartme {
+             top: 350px;
+         }
+         .mycart2 {
+             left: -70px;
+             top: 55px;
+             li {
+                 padding: 0px 12px;
+             }
+         }
+     }
+     .mf {
+         text-align: center;
+     }
+     .stp .form-control,
+     .submitgo {
+         display: inline-block;
+     }
+     .footb {
+         .padright {
+             text-align: center;
+         }
+         text-align: center;
+     }
+     .fsiz {
+         font-size: 40px;
+         padding: 30px 0;
+     }
+     .m4 .m2 {
+         margin: 0;
+         .pd15 h1 {
+             font-size: 30px;
+         }
+     }
+     .bluecol {
+         text-align: justify;
+     }
+     .pattayamarg4 {
+         margin: 0;
+         padding: 5px 15%;
+     }
+     .patpack2 {
+         font-size: 20px;
+         padding: 10px 20px;
+         margin-left: 0;
+     }
+     .pattmarg2 {
+         padding: 10%;
+     }
+     .circle {
+         top: -10px;
+         right: -10px;
+     }
+     .cartadd {
+         top: 230px;
+     }
+     .canviewmob {
+         display: block;
+     }
+     .mobview {
+         display: none;
+         float: right;
+     }
  }

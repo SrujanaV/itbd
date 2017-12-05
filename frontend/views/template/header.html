@@ -113,7 +113,7 @@
                                         <p class="error" ng-show="detailForm.groupsize.$invalid && detailForm.groupsize.$touched">Group Size is required</p>
                                     </div>
                                     <div class="row text-center">
-                                        <button ng-class="{ active: mycart }" class="btn btn-submit" ng-disabled="detailForm.$invalid || checkCartIsEmpty"
+                                        <button class="mobview" ng-class="{ active: mycart }" class="btn btn-submit" ng-disabled="detailForm.$invalid || checkCartIsEmpty"
                                             type="submit" ng-click="cartSubmit(cartData,detailForm)">SUBMIT</button>
                                     </div>
                                 </div>
@@ -123,6 +123,10 @@
                                         <textarea rows="4" cols="50" class="form-control inputform" placeholder="Message" name="message" ng-model="cartData.message"
                                             required></textarea>
                                         <p class="error" ng-show="detailForm.message.$invalid && detailForm.message.$touched">Message is required</p>
+                                    </div>
+                                    <div class="row text-center">
+                                        <button class="canviewmob" ng-class="{ active: mycart }" class="btn btn-submit" ng-disabled="detailForm.$invalid || checkCartIsEmpty"
+                                            type="submit" ng-click="cartSubmit(cartData,detailForm)">SUBMIT</button>
                                     </div>
                                 </div>
                             </div>

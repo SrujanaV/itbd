@@ -1,9 +1,9 @@
 <!-- START DESKTOP SLIDER -->
-<div class="homeslidr hidden-xs">
+<div class="homeslidr">
     <flex-slider id="homeslider" flex-slide="s in mySlides track by $index" slideshow-speed="2500" slideshow="true" animation-speed="1000"
         class="m1 carousel">
         <li>
-            <img alt="In time by Design" class="img-responsive " ng-src="{{s.img}}">
+            <img alt="In time by Design" class="img-responsive" ng-src="{{s.img}}">
         </li>
     </flex-slider>
 </div>
@@ -15,7 +15,7 @@
             <div class="item">
                 <figure class=" ng-scope">
                     <!-- <a href={{s.url}} target="_blank"> -->
-                    <img alt="In time by Design" class="img-responsive " ng-src="{{s.image2}}">
+                    <img alt="In time by Design" class="img-responsive" ng-src="{{s.image2}}">
                     <!-- </a> -->
                 </figure>
             </div>
@@ -36,9 +36,9 @@
     <div class="mr">
         <div class="container borderup">
             <div class="row">
-                <div class="col-md-4 col-sm-4  col-xs-6 padng0">
+                <div class="col-md-4 col-sm-2 col-xs-12 padng0">
                     <h1 class="p p11 pregular" ui-sref="destination">POPULAR</h1>
-                    <h1 class="p2 p22 theboldfont" ui-sref="destination">DESTIN ATIONS</h1>
+                    <h1 class="p2 p22 theboldfont" ui-sref="destination">DESTIN<br>ATIONS</h1>
                 </div>
                 <div class="col-md-2 col-sm-2 col-xs-6 padng0" ng-repeat="x in popularDestination">
                     <div class="eventshome">
@@ -63,7 +63,7 @@
     <div class="ml">
         <div class="container borderdown">
             <div class="row">
-                <div class="col-md-2 col-sm-2 col-xs-6 padng0" ng-repeat="x in popularAttraction">
+                <div class="col-md-4 col-sm-2 col-xs-6 padng0" ng-repeat="x in popularAttraction">
                     <div class="eventshome" ui-sref="customdestination({id:x.name})">
                         <img alt="{{x.name}}" title="{{x.name}}" src="{{x.image1}}" class="img-responsive">
                         <div class="shadow-down"></div>
@@ -77,10 +77,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-4 col-xs-4 padng0">
+                <div class="col-md-4 col-sm-4 col-xs-12 padng0">
                     <h1 class="p p1 theboldfont" ui-sref="activity">POPULAR</h1>
-                    <h1 class="p2 p222 theboldfont" ui-sref="activity">ATTRA
-                        <br>CTIONS</h1>
+                    <h1 class="p2 p222 theboldfont" ui-sref="activity">ATTRA<br>CTIONS</h1>
                 </div>
             </div>
         </div>
