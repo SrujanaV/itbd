@@ -14,13 +14,17 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
         }
 
         $scope.mySlides = [{
-            "img": "img/bg1.jpg"
+            "img": "img/bg1.jpg",
+            "name":"France"
         }, {
-            "img": "img/bg2.jpg"
+            "img": "img/bg2.jpg",
+            "name":"Japan"
         }, {
-            "img": "img/bg3.jpg"
+            "img": "img/bg3.jpg",
+            "name":"United States of America"
         }, {
-            "img": "img/bg4.jpg"
+            "img": "img/bg4.jpg",
+            "name":"Malaysia"
         }];
         $scope.popularDestination = [{
             "image": "img/australia.jpg",
