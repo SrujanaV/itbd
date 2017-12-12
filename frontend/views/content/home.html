@@ -1,4 +1,4 @@
-<!-- START DESKTOP SLIDER -->
+<!-- START DESKTOP SLIDER --> 
 <div class="homeslidr">
     <flex-slider id="homeslider" flex-slide="s in mySlides track by $index" slideshow-speed="2500" slideshow="true" animation-speed="1000"
         class="m1 carousel">
@@ -23,6 +23,7 @@
     </flex-slider>
 </div>
 <!-- END MOBILE SLIDER -->
+ 
 <!-- START POPULAR -->
 <div class="container display">
     <div class="row ">
@@ -63,7 +64,7 @@
     <div class="ml">
         <div class="container borderdown">
             <div class="row">
-                <div class="col-md-4 col-sm-2 col-xs-6 padng0" ng-repeat="x in popularAttraction">
+                <div class="col-md-2 col-sm-2 col-xs-6 padng0" ng-repeat="x in popularAttraction">
                     <div class="eventshome" ui-sref="customdestination({id:x.name})">
                         <img alt="{{x.name}}" title="{{x.name}}" src="{{x.image1}}" class="img-responsive">
                         <div class="shadow-down"></div>
