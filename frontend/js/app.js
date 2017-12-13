@@ -11,12 +11,18 @@ var myApp = angular.module('myApp', [
     'angularPromiseButtons',
     'toastr',
     'ui.select',
-    'ui.bootstrap'
+    'ui.bootstrap',
+    'angular-loading-bar'
 ]);
 
 // Define all the routes below
-myApp.config(function ($stateProvider, $urlRouterProvider, $httpProvider, $locationProvider) {
+myApp.config(function ($stateProvider, $urlRouterProvider, $httpProvider, $locationProvider, cfpLoadingBarProvider) {
     var tempateURL = "views/template/template.html"; //Default Template URL
+    cfpLoadingBarProvider.includeSpinner = true;
+    cfpLoadingBarProvider.includeBar = true;
+    // cfpLoadingBarProvider.parentSelector = '#loading-bar-container';
+    cfpLoadingBarProvider.spinnerTemplate = '<div class="spinner-overlay"><img class="spinner" src="img/loader.gif" /></div>';
+    // cfpLoadingBarProvider.spinnerTemplate = '<div><span class="fa fa-spinner">Loading...</div>';
 
     // for http request with session
     $httpProvider.defaults.withCredentials = true;
