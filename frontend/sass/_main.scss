@@ -16,6 +16,12 @@ $white: #ffffff !default;
 }
 
 @font-face {
+    font-family: "theboldfont";
+    src: url("../fonts/theboldfont.ttf");
+    font-weight: 700;
+}
+
+@font-face {
     font-family: "Roboto";
     src: url("../fonts/Roboto-Light_1.ttf");
     font-weight: 300;
@@ -27,16 +33,6 @@ $white: #ffffff !default;
     font-weight: 400;
 }
 
-@font-face {
-    font-family: "theboldfont";
-    src: url("../fonts/theboldfont.ttf");
-    font-weight: 700;
-}
-
-@font-face {
-    font-family: "flexslider-icon";
-    src: url("../fonts/flexslider-icon.ttf");
-} //new font imported
 @font-face {
     font-family: "plan-dark-bold";
     src: url("../fonts/plan-dark-bold.ttf");
@@ -542,7 +538,8 @@ header {
         .form-group {
             margin-bottom: 6px !important;
         }
-        label {
+        label {   
+            font-family: "Roboto";        
             word-spacing: 2px;
             font-size: 14px;
             display: inline-block;
@@ -557,13 +554,15 @@ header {
 textarea.form-control {
     height: auto !important;
 }
-
+a {
+    color: #81b1d9;
+}
 .mycart2 {
     box-shadow: #0e0f24 0 -1px 1px -1px;
     @include transform(rotate(-90deg)); // -webkit-transform: rotate(-90deg);
     position: absolute;
-    left: -92px;
-    top: 53px;
+    left: -90px;
+    top: 57px;
     z-index: 9999;
     .socialpatt {
         list-style: none;
@@ -729,7 +728,8 @@ textarea.form-control {
     border: none!important;
     border-radius: 0 !important;
 }
-.homeslidr{
+
+.homeslidr {
     cursor: pointer;
 }
 
@@ -1582,7 +1582,7 @@ figure.hover figcaption {
         display: none;
     }
     input[type="checkbox"]+label {
-        font-weight: 300;
+        font-weight: 700;
         font-size: 16px;
     }
     input[type="checkbox"]+label span {
@@ -1935,7 +1935,7 @@ input[type="time"].form-control {
 //whats hot page ends
 //footer starts
 .footermenu {
-    background: #0e0f24;
+    background: #0f0f24;
 }
 
 .confoot {
@@ -2003,7 +2003,8 @@ input[type="time"].form-control {
         text-align: center;
     }
 }
-.canviewmob{
+
+.canviewmob {
     display: none;
 }
 
@@ -2059,6 +2060,17 @@ input[type="time"].form-control {
     }
 }
 
+.spinner-overlay {
+    position: absolute;
+    height: 600vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: white;
+    opacity: 0.8;
+    z-index: 9998;    
+}
+
 .spinner {
     position: fixed;
     left: 50%;
@@ -2066,5 +2078,11 @@ input[type="time"].form-control {
     transform: translate(-50%, -50%);
     z-index: 9999;
     opacity: 1;
+}
+.blueb{
+    color: #0e0f24 !important;
+}
+label{
+    font-weight: 300 !important;
 }
 //footer ends

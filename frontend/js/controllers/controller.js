@@ -4,6 +4,10 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
         $scope.navigation = NavigationService.getNavigation();
         $scope.formData = {};
 
+        $('#loader').show();
+        setTimeout(function(){$('#loader').hide();}, 2000);
+        // setTimeout(function(){ alert("Hello"); }, 0);
+
         $scope.gotoFun = function () {
             $state.go('customdestination', {
                 id: $scope.goTo
@@ -220,6 +224,8 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
         $scope.template = TemplateService.getHTML("content/destination.html");
         TemplateService.title = "Destination"; // This is the Title of the Website
         $scope.navigation = NavigationService.getNavigation();
+        $('#loader').show();
+        setTimeout(function(){$('#loader').hide();}, 2000);
         $scope.DestinationLand = [{
             "name": "Argentina",
             "image": "img/dest/argentina.jpg",
@@ -460,6 +466,8 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
         $scope.template = TemplateService.getHTML("content/customdestination.html");
         TemplateService.title = "Grid"; // This is the Title of the Website
         $scope.navigation = NavigationService.getNavigation();
+        $('#loader').show();
+        setTimeout(function(){$('#loader').hide();}, 2000);
         $scope.id = $stateParams.id;
         // $scope.getDestination = {
         //     "image": "img/customDes/argentina.jpg",
@@ -2636,6 +2644,8 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
         $scope.template = TemplateService.getHTML("content/activity.html");
         TemplateService.title = "Activity"; // This is the Title of the Website
         $scope.navigation = NavigationService.getNavigation();
+        $('#loader').show();
+        setTimeout(function(){$('#loader').hide();}, 2000);
         $scope.getActivity = [{
             "name": "BICYCLE TOUR",
             "image": "img/activities/bicycle_tour.jpg"
@@ -2669,6 +2679,8 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
         $scope.template = TemplateService.getHTML("content/whats-hot.html");
         TemplateService.title = "Whats Hot"; // This is the Title of the Website
         $scope.navigation = NavigationService.getNavigation();
+        $('#loader').show();
+        setTimeout(function(){$('#loader').hide();}, 2000);
         $scope.allDestination = [{
             "name": "Hat Rin Full Moon Party",
             "fromDate": "03-04 November 2017",

@@ -6,7 +6,7 @@ myApp.controller('headerCtrl', function ($scope, $state,TemplateService, Navigat
 
     $.fancybox.close(true);
 $scope.onlyNumbers = "^[1-9][0-9]*$";
-$scope.cartSubmit = function (cartData, detailForm) {
+$scope.submit = function (cartData, detailForm) {
             console.log("submiting...")
             console.log("data",cartData)
             if (cartData) {
