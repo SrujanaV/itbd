@@ -10045,6 +10045,11 @@ button.close {
   src: url("../fonts/plan-dark-r.ttf"); }
 
 @font-face {
+  font-family: "theboldfont";
+  src: url("../fonts/theboldfont.ttf");
+  font-weight: 700; }
+
+@font-face {
   font-family: "Roboto";
   src: url("../fonts/Roboto-Light_1.ttf");
   font-weight: 300; }
@@ -10053,15 +10058,6 @@ button.close {
   font-family: "Robotor";
   src: url("../fonts/Roboto-Regular_1.ttf");
   font-weight: 400; }
-
-@font-face {
-  font-family: "theboldfont";
-  src: url("../fonts/theboldfont.ttf");
-  font-weight: 700; }
-
-@font-face {
-  font-family: "flexslider-icon";
-  src: url("../fonts/flexslider-icon.ttf"); }
 
 @font-face {
   font-family: "plan-dark-bold";
@@ -10481,6 +10477,7 @@ header {
   .patmargin3 .formlabels .form-group {
     margin-bottom: 6px !important; }
   .patmargin3 .formlabels label {
+    font-family: "Roboto";
     word-spacing: 2px;
     font-size: 14px;
     display: inline-block;
@@ -10492,6 +10489,9 @@ header {
 textarea.form-control {
   height: auto !important; }
 
+a {
+  color: #81b1d9; }
+
 .mycart2 {
   box-shadow: #0e0f24 0 -1px 1px -1px;
   -webkit-transform: rotate(-90deg);
@@ -10500,8 +10500,8 @@ textarea.form-control {
   -o-transform: rotate(-90deg);
   transform: rotate(-90deg);
   position: absolute;
-  left: -92px;
-  top: 53px;
+  left: -90px;
+  top: 57px;
   z-index: 9999; }
   .mycart2 .socialpatt {
     list-style: none;
@@ -10636,6 +10636,9 @@ textarea.form-control {
   margin: 0 !important;
   border: none !important;
   border-radius: 0 !important; }
+
+.homeslidr {
+  cursor: pointer; }
 
 .homeslidr .flex-direction-nav .flex-prev {
   left: 10px !important; }
@@ -11359,7 +11362,7 @@ figure.hover figcaption {
   display: none; }
 
 .checkboxing input[type="checkbox"] + label {
-  font-weight: 300;
+  font-weight: 700;
   font-size: 16px; }
 
 .checkboxing input[type="checkbox"] + label span {
@@ -11665,7 +11668,7 @@ input[type="time"].form-control {
     margin: 3% 0; }
 
 .footermenu {
-  background: #0e0f24; }
+  background: #0f0f24; }
 
 .confoot {
   font-size: 15px;
@@ -11723,6 +11726,9 @@ input[type="time"].form-control {
     padding: 2% 0 0;
     text-align: center; }
 
+.canviewmob {
+  display: none; }
+
 .footb {
   background: #121212; }
   .footb .fc {
@@ -11764,6 +11770,30 @@ input[type="time"].form-control {
     padding-left: 15px !important;
     padding-bottom: 2% !important; }
 
+.spinner-overlay {
+  position: absolute;
+  height: 600vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: white;
+  opacity: 0.8;
+  z-index: 9998; }
+
+.spinner {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  opacity: 1; }
+
+.blueb {
+  color: #0e0f24 !important; }
+
+label {
+  font-weight: 300 !important; }
+
 #fancybox-loading,
 .fancybox-close,
 .fancybox-next span,
@@ -11803,5 +11833,94 @@ input[type="time"].form-control {
 
 .fancybox-nav.fancybox-prev span {
   background-image: url(../img/prev.png); }
+
+@media (max-width: 767px) {
+  .himg2 .form-control {
+    font-size: 14px; }
+  .m2 {
+    margin-top: 70px; }
+  .himg2 {
+    width: 75%;
+    margin-left: 10%;
+    margin-top: -5.5%; }
+    .himg2 .gobtn {
+      padding-left: 0;
+      font-size: 16px; }
+    .himg2 .form-control {
+      background-size: 14px; }
+  .p222 {
+    margin: 15% 0 0 -15%; }
+  .p2 {
+    font-size: 40px; }
+    .p2 br {
+      display: none; }
+  .p22 {
+    margin-left: 15%; }
+    .p22 br {
+      display: none; }
+  .imgab {
+    width: 24%; }
+  .spAb {
+    width: 85%;
+    padding-left: 0; }
+    .spAb h1 {
+      font-size: 50px;
+      letter-spacing: 2px; }
+  .hbc .tp {
+    padding-left: 0; }
+  .pd50 {
+    padding: 0 20px; }
+  .category {
+    padding: 20px; }
+  .categoryup {
+    padding: 30px;
+    margin: 0; }
+    .categoryup h1 {
+      font-size: 30px;
+      margin: 0; }
+  .cartadd .mycartme {
+    top: 350px; }
+  .cartadd .mycart2 {
+    left: -70px;
+    top: 55px; }
+    .cartadd .mycart2 li {
+      padding: 0px 12px; }
+  .mf {
+    text-align: center; }
+  .stp .form-control,
+  .submitgo {
+    display: inline-block; }
+  .footb {
+    text-align: center; }
+    .footb .padright {
+      text-align: center; }
+  .fsiz {
+    font-size: 40px;
+    padding: 30px 0; }
+  .m4 .m2 {
+    margin: 0; }
+    .m4 .m2 .pd15 h1 {
+      font-size: 30px; }
+  .bluecol {
+    text-align: justify; }
+  .pattayamarg4 {
+    margin: 0;
+    padding: 5px 15%; }
+  .patpack2 {
+    font-size: 20px;
+    padding: 10px 20px;
+    margin-left: 0; }
+  .pattmarg2 {
+    padding: 10%; }
+  .circle {
+    top: -10px;
+    right: -10px; }
+  .cartadd {
+    top: 230px; }
+  .canviewmob {
+    display: block; }
+  .mobview {
+    display: none;
+    float: right; } }
 
 /*# sourceMappingURL=import.css.map */
