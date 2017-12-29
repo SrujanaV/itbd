@@ -1,3 +1,9 @@
  @media (max-width: $screen-md-max) {
      // Desktop
+     .content2 {
+         height: 125px !important;
+     }
+     .client_name {
+         font-size: 25px;
+     }
  }

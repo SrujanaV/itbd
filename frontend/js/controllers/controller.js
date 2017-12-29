@@ -1,11 +1,13 @@
-myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationService, $timeout, $state,$uibModal) {
+myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationService, $timeout, $state, $uibModal) {
         $scope.template = TemplateService.getHTML("content/home.html");
         TemplateService.title = "Home"; //This is the Title of the Website
         $scope.navigation = NavigationService.getNavigation();
         $scope.formData = {};
 
         $('#loader').show();
-        setTimeout(function(){$('#loader').hide();}, 2000);
+        setTimeout(function () {
+            $('#loader').hide();
+        }, 2000);
         // setTimeout(function(){ alert("Hello"); }, 0);
 
         $scope.gotoFun = function () {
@@ -19,16 +21,16 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
 
         $scope.mySlides = [{
             "img": "img/bg1.jpg",
-            "name":"France"
+            "name": "France"
         }, {
             "img": "img/bg2.jpg",
-            "name":"Japan"
+            "name": "Japan"
         }, {
             "img": "img/bg3.jpg",
-            "name":"United States of America"
+            "name": "United States of America"
         }, {
             "img": "img/bg4.jpg",
-            "name":"Malaysia"
+            "name": "Malaysia"
         }];
         $scope.popularDestination = [{
             "image": "img/australia.jpg",
@@ -225,7 +227,9 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
         TemplateService.title = "Destination"; // This is the Title of the Website
         $scope.navigation = NavigationService.getNavigation();
         $('#loader').show();
-        setTimeout(function(){$('#loader').hide();}, 2000);
+        setTimeout(function () {
+            $('#loader').hide();
+        }, 2000);
         $scope.DestinationLand = [{
             "name": "Argentina",
             "image": "img/dest/argentina.jpg",
@@ -467,7 +471,9 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
         TemplateService.title = "Grid"; // This is the Title of the Website
         $scope.navigation = NavigationService.getNavigation();
         $('#loader').show();
-        setTimeout(function(){$('#loader').hide();}, 2000);
+        setTimeout(function () {
+            $('#loader').hide();
+        }, 2000);
         $scope.id = $stateParams.id;
         // $scope.getDestination = {
         //     "image": "img/customDes/argentina.jpg",
@@ -2630,7 +2636,7 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
                 // windowClass: 'modalWidth',
                 backdropClass: 'black-drop'
             });
-            
+
         };
         $scope.closeModal = function () { // to close modals for ALL OTP
             $scope.galleryImage.close();
@@ -2645,7 +2651,9 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
         TemplateService.title = "Activity"; // This is the Title of the Website
         $scope.navigation = NavigationService.getNavigation();
         $('#loader').show();
-        setTimeout(function(){$('#loader').hide();}, 2000);
+        setTimeout(function () {
+            $('#loader').hide();
+        }, 2000);
         $scope.getActivity = [{
             "name": "BICYCLE TOUR",
             "image": "img/activities/bicycle_tour.jpg"
@@ -2680,7 +2688,9 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
         TemplateService.title = "Whats Hot"; // This is the Title of the Website
         $scope.navigation = NavigationService.getNavigation();
         $('#loader').show();
-        setTimeout(function(){$('#loader').hide();}, 2000);
+        setTimeout(function () {
+            $('#loader').hide();
+        }, 2000);
         $scope.allDestination = [{
             "name": "Hat Rin Full Moon Party",
             "fromDate": "03-04 November 2017",
@@ -2747,6 +2757,12 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
             "banner": "img/bachelor.jpg",
             "banner": "img/bachelorette.jpg"
         }]
+    })
+
+    .controller('AboutCtrl', function ($scope, TemplateService, apiService, NavigationService, $timeout) {
+        $scope.template = TemplateService.getHTML("content/aboutus.html");
+        TemplateService.title = "About Us"; //This is the Title of the Website
+        $scope.navigation = NavigationService.getNavigation();
     })
 
     // Example API Controller

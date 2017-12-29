@@ -538,8 +538,8 @@ header {
         .form-group {
             margin-bottom: 6px !important;
         }
-        label {   
-            font-family: "Roboto";        
+        label {
+            font-family: "Roboto";
             word-spacing: 2px;
             font-size: 14px;
             display: inline-block;
@@ -554,9 +554,11 @@ header {
 textarea.form-control {
     height: auto !important;
 }
+
 a {
     color: #81b1d9;
 }
+
 .mycart2 {
     box-shadow: #0e0f24 0 -1px 1px -1px;
     @include transform(rotate(-90deg)); // -webkit-transform: rotate(-90deg);
@@ -1116,6 +1118,66 @@ figure .links {
     background: #81b1d9;
     padding: 5%;
     text-align: center;
+}
+
+.aboutus_para {
+    background-color: #002774;
+    color: #fff;
+    width: 94%;
+    margin: 32% 3% 0% 3%;
+    .content1 {
+        padding: 2% 6% 6%;
+    }
+    .content2 {
+        background-color: #A1BC0A;
+    }
+}
+
+.abt_heading {
+    font-size: 56px;
+    font-weight: bolder;
+}
+
+.abt_para {
+    font-size: 17px;
+    @extend .Robotor;
+}
+
+.client_name {
+    font-size: 35px;
+    @extend .Robotor;
+}
+
+.bg_aboutus {
+    background-image: url(../img/bg_aboutus.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    margin-bottom: 4%;
+}
+
+.img_client {
+    margin-top: -43px;
+}
+
+.clientname {
+    font-size: 35px;
+    padding: 4% 0% 0% 15%;
+    font-weight: 200;
+}
+
+.clientimg {
+    position: absolute;
+    bottom: 6%;
+    z-index: 9;
+}
+
+.pad0 {
+    padding: 0;
+}
+
+.clients_pic {
+    background-color: #A1BC0A;
+    color: #fff;
 }
 
 .imAb {
@@ -2068,7 +2130,7 @@ input[type="time"].form-control {
     left: 0;
     background: white;
     opacity: 0.8;
-    z-index: 9998;    
+    z-index: 9998;
 }
 
 .spinner {
@@ -2079,10 +2141,13 @@ input[type="time"].form-control {
     z-index: 9999;
     opacity: 1;
 }
-.blueb{
+
+.blueb {
     color: #0e0f24 !important;
 }
-label{
+
+label {
     font-weight: 300 !important;
 }
+
 //footer ends

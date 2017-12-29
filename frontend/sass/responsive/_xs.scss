@@ -3,7 +3,7 @@
      .himg2 .form-control {
          font-size: 14px;
      }
-     .m2{
+     .m2 {
          margin-top: 70px;
      }
      .himg2 {
@@ -14,24 +14,24 @@
              padding-left: 0;
              font-size: 16px;
          }
-         .form-control{
+         .form-control {
              background-size: 14px;
          }
      }
-     .p222{
-        margin:15% 0 0 -15%
+     .p222 {
+         margin: 15% 0 0 -15%
      }
-     .p2{
+     .p2 {
          font-size: 40px;
-         br{
-            display: none;
-        }
+         br {
+             display: none;
+         }
      }
-     .p22{
-        margin-left: 15%;
-        br{
-            display: none;
-        }
+     .p22 {
+         margin-left: 15%;
+         br {
+             display: none;
+         }
      }
      .imgab {
          width: 24%;
@@ -126,5 +126,31 @@
      .mobview {
          display: none;
          float: right;
+     }
+     .content2 {
+         height: 78px !important;
+     }
+     .abt_heading {
+         font-size: 50px !important;
+     }
+     .abt_para {
+         font-size: 16px;
+     }
+     .img_client {
+         margin-top: -15px;
+         width: 111px;
+         margin: 0 auto;
+     }
+     .content2 {
+         //  height: 56px !important;
+         //  min-height: 90px;
+         height: unset !important;
+     }
+     .client_name {
+         font-size: 19px;
+         text-align: center;
+     }
+     .mob_pad0 {
+         padding: 0;
      }
  }
