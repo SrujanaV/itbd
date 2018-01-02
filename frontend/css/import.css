@@ -10836,7 +10836,7 @@ figure .links {
   display: inline-block !important;
   width: 250px;
   vertical-align: top;
-  padding-top: 9%; }
+  padding-top: 2%; }
 
 .spAb {
   width: 50%;
@@ -11717,7 +11717,7 @@ label {
     width: 85%;
     padding-left: 0; }
     .spAb h1 {
-      font-size: 50px;
+      font-size: 40px;
       letter-spacing: 2px; }
   .hbc .tp {
     padding-left: 0; }
@@ -11791,4 +11791,9 @@ label {
     font-size: 19px;
     text-align: center; }
   .mob_pad0 {
-    padding: 0; } }
+    padding: 0; }
+  .sado {
+    background-size: 60% 100%;
+    background-position-x: center;
+    text-align: center;
+    float: none; } }

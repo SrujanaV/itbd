@@ -40,7 +40,7 @@
          width: 85%;
          padding-left: 0;
          h1 {
-             font-size: 50px;
+             font-size: 40px;
              letter-spacing: 2px;
          }
      }
@@ -152,5 +152,11 @@
      }
      .mob_pad0 {
          padding: 0;
+     }
+     .sado {
+         background-size: 60% 100%;
+         background-position-x: center;
+         text-align: center;
+         float: none;
      }
  }
