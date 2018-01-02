@@ -1,7 +1,7 @@
  @media (max-width: $screen-xs-max) {
      // Mobile
      .himg2 .form-control {
-         font-size: 14px;
+         font-size: 11px;
      }
      .m2 {
          margin-top: 70px;
@@ -34,14 +34,21 @@
          }
      }
      .imgab {
-         width: 24%;
+         width: 29%;
+     }
+     .himg2 .form-control {
+         width: 98%;
+         padding-left: 11px;
      }
      .spAb {
          width: 85%;
          padding-left: 0;
+         font-size: 10px;
          h1 {
              font-size: 40px;
-             letter-spacing: 2px;
+         }
+         .ain {
+             font-size: 11px;
          }
      }
      .hbc {
@@ -154,9 +161,35 @@
          padding: 0;
      }
      .sado {
-         background-size: 60% 100%;
+         background-size: 40% 90%;
          background-position-x: center;
          text-align: center;
          float: none;
+         font-size: 9px;
+     }
+     .imAb {
+         margin: 0;
+         width: 210px;
+         padding: 0;
+     }
+     .labsec {
+         font-size: 14px;
+         padding-left: 12px;
+     }
+     .display {
+         cursor: pointer;
+         display: block;
+         margin-bottom: -21px;
+         margin-top: 9%;
+         padding-left: 10px;
+     }
+     .displaynon {
+         display: none;
+     }
+     .display2 {
+         cursor: pointer;
+         display: block;
+         text-align: right;
+         margin-bottom: 7%;
      }
  }

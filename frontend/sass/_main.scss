@@ -58,7 +58,7 @@ $white: #ffffff !default;
 
 @import "other/font-fix";
 body {
-    padding-top: 59px;
+    padding-top: 51px;
 }
 
 //font style start
@@ -2151,3 +2151,9 @@ label {
 }
 
 //footer ends
+//media query
+@media (max-width: 480px) {
+    .imAb {
+        width: 115px !important;
+    }
+}

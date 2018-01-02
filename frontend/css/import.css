@@ -9911,7 +9911,7 @@ button.close {
   src: url("../fonts/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/glyphicons-halflings-regular.woff2") format("woff2"), url("../fonts/glyphicons-halflings-regular.woff") format("woff"), url("../fonts/glyphicons-halflings-regular.ttf") format("truetype"), url("../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg"); }
 
 body {
-  padding-top: 59px; }
+  padding-top: 51px; }
 
 .pregular {
   font-family: 'pregular'; }
@@ -11631,6 +11631,10 @@ input[type="time"].form-control {
 label {
   font-weight: 300 !important; }
 
+@media (max-width: 480px) {
+  .imAb {
+    width: 115px !important; } }
+
 #fancybox-loading,
 .fancybox-close,
 .fancybox-next span,
@@ -11679,17 +11683,43 @@ label {
   .content2 {
     height: 125px !important; }
   .client_name {
-    font-size: 25px; } }
+    font-size: 25px; }
+  .p11 {
+    letter-spacing: 3px;
+    margin-right: 21px; } }
 
 @media (max-width: 991px) {
   .content2 {
     height: 78px !important; }
   .client_name {
-    font-size: 20px; } }
+    font-size: 20px; }
+  .imAb {
+    width: 230px; }
+  .disp {
+    font-weight: 600;
+    font-size: 16px;
+    color: #fff;
+    background-image: url(../img/btn-bg.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding: 5px 32px;
+    margin: 0;
+    display: inline-block; }
+  .disp2 {
+    font-size: 34px;
+    margin: 0;
+    color: #0b325b;
+    font-weight: bolder; }
+  .p {
+    font-size: 12px; }
+  .margleft {
+    margin-left: 70px; }
+  .p2 {
+    font-size: 43px; } }
 
 @media (max-width: 767px) {
   .himg2 .form-control {
-    font-size: 14px; }
+    font-size: 11px; }
   .m2 {
     margin-top: 70px; }
   .himg2 {
@@ -11712,13 +11742,18 @@ label {
     .p22 br {
       display: none; }
   .imgab {
-    width: 24%; }
+    width: 29%; }
+  .himg2 .form-control {
+    width: 98%;
+    padding-left: 11px; }
   .spAb {
     width: 85%;
-    padding-left: 0; }
+    padding-left: 0;
+    font-size: 10px; }
     .spAb h1 {
-      font-size: 40px;
-      letter-spacing: 2px; }
+      font-size: 40px; }
+    .spAb .ain {
+      font-size: 11px; }
   .hbc .tp {
     padding-left: 0; }
   .pd50 {
@@ -11793,7 +11828,28 @@ label {
   .mob_pad0 {
     padding: 0; }
   .sado {
-    background-size: 60% 100%;
+    background-size: 40% 90%;
     background-position-x: center;
     text-align: center;
-    float: none; } }
+    float: none;
+    font-size: 9px; }
+  .imAb {
+    margin: 0;
+    width: 210px;
+    padding: 0; }
+  .labsec {
+    font-size: 14px;
+    padding-left: 12px; }
+  .display {
+    cursor: pointer;
+    display: block;
+    margin-bottom: -21px;
+    margin-top: 9%;
+    padding-left: 10px; }
+  .displaynon {
+    display: none; }
+  .display2 {
+    cursor: pointer;
+    display: block;
+    text-align: right;
+    margin-bottom: 7%; } }
