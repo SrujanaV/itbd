@@ -192,4 +192,12 @@
          text-align: right;
          margin-bottom: 7%;
      }
+     .event-name span {
+         letter-spacing: inherit;
+         font-size: 11px;
+     }
+     .navbar-default .navbar-toggle:hover,
+     .navbar-default .navbar-toggle:focus {
+         background-color: #0d0f24;
+     }
  }
