@@ -11715,13 +11715,25 @@ label {
   .margleft {
     margin-left: 70px; }
   .p2 {
-    font-size: 43px; } }
+    font-size: 43px; }
+  .himg2 {
+    width: 63%;
+    padding: 3% 2% 3% 19%;
+    margin-left: 19%; }
+    .himg2 .form-control {
+      background-size: 24px;
+      font-size: 16px; }
+    .himg2 .gobtn {
+      font-size: 19px; }
+  .labsec {
+    font-size: 14px;
+    padding-left: 10px; }
+  .imgab {
+    width: 38%; } }
 
 @media (max-width: 767px) {
   .himg2 .form-control {
     font-size: 11px; }
-  .m2 {
-    margin-top: 70px; }
   .himg2 {
     width: 75%;
     margin-left: 10%;
@@ -11746,6 +11758,8 @@ label {
   .himg2 .form-control {
     width: 98%;
     padding-left: 11px; }
+  .himg {
+    width: 130px; }
   .spAb {
     width: 85%;
     padding-left: 0;
